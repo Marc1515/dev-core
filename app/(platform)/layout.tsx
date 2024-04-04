@@ -1,5 +1,12 @@
+import { Navbar } from "./_components/navbar";
+
 const PlatformLayout = ({ children }: { children: React.ReactNode }) => {
-  return <div>{children}</div>;
+  return (
+    <>
+      <Navbar />
+      <div>{children}</div>
+    </>
+  );
 };
 
 export default PlatformLayout;
