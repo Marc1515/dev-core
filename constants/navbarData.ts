@@ -14,27 +14,28 @@ export const navbarData: NavbarDataType = [
     title: "Fundamentals",
     items: [
       {
-        label: "Alert Dialog",
-        href: "/docs/primitives/alert-dialog",
+        label: "HTML5",
+        href: "/fundamentals/html5",
         description:
-          "A modal dialog that interrupts the user with important content and expects a response.",
+          "It allows the structuring of content and is essential for defining the semantics and structure of websites.",
       },
       {
-        label: "Hover Card",
-        href: "/docs/primitives/hover-card",
+        label: "CSS",
+        href: "/fundamentals/css3",
         description:
-          "For sighted users to preview content available behind a link.",
+          "Used to design and customize the visual appearance of web pages, enabling control over layout, colors, fonts, and more.",
       },
       {
-        label: "Progress",
-        href: "/docs/primitives/progress",
+        label: "JavaScript",
+        href: "/fundamentals/javascript",
         description:
-          "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+          "It's an interpreted programming language primarily used on the client-side for creating dynamic web pages, enabling interactivity with the user, data manipulation, and more.",
       },
       {
-        label: "Scroll-area",
-        href: "/docs/primitives/scroll-area",
-        description: "Visually or semantically separates content.",
+        label: "TypeScript",
+        href: "/fundamentals/typescript",
+        description:
+          "It's a superset of JavaScript, adding static types and class-based objects. It aids in developing large applications and compiles to JavaScript to be executed in the browser.",
       },
     ],
   },
