@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export const ObjectTypes = () => {
@@ -23,8 +24,11 @@ export const ObjectTypes = () => {
         </li>
         <li>
           <p>
-            <strong>Function:</strong>A block of code designed to perform a
-            particular task. Functions are objects too.
+            <strong>
+              <Link href={"/fundamentals/javascript/functions"}>Function:</Link>
+            </strong>
+            A block of code designed to perform a particular task. Functions are
+            objects too.
           </p>
         </li>
       </ul>
