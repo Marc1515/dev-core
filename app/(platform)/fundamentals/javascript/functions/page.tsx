@@ -1,5 +1,5 @@
 import React from "react";
-import { FunctionsDeclarations } from "./_components/FunctionsDeclarations";
+import FunctionsDeclarations from "./_components/FunctionsDeclarations";
 import FunctionsExpressions from "./_components/FunctionsExpression";
 import ArrowFunctions from "./_components/ArrowFunctions";
 import ConstructorFunctions from "./_components/ConstructorFunctions";
