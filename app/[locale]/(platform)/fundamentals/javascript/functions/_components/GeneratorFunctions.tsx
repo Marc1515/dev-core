@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import ClipboardButton from "@/app/(platform)/_components/ClipboardButton";
+import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButton";
 
 const GeneratorFunctions = () => {
   const codeToCopy = `
