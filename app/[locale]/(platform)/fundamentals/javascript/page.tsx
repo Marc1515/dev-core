@@ -1,16 +1,20 @@
 import React from "react";
 import { PrimitiveTypes } from "./_components/PrimitiveTypes";
 import { ObjectTypes } from "./_components/ObjectTypes";
+import initTranslations from "@/app/i18n";
 
-const JavaScriptPage = () => {
+interface JavaScriptPageProps {
+  params: {
+    locale: string;
+  };
+}
+
+const JavaScriptPage = async ({ params: { locale } }: JavaScriptPageProps) => {
+  const { t } = await initTranslations(locale, ["javascript"]);
   return (
     <div>
       <h1>JavaScript</h1>
-      <p>
-        It&apos;s an interpreted programming language primarily used on the
-        client-side for creating dynamic web pages, enabling interactivity with
-        the user, data manipulation, and more.
-      </p>
+      <p>{t("javascript_definition")}</p>
       <PrimitiveTypes />
       <ObjectTypes />
     </div>
