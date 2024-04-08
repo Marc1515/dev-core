@@ -3,7 +3,7 @@
 import React from "react";
 import ClipboardButton from "@/app/(platform)/_components/ClipboardButton";
 
-export const FunctionsDeclarations = () => {
+const FunctionsDeclarations = () => {
   const codeToCopy = `
   
     function greet(name) {
@@ -30,3 +30,5 @@ export const FunctionsDeclarations = () => {
     </div>
   );
 };
+
+export default FunctionsDeclarations;
