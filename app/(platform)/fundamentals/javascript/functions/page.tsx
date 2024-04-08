@@ -1,4 +1,5 @@
 import React from "react";
+import { FunctionsDeclarations } from "./_components/FunctionsDeclarations";
 
 const FunctionsPage = () => {
   return (
@@ -11,6 +12,7 @@ const FunctionsPage = () => {
         organization. Functions can receive data as input, called parameters,
         process that data, and return a result.
       </p>
+      <FunctionsDeclarations />
     </div>
   );
 };
