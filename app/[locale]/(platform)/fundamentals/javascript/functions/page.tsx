@@ -7,18 +7,23 @@ import GeneratorFunctions from "./_components/GeneratorFunctions";
 import AsyncFunctions from "./_components/AsyncFunctions";
 import Closures from "./_components/Closures";
 import Callbacks from "./_components/Callbacks";
+import initTranslations from "@/app/i18n";
 
-const FunctionsPage = () => {
+interface FunctionPageProps {
+  params: {
+    locale: string;
+  };
+}
+
+const i18nNamespaces = ["functions"];
+
+const FunctionsPage = async ({ params: { locale } }: FunctionPageProps) => {
+  const { t } = await initTranslations(locale, i18nNamespaces);
+
   return (
     <div>
-      <h1>Functions</h1>
-      <p>
-        Functions in JavaScript are blocks of code designed to perform a
-        specific task. They are defined once and can be invoked or {"called"} as
-        many times as necessary, which allows for code reuse and more efficient
-        organization. Functions can receive data as input, called parameters,
-        process that data, and return a result.
-      </p>
+      <h1>{t("functions_name")}</h1>
+      <p>{t("functions_introduction")}</p>
       <FunctionsDeclarations />
       <FunctionsExpressions />
       <ArrowFunctions />
@@ -27,12 +32,7 @@ const FunctionsPage = () => {
       <AsyncFunctions />
       <Closures />
       <Callbacks />
-      <p>
-        Each type of function in JavaScript has its purpose and situations where
-        it is most useful. Understanding these different types will allow you to
-        write clearer and more effective code, choosing the form of function
-        that best suits your needs in each case.
-      </p>
+      <p>{t("functions_conclusion")}</p>
     </div>
   );
 };
