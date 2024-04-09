@@ -1,53 +1,57 @@
+import initTranslations from "@/app/i18n";
 import React from "react";
 
-export const PrimitiveTypes = () => {
+interface PrimitiveTypesProps {
+  params: {
+    locale: string;
+  };
+}
+
+const i18nNamespaces = ["primitiveTypes"];
+
+export const PrimitiveTypes = async ({
+  params: { locale },
+}: PrimitiveTypesProps) => {
+  const { t } = await initTranslations(locale, i18nNamespaces);
+
   return (
     <div>
-      <span>Primitive Types</span>
-      <p>These are the basics types of data:</p>
+      <span>{t("primitive_types_name")}</span>
+      <p>{t("primitive_type_introduction")}</p>
       <ul>
         <li>
           <p>
-            <strong>String:</strong>It&apos;s a sequence of characters used to
-            represent text. For example, &apos;Hello, World!&apos;.
+            <strong>String:</strong> {t("string_explanation")}
           </p>
         </li>
         <li>
           <p>
-            <strong>Number:</strong>Represents both integer and floating-point
-            numbers. For example, 42 or 3.14. JavaScript uses double-precision
-            floating-point format for numbers.
+            <strong>Number:</strong> {t("number_explanation")}
           </p>
         </li>
         <li>
           <p>
-            <strong>BigInt:</strong>An integer with arbitrary precision.
-            It&apos;s useful for very large numbers. For example,
-            9007199254740991n.
+            <strong>BigInt:</strong> {t("bigint_explanation")}
           </p>
         </li>
         <li>
           <p>
-            <strong>Boolean:</strong>Represents a logical entity and can have
-            two values: true and false.
+            <strong>Boolean:</strong> {t("boolean_explanation")}
           </p>
         </li>
         <li>
           <p>
-            <strong>Undefined:</strong>A variable that has not been assigned a
-            value has the value undefined.
+            <strong>Undefined:</strong> {t("undefined_explanation")}
           </p>
         </li>
         <li>
           <p>
-            <strong>Null:</strong>Denotes a null value. It&apos;s used to
-            represent a non-existent or invalid object or address.
+            <strong>Null:</strong> {t("null_explanation")}
           </p>
         </li>
         <li>
           <p>
-            <strong>Symbol:</strong>A unique and immutable primitive introduced
-            in ES6, used as the key of an Object property.
+            <strong>Symbol:</strong> {t("symbol_explanation")}
           </p>
         </li>
       </ul>
