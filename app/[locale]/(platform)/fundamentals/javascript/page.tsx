@@ -9,15 +9,17 @@ interface JavaScriptPageProps {
   };
 }
 
+const i18nNamespaces = ["javascript"];
+
 const JavaScriptPage = async ({ params: { locale } }: JavaScriptPageProps) => {
-  const { t } = await initTranslations(locale, ["javascript"]);
+  const { t, resources } = await initTranslations(locale, i18nNamespaces);
   return (
-    <div>
+    <>
       <h1>JavaScript</h1>
       <p>{t("javascript_definition")}</p>
-      <PrimitiveTypes />
-      <ObjectTypes />
-    </div>
+      <PrimitiveTypes params={{ locale }} />
+      <ObjectTypes params={{ locale }} />
+    </>
   );
 };
 
