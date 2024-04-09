@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import { navbarData } from "@/constants/navbarData";
+import LanguageChanger from "@/lib/LanguageChanger";
 
 export const Navbar = () => {
   return (
@@ -49,6 +50,7 @@ export const Navbar = () => {
             </NavigationMenuItem>
           ))}
         </NavigationMenuList>
+        <LanguageChanger />
       </NavigationMenu>
     </div>
   );
