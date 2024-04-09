@@ -1,25 +1,31 @@
+import initTranslations from "@/app/i18n";
 import Link from "next/link";
 import React from "react";
 
-export const ObjectTypes = () => {
+interface ObjectTypesProps {
+  params: {
+    locale: string;
+  };
+}
+
+const i18nNamespaces = ["objectTypes"];
+
+export const ObjectTypes = async ({ params: { locale } }: ObjectTypesProps) => {
+  const { t } = await initTranslations(locale, i18nNamespaces);
+
   return (
     <div>
-      <span>Objetc Types</span>
-      <p>
-        JavaScript allows you to create objects, which are collections of
-        properties:
-      </p>
+      <span>{t("object_types_name")}</span>
+      <p>{t("object_type_introduction")}</p>
       <ul>
         <li>
           <p>
-            <strong>Object:</strong>The most basic structure for storing data in
-            a key-value format. For example, {"{ name: 'John', age: 30 }"}.
+            <strong>Object:</strong> {t("object_explanation")}
           </p>
         </li>
         <li>
           <p>
-            <strong>Array:</strong>A special kind of object used for storing
-            ordered collections. For example, {"['apple', 'banana', 'cherry']"}.
+            <strong>Array:</strong> {t("array_explanation")}
           </p>
         </li>
         <li>
@@ -27,9 +33,8 @@ export const ObjectTypes = () => {
             <strong>
               <Link href={"/fundamentals/javascript/functions"}>Function:</Link>
             </strong>
-            A block of code designed to perform a particular task. Functions are
-            objects too.
-          </p>
+          </p>{" "}
+          {t("function_explanation")}
         </li>
       </ul>
     </div>
