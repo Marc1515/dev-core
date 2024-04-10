@@ -12,7 +12,7 @@ interface JavaScriptPageProps {
 const i18nNamespaces = ["javascript"];
 
 const JavaScriptPage = async ({ params: { locale } }: JavaScriptPageProps) => {
-  const { t, resources } = await initTranslations(locale, i18nNamespaces);
+  const { t } = await initTranslations(locale, i18nNamespaces);
   return (
     <>
       <h1>JavaScript</h1>
