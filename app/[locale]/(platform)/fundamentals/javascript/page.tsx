@@ -17,8 +17,8 @@ const JavaScriptPage = async ({ params: { locale } }: JavaScriptPageProps) => {
     <>
       <h1>JavaScript</h1>
       <p>{t("javascript_definition")}</p>
-      <PrimitiveTypes params={{ locale }} />
-      <ObjectTypes params={{ locale }} />
+      <PrimitiveTypes />
+      <ObjectTypes />
     </>
   );
 };
