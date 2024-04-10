@@ -1,18 +1,31 @@
+"use client";
+import React, { useEffect, useState } from "react";
 import initTranslations from "@/app/i18n";
-import React from "react";
-
-interface PrimitiveTypesProps {
-  params: {
-    locale: string;
-  };
-}
+import { useLocale } from "@/contexts/LocaleContext";
 
 const i18nNamespaces = ["primitiveTypes"];
 
-export const PrimitiveTypes = async ({
-  params: { locale },
-}: PrimitiveTypesProps) => {
-  const { t } = await initTranslations(locale, i18nNamespaces);
+export const PrimitiveTypes = () => {
+  const [translations, setTranslations] = useState<{
+    t: (key: string) => string;
+  } | null>(null);
+
+  const { locale } = useLocale();
+
+  useEffect(() => {
+    const loadTranslations = async () => {
+      const translationsResult = await initTranslations(locale, i18nNamespaces);
+      setTranslations(translationsResult);
+    };
+
+    loadTranslations();
+  }, [locale]);
+
+  if (!translations) {
+    return <div>Loading...</div>;
+  }
+
+  const { t } = translations;
 
   return (
     <div>

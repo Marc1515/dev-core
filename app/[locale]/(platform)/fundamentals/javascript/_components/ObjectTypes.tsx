@@ -1,17 +1,33 @@
-import initTranslations from "@/app/i18n";
-import Link from "next/link";
-import React from "react";
+"use client";
 
-interface ObjectTypesProps {
-  params: {
-    locale: string;
-  };
-}
+import initTranslations from "@/app/i18n";
+import { useLocale } from "@/contexts/LocaleContext";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 
 const i18nNamespaces = ["objectTypes"];
 
-export const ObjectTypes = async ({ params: { locale } }: ObjectTypesProps) => {
-  const { t } = await initTranslations(locale, i18nNamespaces);
+export const ObjectTypes = () => {
+  const [translations, setTranslations] = useState<{
+    t: (key: string) => string;
+  } | null>(null);
+
+  const { locale } = useLocale();
+
+  useEffect(() => {
+    const loadTranslations = async () => {
+      const translationsResult = await initTranslations(locale, i18nNamespaces);
+      setTranslations(translationsResult);
+    };
+
+    loadTranslations();
+  }, [locale]);
+
+  if (!translations) {
+    return <div>Loading...</div>;
+  }
+
+  const { t } = translations;
 
   return (
     <div>

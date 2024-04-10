@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -15,10 +15,36 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-import { navbarData } from "@/constants/navbarData";
+import { getNavbarData } from "./navbarData";
 import LanguageChanger from "@/lib/LanguageChanger";
+import initTranslations from "@/app/i18n";
+import { useLocale } from "@/contexts/LocaleContext";
+
+const i18nNamespaces = ["navbar"];
 
 export const Navbar = () => {
+  const [translations, setTranslations] = useState<{
+    t: (key: string) => string;
+  } | null>(null);
+
+  const { locale } = useLocale();
+
+  useEffect(() => {
+    const loadTranslations = async () => {
+      const translationsResult = await initTranslations(locale, i18nNamespaces);
+      setTranslations(translationsResult);
+    };
+
+    loadTranslations();
+  }, [locale]);
+
+  if (!translations) {
+    return <div>Loading...</div>;
+  }
+
+  const { t } = translations;
+  const navbarData = getNavbarData(t);
+
   return (
     <div>
       <NavigationMenu>
@@ -26,7 +52,7 @@ export const Navbar = () => {
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Home
+                {t("home_name")}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
