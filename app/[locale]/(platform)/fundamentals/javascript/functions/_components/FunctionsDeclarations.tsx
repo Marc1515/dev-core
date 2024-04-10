@@ -1,7 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButton";
+import initTranslations from "@/app/i18n";
+import { useLocale } from "@/contexts/LocaleContext";
+
+const i18nNamespaces = ["functions"];
 
 const FunctionsDeclarations = () => {
   const codeToCopy = `
@@ -9,20 +13,33 @@ const FunctionsDeclarations = () => {
     function greet(name) {
       return \`Hello, \${name}!\`;
     }
-    console.log(greet('Ana')); // "Hello, Ana!"
+    console.log(greet('Ana')); // "Hello, Ana!"`;
 
-    `;
+  const [translations, setTranslations] = useState<{
+    t: (key: string) => string;
+  } | null>(null);
+
+  const { locale } = useLocale();
+
+  useEffect(() => {
+    const loadTranslations = async () => {
+      const translationsResult = await initTranslations(locale, i18nNamespaces);
+      setTranslations(translationsResult);
+    };
+
+    loadTranslations();
+  }, [locale]);
+
+  if (!translations) {
+    return <div>Loading...</div>;
+  }
+
+  const { t } = translations;
 
   return (
     <div>
-      <span>Functions Declarations</span>
-      <p>
-        Function declarations are perhaps the most traditional way of defining
-        functions in JavaScript. They are characterized by having a name and do
-        not require assignment to a variable. A distinctive aspect of this type
-        of function is that they are hoisted, meaning they can be called before
-        they appear in the code due to how JavaScript interprets functions.
-      </p>
+      <span>{t("functions_declarations_title")}</span>
+      <p>{t("functions_declarations_explanation")}</p>
       <div>
         <pre>{codeToCopy}</pre>
         <ClipboardButton textToCopy={codeToCopy} />
