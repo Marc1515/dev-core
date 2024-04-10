@@ -26,7 +26,7 @@ const PlatformLayout = async ({ children, params }: PlatformLayoutProps) => {
         namespaces={i18nNamespaces}
       >
         <Toaster position="top-right" />
-        <Navbar params={{ locale }} />
+        <Navbar />
         <div>{children}</div>
       </TranslationsProvider>
     </LocaleProvider>
