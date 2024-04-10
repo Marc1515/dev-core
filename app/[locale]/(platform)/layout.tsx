@@ -1,7 +1,8 @@
 import initTranslations from "@/app/i18n";
-import TranslationsProvider from "@/lib/TranslationProvider";
+import { LocaleProvider } from "@/contexts/LocaleContext";
 import { Toaster } from "sonner";
 import { Navbar } from "./_components/Navbar";
+import TranslationsProvider from "@/lib/TranslationProvider";
 
 interface PlatformLayoutProps {
   children: React.ReactNode;
@@ -18,15 +19,17 @@ const PlatformLayout = async ({ children, params }: PlatformLayoutProps) => {
   const { resources } = await initTranslations(locale, i18nNamespaces);
 
   return (
-    <TranslationsProvider
-      resources={resources}
-      locale={locale}
-      namespaces={i18nNamespaces}
-    >
-      <Toaster position="top-right" />
-      <Navbar />
-      <div>{children}</div>
-    </TranslationsProvider>
+    <LocaleProvider initialLocale={locale}>
+      <TranslationsProvider
+        resources={resources}
+        locale={locale}
+        namespaces={i18nNamespaces}
+      >
+        <Toaster position="top-right" />
+        <Navbar params={{ locale }} />
+        <div>{children}</div>
+      </TranslationsProvider>
+    </LocaleProvider>
   );
 };
 
