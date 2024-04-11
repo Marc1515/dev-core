@@ -1,7 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButton";
+import initTranslations from "@/app/i18n";
+import { useLocale } from "@/contexts/LocaleContext";
+
+const i18nNamespaces = ["functions"];
 
 const ArrowFunctions = () => {
   const codeToCopy = `
@@ -10,16 +14,31 @@ const ArrowFunctions = () => {
         console.log(add(5, 3)); // 8
     `;
 
+  const [translations, setTranslations] = useState<{
+    t: (key: string) => string;
+  } | null>(null);
+
+  const { locale } = useLocale();
+
+  useEffect(() => {
+    const loadTranslations = async () => {
+      const translationsResult = await initTranslations(locale, i18nNamespaces);
+      setTranslations(translationsResult);
+    };
+
+    loadTranslations();
+  }, [locale]);
+
+  if (!translations) {
+    return <div>Loading...</div>;
+  }
+
+  const { t } = translations;
+
   return (
     <div>
-      <span>Arrow Functions</span>
-      <p>
-        Introduced in ES6, arrow functions offer a shorter and more concise
-        syntax. They do not have their own this, arguments, super, or
-        new.target, which makes them an ideal choice for functions that do not
-        define their own behavior, such as those used in callbacks or
-        higher-order functions. They cannot be used as constructors.
-      </p>
+      <span>{t("arrow_functions_title")}</span>
+      <p>{t("arrow_functions_explanation")}</p>
       <div>
         <pre>{codeToCopy}</pre>
         <ClipboardButton textToCopy={codeToCopy} />

@@ -1,7 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButton";
+import initTranslations from "@/app/i18n";
+import { useLocale } from "@/contexts/LocaleContext";
+
+const i18nNamespaces = ["functions"];
 
 const Closures = () => {
   const codeToCopy = `
@@ -18,16 +22,31 @@ const Closures = () => {
     console.log(sayHello('Alice')); // "Hello, Alice!"
     console.log(sayHi('Bob')); // "Hi, Bob!"`;
 
+  const [translations, setTranslations] = useState<{
+    t: (key: string) => string;
+  } | null>(null);
+
+  const { locale } = useLocale();
+
+  useEffect(() => {
+    const loadTranslations = async () => {
+      const translationsResult = await initTranslations(locale, i18nNamespaces);
+      setTranslations(translationsResult);
+    };
+
+    loadTranslations();
+  }, [locale]);
+
+  if (!translations) {
+    return <div>Loading...</div>;
+  }
+
+  const { t } = translations;
+
   return (
     <div>
-      <span>Closures</span>
-      <p>
-        A closure is a function that remembers and continues to access variables
-        from outside its scope even after the outer function has finished
-        executing. This powerful feature of JavaScript allows you to create
-        private variables and encapsulate functionality. Closures are created
-        every time a function is created, at function creation time.
-      </p>
+      <span>{t("closures_title")}</span>
+      <p>{t("closures_explanation")}</p>
       <div>
         <pre>{codeToCopy}</pre>
         <ClipboardButton textToCopy={codeToCopy} />
