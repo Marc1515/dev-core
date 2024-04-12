@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -17,26 +17,12 @@ import {
 
 import { getNavbarData } from "./navbarData";
 import LanguageChanger from "@/lib/LanguageChanger";
-import initTranslations from "@/app/i18n";
-import { useLocale } from "@/contexts/LocaleContext";
 
-const i18nNamespaces = ["navbar"];
+import { useTranslations } from "@/hooks/useTranslations";
+import { navbarTypesNamespaces } from "@/constants/translationNamespaces";
 
 export const Navbar = () => {
-  const [translations, setTranslations] = useState<{
-    t: (key: string) => string;
-  } | null>(null);
-
-  const { locale } = useLocale();
-
-  useEffect(() => {
-    const loadTranslations = async () => {
-      const translationsResult = await initTranslations(locale, i18nNamespaces);
-      setTranslations(translationsResult);
-    };
-
-    loadTranslations();
-  }, [locale]);
+  const translations = useTranslations([navbarTypesNamespaces[1]]);
 
   if (!translations) {
     return <div>Loading...</div>;
