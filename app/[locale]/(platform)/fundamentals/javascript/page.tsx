@@ -1,8 +1,13 @@
 import React from "react";
-import { PrimitiveTypes } from "./_components/PrimitiveTypes";
-import { ObjectTypes } from "./_components/ObjectTypes";
 import initTranslations from "@/app/i18n";
 import { javascriptTypesNamespaces } from "@/constants/translationNamespaces";
+import { PrimitiveTypes } from "./_components/PrimitiveTypes";
+import { ObjectTypes } from "./_components/ObjectTypes";
+import { ArithmeticOperators } from "./_components/ArithmeticOperators";
+import { AssignmentOperators } from "./_components/AssignmentOperators";
+import { ComparisionOperators } from "./_components/ComparisionOperators";
+import { LogicalOperators } from "./_components/LogicalOperators";
+import { StringOperator } from "./_components/StringOperator";
 
 interface JavaScriptPageProps {
   params: {
@@ -20,8 +25,15 @@ const JavaScriptPage = async ({ params: { locale } }: JavaScriptPageProps) => {
     <>
       <h1>JavaScript</h1>
       <p>{t("javascript_definition")}</p>
+      <span>Data Types</span>
       <PrimitiveTypes />
       <ObjectTypes />
+      <span>Operators</span>
+      <ArithmeticOperators />
+      <AssignmentOperators />
+      <ComparisionOperators />
+      <LogicalOperators />
+      <StringOperator />
     </>
   );
 };
