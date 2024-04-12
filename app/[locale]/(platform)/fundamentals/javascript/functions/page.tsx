@@ -8,6 +8,7 @@ import AsyncFunctions from "./_components/AsyncFunctions";
 import Closures from "./_components/Closures";
 import Callbacks from "./_components/Callbacks";
 import initTranslations from "@/app/i18n";
+import { functionsNamespaces } from "@/constants/translationNamespaces";
 
 interface FunctionPageProps {
   params: {
@@ -15,7 +16,9 @@ interface FunctionPageProps {
   };
 }
 
-const i18nNamespaces = ["functions"];
+const i18nNamespaces = functionsNamespaces.filter(
+  (namespace) => namespace === functionsNamespaces[1]
+);
 
 const FunctionsPage = async ({ params: { locale } }: FunctionPageProps) => {
   const { t } = await initTranslations(locale, i18nNamespaces);
