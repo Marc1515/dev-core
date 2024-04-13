@@ -1,13 +1,10 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
-import { javascriptTypesNamespaces } from "@/constants/translationNamespaces";
-import { PrimitiveTypes } from "./_components/PrimitiveTypes";
-import { ObjectTypes } from "./_components/ObjectTypes";
-import { ArithmeticOperators } from "./_components/ArithmeticOperators";
-import { AssignmentOperators } from "./_components/AssignmentOperators";
-import { ComparisionOperators } from "./_components/ComparisionOperators";
-import { LogicalOperators } from "./_components/LogicalOperators";
-import { StringOperator } from "./_components/StringOperator";
+import {
+  commonNamespaces,
+  javascriptNamespaces,
+} from "@/constants/translationNamespaces";
+import Link from "next/link";
 
 interface JavaScriptPageProps {
   params: {
@@ -15,25 +12,30 @@ interface JavaScriptPageProps {
   };
 }
 
-const i18nNamespaces = javascriptTypesNamespaces.filter(
-  (namespace) => namespace === javascriptTypesNamespaces[1]
-);
-
 const JavaScriptPage = async ({ params: { locale } }: JavaScriptPageProps) => {
-  const { t } = await initTranslations(locale, i18nNamespaces);
+  const { t: commonT } = await initTranslations(locale, commonNamespaces);
+  const { t: mainT } = await initTranslations(locale, javascriptNamespaces);
   return (
     <>
       <h1>JavaScript</h1>
-      <p>{t("javascript_definition")}</p>
-      <span>Data Types</span>
-      <PrimitiveTypes />
-      <ObjectTypes />
-      <span>Operators</span>
-      <ArithmeticOperators />
-      <AssignmentOperators />
-      <ComparisionOperators />
-      <LogicalOperators />
-      <StringOperator />
+      <p>{mainT("javascript_definition")}</p>
+      <p>{mainT("difference_between_var_and_dt")}</p>
+      <Link href={"./javascript/variables"}>
+        <span>Variables</span>
+      </Link>
+      <p>{mainT("variable_description")}</p>
+      <Link href={"./javascript/datatypes"}>
+        <span>{commonT("datatype_title")}</span>
+      </Link>
+      <p>{mainT("dataType_description")}</p>
+      <Link href={"./javascript/operators"}>
+        <span>{commonT("operator_title")}</span>
+      </Link>
+      <p>{mainT("operator_description")}</p>
+      <Link href={"./javascript/controlstructures"}>
+        <span>{commonT("control_structures_title")}</span>
+      </Link>
+      <p>{mainT("control_strucutres_description")}</p>
     </>
   );
 };
