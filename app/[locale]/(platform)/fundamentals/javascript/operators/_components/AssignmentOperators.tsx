@@ -5,7 +5,7 @@ import { useTranslations } from "@/hooks/useTranslations";
 import { operatorsNamespaces } from "@/constants/translationNamespaces";
 
 export const AssignmentOperators = () => {
-  const translations = useTranslations([operatorsNamespaces[1]]);
+  const translations = useTranslations(operatorsNamespaces);
 
   if (!translations) return;
 

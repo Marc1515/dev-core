@@ -4,8 +4,8 @@ import React from "react";
 import { useTranslations } from "@/hooks/useTranslations";
 import { operatorsNamespaces } from "@/constants/translationNamespaces";
 
-export const StringOperator = () => {
-  const translations = useTranslations([operatorsNamespaces[1]]);
+export const ConditionalOperators = () => {
+  const translations = useTranslations(operatorsNamespaces);
 
   if (!translations) return;
 
@@ -13,13 +13,13 @@ export const StringOperator = () => {
 
   return (
     <div>
-      <span>{t("string_operator_title")}</span>
-      <p>{t("string_operator_description")}</p>
+      <span>{t("conditional_operator_title")}</span>
+      <p>{t("conditional_operator_description")}</p>
       <ul>
         <li>
           <p>
-            <strong>`+`</strong>
-            {t("string_operator_explanation")}
+            <strong>`condition ? value1 : value2`</strong>
+            {t("conditional_operator_explanation")}
           </p>
         </li>
       </ul>

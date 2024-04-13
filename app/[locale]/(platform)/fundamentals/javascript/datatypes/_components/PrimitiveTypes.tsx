@@ -4,7 +4,7 @@ import { primitiveTypesNamespaces } from "@/constants/translationNamespaces";
 import { useTranslations } from "@/hooks/useTranslations";
 
 export const PrimitiveTypes = () => {
-  const translations = useTranslations([primitiveTypesNamespaces[1]]);
+  const translations = useTranslations(primitiveTypesNamespaces);
 
   if (!translations) {
     return;

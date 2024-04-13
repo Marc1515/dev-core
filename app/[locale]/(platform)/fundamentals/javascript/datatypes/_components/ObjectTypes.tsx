@@ -6,7 +6,7 @@ import { useTranslations } from "@/hooks/useTranslations";
 import { objectTypesNamespaces } from "@/constants/translationNamespaces";
 
 export const ObjectTypes = () => {
-  const translations = useTranslations([objectTypesNamespaces[1]]);
+  const translations = useTranslations(objectTypesNamespaces);
 
   if (!translations) {
     return;

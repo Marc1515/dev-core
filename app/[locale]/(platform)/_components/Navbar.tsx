@@ -19,10 +19,10 @@ import { getNavbarData } from "./navbarData";
 import LanguageChanger from "@/lib/LanguageChanger";
 
 import { useTranslations } from "@/hooks/useTranslations";
-import { navbarTypesNamespaces } from "@/constants/translationNamespaces";
+import { navbarNamespaces } from "@/constants/translationNamespaces";
 
 export const Navbar = () => {
-  const translations = useTranslations([navbarTypesNamespaces[1]]);
+  const translations = useTranslations(navbarNamespaces);
 
   if (!translations) {
     return <div>Loading...</div>;
