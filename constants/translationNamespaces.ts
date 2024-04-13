@@ -2,16 +2,22 @@
 
 export const commonNamespaces = ["common"];
 
-export const navbarTypesNamespaces = [...commonNamespaces, "navbar"];
+export const navbarNamespaces = ["navbar"];
 
-export const javascriptTypesNamespaces = [...commonNamespaces, "javascript"];
+export const javascriptNamespaces = ["javascript"];
 
-export const objectTypesNamespaces = [...commonNamespaces, "objectTypes"];
+export const variablesNamespaces = ["variables"];
 
-export const primitiveTypesNamespaces = [...commonNamespaces, "primitiveTypes"];
+export const dataTypesNamespaces = ["dataTypes"];
 
-export const functionsNamespaces = [...commonNamespaces, "functions"];
+export const objectTypesNamespaces = ["objectTypes"];
 
-export const operatorsNamespaces = [...commonNamespaces, "operators"];
+export const primitiveTypesNamespaces = ["primitiveTypes"];
+
+export const operatorsNamespaces = ["operators"];
+
+export const controlStructuresNamespaces = ["controlStructures"];
+
+export const functionsNamespaces = ["functions"];
 
 // Y así sucesivamente para otras partes de la aplicación
