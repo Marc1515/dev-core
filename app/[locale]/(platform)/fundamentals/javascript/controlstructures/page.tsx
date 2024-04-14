@@ -5,6 +5,7 @@ import {
   controlStructuresNamespaces,
 } from "@/constants/translationNamespaces";
 import { Conditional } from "./_components/Conditional";
+import { Loops } from "./_components/Loops";
 
 interface ControlStructuresProps {
   params: {
@@ -48,6 +49,7 @@ const ControlStructures = async ({
         <Conditional />
         <span>{mainT("repetition_structures_title")}</span>
         <p>{mainT("repetition_structures_explanation")}</p>
+        <Loops />
       </div>
     </div>
   );
