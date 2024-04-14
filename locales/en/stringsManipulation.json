@@ -1,0 +1,15 @@
+{
+  "strings_manipulation_introduction": "Strings are sequences of characters used to represent text. JavaScript provides many methods to manipulate strings:",
+  "sm_characters_access_title": "Characters Access",
+  "sm_characters_access_explanation": "You can access a specific character in a string using bracket notation: 'string[index]'.",
+  "sm_concatenation_title": "Concatenation",
+  "sm_concatenation_explanation": "You can combine strings using the '+' operator or the 'concat()' function.",
+  "sm_search_and_replace_title": "Search and Replace",
+  "sm_search_and_replace_explanation_one": "returns the first position at which a specified substring appears.",
+  "sm_search_and_replace_explanation_two": "checks if the string contains a specific substring.",
+  "sm_search_and_replace_explanation_three": "replaces parts of a string.",
+  "sm_slicing_and_extracting_title": "Slicing and Extracting",
+  "sm_slicing_and_extracting_explanation": "extracts a section of a string and returns a new string.",
+  "sm_transformation_title": "Transformation",
+  "sm_transformation_explanation": "convert a string to uppercase or lowercase, respectively."
+}

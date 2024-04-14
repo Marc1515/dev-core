@@ -1,0 +1,10 @@
+{
+  "methods_description": "A method is a type of function that is associated with an object (or class). In other words, a method is a function that belongs to an object. This means that the method usually operates on the data contained within its object.",
+  "methods_example_introduction": "For example, in JavaScript, objects of type 'String' have methods like 'toUpperCase()', 'slice()', etc., that operate on the specific string with which they are called.",
+  "methods_example_explanation": "In this example, 'toUpperCase()' is a method of the 'text' object (which is an instance of 'String'). It acts on the data of 'text' and returns a new string in uppercase.",
+  "methods_example_key_differences_title": "Key Differences",
+  "methods_example_key_differences_context": "Context: A function can exist independently, whereas a method is always defined in the context of an object.",
+  "methods_example_key_differences_call": "Call: You call a function directly by its name, whereas a method is called on an object ('object.method()').",
+  "methods_example_key_differences_purpose": "Purpose: While functions are designed for possibly general tasks, methods are typically designed to interact with the attributes of the object to which they belong.",
+  "methods_example_conclusion": "Understanding the difference between methods and functions helps you better grasp how and when to use each in your programs, especially in an object-oriented language like JavaScript."
+}

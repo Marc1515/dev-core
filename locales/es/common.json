@@ -1,1 +1,9 @@
-{"control_structures_title":"Estructuras de Control","datatype_title":"Tipo de Datos","operator_title":"Operador"}
+{
+  "control_structures_title": "Estructuras de Control",
+  "datatype_title": "Tipo de Datos",
+  "operator_title": "Operador",
+  "functions_title": "Funciones",
+  "methods_title": "Métodos",
+  "strings_manipulation_title": "Manipulación de Strings",
+  "arrays_manipulation_title": "Manipulación de Arrays"
+}

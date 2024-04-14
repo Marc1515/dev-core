@@ -1,0 +1,17 @@
+{
+  "arrays_manipulation_introduction": "Los arrays son estructuras que te permiten almacenar múltiples valores en una variable única. JavaScript ofrece varios métodos para trabajar con arrays:",
+  "am_add_and_remove_title": "Agregar/Quitar Elementos:",
+  "am_add_and_remove_explanation_one": "Agrega elementos al final de un array.",
+  "am_add_and_remove_explanation_two": "Elimina el último elemento de un array.",
+  "am_add_and_remove_explanation_three": "Elimina el primer elemento de un array.",
+  "am_add_and_remove_explanation_four": "Agrega elementos al inicio de un array.",
+  "iter_over_arrays_title": "Iterar Sobre Arrays",
+  "iter_over_arrays_explanation": "Ejecuta una función para cada elemento del array.",
+  "transform_arrays_title": "Transformar Arrays",
+  "transform_arrays_explanation": "Crea un nuevo array con los resultados de llamar a una función proporcionada sobre cada elemento del array.",
+  "search_in_arrays_title": "Búsqueda en Arrays",
+  "search_in_arrays_explanation": "Busca elementos en un array que cumplan con una condición.",
+  "sort_arrays_title": "Ordenar Arrays",
+  "sort_arrays_explanation": "Ordena los elementos de un array en el lugar y devuelve el array.",
+  "arrays_manipulation_conclusion": "Esta visión general debería ayudarte a entender los conceptos básicos de la manipulación de cadenas y arrays en JavaScript, mejorando tu capacidad para manejar datos y mejorar la interactividad de tus aplicaciones web."
+}
