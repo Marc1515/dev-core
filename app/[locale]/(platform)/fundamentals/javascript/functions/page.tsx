@@ -16,12 +16,8 @@ interface FunctionPageProps {
   };
 }
 
-const i18nNamespaces = functionsNamespaces.filter(
-  (namespace) => namespace === functionsNamespaces[1]
-);
-
 const FunctionsPage = async ({ params: { locale } }: FunctionPageProps) => {
-  const { t } = await initTranslations(locale, i18nNamespaces);
+  const { t } = await initTranslations(locale, functionsNamespaces);
 
   return (
     <div>
