@@ -20,4 +20,10 @@ export const controlStructuresNamespaces = ["controlStructures"];
 
 export const functionsNamespaces = ["functions"];
 
+export const methodsNamespaces = ["methods"];
+
+export const stringsManipulationNamespaces = ["stringsManipulation"];
+
+export const arraysManipulationNamespaces = ["arraysManipulation"];
+
 // Y así sucesivamente para otras partes de la aplicación
