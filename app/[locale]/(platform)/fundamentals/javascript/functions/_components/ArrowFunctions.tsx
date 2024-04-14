@@ -12,7 +12,7 @@ const ArrowFunctions = () => {
         console.log(add(5, 3)); // 8
     `;
 
-  const translations = useTranslations([functionsNamespaces[1]]);
+  const translations = useTranslations(functionsNamespaces);
 
   if (!translations) {
     return;

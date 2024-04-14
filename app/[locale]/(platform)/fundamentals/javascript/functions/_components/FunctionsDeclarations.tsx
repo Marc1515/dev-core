@@ -13,7 +13,7 @@ const FunctionsDeclarations = () => {
     }
     console.log(greet('Ana')); // "Hello, Ana!"`;
 
-  const translations = useTranslations([functionsNamespaces[1]]);
+  const translations = useTranslations(functionsNamespaces);
 
   if (!translations) {
     return;

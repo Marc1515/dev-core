@@ -31,11 +31,8 @@ export const ObjectTypes = () => {
         </li>
         <li>
           <p>
-            <strong>
-              <Link href={"/fundamentals/javascript/functions"}>Function:</Link>
-            </strong>
-          </p>{" "}
-          {t("function_explanation")}
+            <strong>Function:</strong> {t("function_explanation")}
+          </p>
         </li>
       </ul>
     </div>

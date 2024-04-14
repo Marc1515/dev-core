@@ -20,7 +20,7 @@ const Closures = () => {
     console.log(sayHello('Alice')); // "Hello, Alice!"
     console.log(sayHi('Bob')); // "Hi, Bob!"`;
 
-  const translations = useTranslations([functionsNamespaces[1]]);
+  const translations = useTranslations(functionsNamespaces);
 
   if (!translations) {
     return;

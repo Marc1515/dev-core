@@ -14,7 +14,7 @@ const FunctionsExpressions = () => {
 
     console.log(sayGoodbye('Carlos')); // "Goodbye, Carlos!"`;
 
-  const translations = useTranslations([functionsNamespaces[1]]);
+  const translations = useTranslations(functionsNamespaces);
 
   if (!translations) {
     return;

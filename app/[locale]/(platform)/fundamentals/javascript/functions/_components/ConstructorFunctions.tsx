@@ -20,7 +20,7 @@ const ConstructorFunctions = () => {
 
     console.log(ana.greet()); // "Hello, I'm Ana";`;
 
-  const translations = useTranslations([functionsNamespaces[1]]);
+  const translations = useTranslations(functionsNamespaces);
 
   if (!translations) {
     return;

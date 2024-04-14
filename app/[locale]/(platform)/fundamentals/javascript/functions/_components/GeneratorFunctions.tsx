@@ -21,7 +21,7 @@ const GeneratorFunctions = () => {
     
     console.log(gen.next().value); // 1`;
 
-  const translations = useTranslations([functionsNamespaces[1]]);
+  const translations = useTranslations(functionsNamespaces);
 
   if (!translations) {
     return;
