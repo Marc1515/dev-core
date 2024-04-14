@@ -7,36 +7,28 @@ import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButt
 
 export const Loops = () => {
   const codeToCopy1 = `
-  if (condition) {
-    // code block executed if the condition is true
+  for (initialization; condition; increment) {
+    // code block to execute
   }`;
 
   const codeToCopy2 = `
-  if (condition) {
-    // code block executed if the condition is true
-  } else {
-    // code block executed if the condition is false
+  while (condition) {
+    // code block to execute
   }`;
 
   const codeToCopy3 = `
-  if (condition1) {
-    // block executed if condition1 is true
-  } else if (condition2) {
-    // block executed if condition2 is true
-  } else {
-    // block executed if none of the above conditions are true
-  }`;
+  do {
+    // code block to execute
+  } while (condition);`;
 
   const codeToCopy4 = `
-  switch (expression) {
-    case value1:
-      // code block
-      break;
-    case value2:
-      // code block
-      break;
-    default:
-      // code block if none of the above
+  for (var key in object) {
+    console.log(key + ": " + object[key]);
+  }`;
+
+  const codeToCopy5 = `
+  for (var element of iterable) {
+    console.log(element);
   }`;
 
   const translations = useTranslations(controlStructuresNamespaces);
@@ -48,7 +40,7 @@ export const Loops = () => {
   return (
     <div>
       <p>
-        <strong>For: </strong>
+        <strong>for: </strong>
         {mainT("for_explanation")}
       </p>
       <div>
@@ -56,24 +48,32 @@ export const Loops = () => {
         <ClipboardButton textToCopy={codeToCopy1} />
       </div>
       <p>
-        <strong>While: </strong>
-        {mainT("if_else_explanation")}
+        <strong>while: </strong>
+        {mainT("while_explanation")}
       </p>
       <div>
         <pre>{codeToCopy2}</pre>
         <ClipboardButton textToCopy={codeToCopy2} />
       </div>
       <p>
-        <strong>If-else-if-else: </strong>
-        {mainT("if_else_if_else_explanation")}
+        <strong>do-while: </strong>
+        {mainT("do_while_explanation")}
       </p>
       <div>
         <pre>{codeToCopy3}</pre>
         <ClipboardButton textToCopy={codeToCopy3} />
       </div>
       <p>
-        <strong>Switch: </strong>
-        {mainT("switch_explanation")}
+        <strong>for-in: </strong>
+        {mainT("for_in_explanation")}
+      </p>
+      <div>
+        <pre>{codeToCopy4}</pre>
+        <ClipboardButton textToCopy={codeToCopy4} />
+      </div>
+      <p>
+        <strong>for-of: </strong>
+        {mainT("for_of_explanation")}
       </p>
       <div>
         <pre>{codeToCopy4}</pre>
