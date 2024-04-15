@@ -1,5 +1,3 @@
-// translationNamespaces.ts
-
 export const commonNamespaces = ["common"];
 
 export const navbarNamespaces = ["navbar"];
@@ -28,4 +26,4 @@ export const arraysManipulationNamespaces = ["arraysManipulation"];
 
 export const domManipulationNamespaces = ["domManipulation"];
 
-// Y así sucesivamente para otras partes de la aplicación
+export const jsonNamespaces = ["json"];
