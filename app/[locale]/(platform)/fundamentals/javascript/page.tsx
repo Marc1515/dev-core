@@ -18,40 +18,20 @@ const JavaScriptPage = async ({ params: { locale } }: JavaScriptPageProps) => {
   return (
     <>
       <h1>JavaScript</h1>
-      <p>{mainT("javascript_definition")}</p>
-      <p>{mainT("difference_between_var_and_dt")}</p>
-      <Link href={"./javascript/variables"}>
-        <span>Variables</span>
+      <p>{commonT("javascript_definition")}</p>
+
+      <Link href={"./javascript/syntax-and-basic-concepts"}>
+        <span>{commonT("syntax_and_basic_concepts_title")}</span>
       </Link>
-      <p>{mainT("variable_description")}</p>
-      <Link href={"./javascript/datatypes"}>
-        <span>{commonT("datatype_title")}</span>
+      <p>{commonT("syntax_and_basic_concepts_definition")}</p>
+      <Link href={"./javascript/dom-manipulation"}>
+        <span>{commonT("dom_manipulation_title")}</span>
       </Link>
-      <p>{mainT("dataType_description")}</p>
-      <Link href={"./javascript/operators"}>
-        <span>{commonT("operator_title")}</span>
+      <p>{commonT("dom_manipulation_definition")}</p>
+      <Link href={"./javascript/json"}>
+        <span>JSON</span>
       </Link>
-      <p>{mainT("operator_description")}</p>
-      <Link href={"./javascript/controlstructures"}>
-        <span>{commonT("control_structures_title")}</span>
-      </Link>
-      <p>{mainT("control_strucutres_description")}</p>
-      <Link href={"./javascript/functions"}>
-        <span>{commonT("functions_title")}</span>
-      </Link>
-      <p>{mainT("functions_description")}</p>
-      <Link href={"./javascript/methods"}>
-        <span>{commonT("methods_title")}</span>
-      </Link>
-      <p>{mainT("methods_description")}</p>
-      <Link href={"./javascript/stringsmanipulation"}>
-        <span>{commonT("strings_manipulation_title")}</span>
-      </Link>
-      <p>{mainT("strings_manipulation_description")}</p>
-      <Link href={"./javascript/arraysmanipulation"}>
-        <span>{commonT("arrays_manipulation_title")}</span>
-      </Link>
-      <p>{mainT("arrays_manipulation_description")}</p>
+      <p>{commonT("json_definition")}</p>
     </>
   );
 };
