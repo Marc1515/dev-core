@@ -26,4 +26,6 @@ export const stringsManipulationNamespaces = ["stringsManipulation"];
 
 export const arraysManipulationNamespaces = ["arraysManipulation"];
 
+export const domManipulationNamespaces = ["domManipulation"];
+
 // Y así sucesivamente para otras partes de la aplicación
