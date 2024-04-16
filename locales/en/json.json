@@ -17,19 +17,22 @@
       "point_one": "Arrays in JSON are ordered lists of values, enclosed in square brackets ([]).",
       "point_two": "The values within an array can be of any type, including other objects or arrays."
     },
-    "valida_data_formats": {
-      "title": ""
+    "data_formats": {
+      "title": "Data Formats",
+      "point_one": "Numbers: Numbers in JSON can be integers or floats but should not have special formats like dates or functions.",
+      "point_two": "Must be enclosed in double quotes.",
+      "point_three": "Booleans and Null: Represented by the keywords 'true', 'false', and 'null'."
+    },
+    "advantages": {
+      "title": "Advantages of JSON",
+      "point_one": "Readability: Its clear format makes it easy to understand, which is advantageous for development and debugging.",
+      "point_two": "Transmission Efficiency: Being a lightweight format, it is ideal for data exchange over networks where bandwidth may be a concern.",
+      "point_three": "Standardization: Its widespread acceptance as a data interchange format ensures that different systems and technologies can interact with each other effectively."
+    },
+    "common_uses": {
+      "title": "Common Uses of JSON",
+      "point_one": "APIs and Web Services: JSON is commonly used in web APIs to send responses from the server to the client. This allows web and mobile applications to process and use the data efficiently.",
+      "point_two": "Project Configuration: Many software projects use JSON for configuration files, like 'package.json' in Node.js projects, which facilitates the management of dependencies and scripts."
     }
-  },
-  "sj_valid_data_formats_title": "Valid Data Formats",
-  "sj_valid_data_formats_explanation_one": "Numbers: Numbers in JSON can be integers or floats but should not have special formats like dates or functions.",
-  "sj_valid_data_formats_explanation_two": "Must be enclosed in double quotes.",
-  "sj_valid_data_formats_explanation_three": "Booleans and Null: Represented by the keywords 'true', 'false', and 'null'.",
-  "sj_advantages_of_json_title": "Advantages of JSON",
-  "sj_advantages_of_json_explanation_one": "Readability: Its clear format makes it easy to understand, which is advantageous for development and debugging.",
-  "sj_advantages_of_json_explanation_two": "Transmission Efficiency: Being a lightweight format, it is ideal for data exchange over networks where bandwidth may be a concern.",
-  "sj_advantages_of_json_explanation_three": "Standardization: Its widespread acceptance as a data interchange format ensures that different systems and technologies can interact with each other effectively.",
-  "sj_common_uses_title": "Common Uses of JSON",
-  "sj_common_uses_one": "APIs and Web Services: JSON is commonly used in web APIs to send responses from the server to the client. This allows web and mobile applications to process and use the data efficiently.",
-  "sj_common_uses_two": "Project Configuration: Many software projects use JSON for configuration files, like 'package.json' in Node.js projects, which facilitates the management of dependencies and scripts."
+  }
 }

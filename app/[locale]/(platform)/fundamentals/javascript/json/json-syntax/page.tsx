@@ -4,7 +4,9 @@ import { jsonNamespaces } from "@/constants/translationNamespaces";
 import { JSONSyntax } from "./_components/JSONSyntax";
 import { JSONObjects } from "./_components/JSONObjects";
 import { JSONArrays } from "./_components/JSONArrays";
-import { JSONValidDataFormats } from "./_components/JSONValidDataFormats";
+import { JSONDataFormats } from "./_components/JSONDataFormats";
+import { JSONAdvantadges } from "./_components/JSONAdvantadges";
+import { JSONCommonUses } from "./_components/JSONCommonUses";
 
 interface JSONSyntaxPageProps {
   params: {
@@ -26,7 +28,9 @@ const JSONSyntaxPage = async ({ params: { locale } }: JSONSyntaxPageProps) => {
       <JSONSyntax />
       <JSONObjects />
       <JSONArrays />
-      <JSONValidDataFormats />
+      <JSONDataFormats />
+      <JSONAdvantadges />
+      <JSONCommonUses />
     </div>
   );
 };
