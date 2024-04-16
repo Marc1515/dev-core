@@ -1,15 +1,26 @@
 {
-  "json_description": "JSON (JavaScript Object Notation) is a lightweight data interchange format, easy for humans to understand and simple for machines to parse. It is based on a subset of the JavaScript programming language, although it is language independent and can be used on many programming platforms.",
-  "syntax_json_title": "JSON Syntax",
-  "syntax_json_explanation": "The syntax of JSON is a subset of JavaScript object syntax, with some specific rules:",
-  "sj_data_in_key_value_pairs_title": "Data in Key-Value Pairs",
-  "sj_data_in_key_value_pairs_explanation_one": "JSON is made up of key-value pairs. Each key is followed by a colon (:) and the corresponding value.",
-  "sj_data_in_key_value_pairs_explanation_two": "Keys must be strings, enclosed in double quotes.",
-  "sj_data_in_key_value_pairs_explanation_three": "Values can be strings, numbers, objects, arrays, booleans (true/false), or null.",
-  "sj_objects_title": "Objects",
-  "sj_objects_explanation": "Objects in JSON are collections of key-value pairs enclosed in curly braces ({}).",
-  "sj_arrays_explanation_one": "Arrays in JSON are ordered lists of values, enclosed in square brackets ([]).",
-  "sj_arrays_explanation_two": "The values within an array can be of any type, including other objects or arrays.",
+  "description": "JSON (JavaScript Object Notation) is a lightweight data interchange format, easy for humans to understand and simple for machines to parse. It is based on a subset of the JavaScript programming language, although it is language independent and can be used on many programming platforms.",
+  "json_syntax": {
+    "title": "JSON Syntax",
+    "explanation": "The syntax of JSON is a subset of JavaScript object syntax, with some specific rules:",
+    "data_in_key_value_pairs": {
+      "title": "Data in Key-Value Pairs",
+      "point_one": "JSON is made up of key-value pairs. Each key is followed by a colon (:) and the corresponding value.",
+      "point_two": "Keys must be strings, enclosed in double quotes.",
+      "point_three": "Values can be strings, numbers, objects, arrays, booleans (true/false), or null."
+    },
+    "objects": {
+      "title": "Objects",
+      "description": "Objects in JSON are collections of key-value pairs enclosed in curly braces ({})."
+    },
+    "arrays": {
+      "point_one": "Arrays in JSON are ordered lists of values, enclosed in square brackets ([]).",
+      "point_two": "The values within an array can be of any type, including other objects or arrays."
+    },
+    "valida_data_formats": {
+      "title": ""
+    }
+  },
   "sj_valid_data_formats_title": "Valid Data Formats",
   "sj_valid_data_formats_explanation_one": "Numbers: Numbers in JSON can be integers or floats but should not have special formats like dates or functions.",
   "sj_valid_data_formats_explanation_two": "Must be enclosed in double quotes.",

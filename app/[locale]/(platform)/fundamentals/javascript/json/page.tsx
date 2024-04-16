@@ -1,7 +1,7 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
 import { jsonNamespaces } from "@/constants/translationNamespaces";
-import { JSONSyntax } from "./_components/JSONSyntax";
+import Link from "next/link";
 
 interface JSONPageProps {
   params: {
@@ -15,8 +15,10 @@ const JSONPage = async ({ params: { locale } }: JSONPageProps) => {
   return (
     <div>
       <h1>JSON</h1>
-      <p>{mainT("json_description")}</p>
-      <JSONSyntax />
+      <p>{mainT("description")}</p>
+      <Link href={"./json/json-syntax"}>
+        <span>{mainT("json_syntax.title")}</span>
+      </Link>
     </div>
   );
 };
