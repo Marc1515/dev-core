@@ -1,6 +1,6 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
-import { variablesNamespaces } from "@/constants/translationNamespaces";
+import { javascriptNamespaces } from "@/constants/translationNamespaces";
 
 interface VariablesProps {
   params: {
@@ -9,23 +9,30 @@ interface VariablesProps {
 }
 
 const Variables = async ({ params: { locale } }: VariablesProps) => {
-  const { t: mainT } = await initTranslations(locale, variablesNamespaces);
+  const { t } = await initTranslations(locale, javascriptNamespaces);
+
+  const mainT = (key: string) =>
+    t(`syntax_and_basic_concepts.variables.${key}`);
 
   return (
     <div>
-      <h1>Variables</h1>
-      <span>{mainT("var_main_function_title")}</span>
-      <p>{mainT("var_main_function_explanation")}</p>
-      <span>{mainT("var_importance_title")}</span>
+      {/* Variables */}
+      <h1>{mainT("title")}</h1>
+      <p>{mainT("description")}</p>
+
+      <span>{mainT("main_function.title")}</span>
+      <p>{mainT("main_function.description")}</p>
+
+      <span>{mainT("importance.title")}</span>
       <ol>
         <li>
-          <p>{mainT("var_importance_explanation_or")}</p>
+          <p>{mainT("importance.point_one")}</p>
         </li>
         <li>
-          <p>{mainT("var_importance_explanation_cr")}</p>
+          <p>{mainT("importance.point_one")}</p>
         </li>
         <li>
-          <p>{mainT("var_importance_explanation_dm")}</p>
+          <p>{mainT("importance.point_one")}</p>
         </li>
       </ol>
     </div>
