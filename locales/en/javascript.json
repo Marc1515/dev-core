@@ -24,33 +24,35 @@
       "primitive_types": {
         "title": "Primitive Types",
         "description": "These are the basics types of data:",
-        "string": {
-          "title": "String",
-          "description": "It's a sequence of characters used to represent text. For example, 'Hello, World!'."
-        },
-        "number": {
-          "title": "Number",
-          "description": "Represents both integer and floating-point numbers. For example, 42 or 3.14. JavaScript uses double-precision floating-point format for numbers."
-        },
-        "big_int": {
-          "title": "BigInt",
-          "description": "An integer with arbitrary precision. It's useful for very large numbers. For example, 9007199254740991n."
-        },
-        "boolean": {
-          "title": "Boolean",
-          "description": "Represents a logical entity and can have two values: true and false."
-        },
-        "undefined": {
-          "title": "Undefined",
-          "description": "A variable that has not been assigned a value has the value undefined."
-        },
-        "null": {
-          "title": "Null",
-          "description": "Denotes a null value. It's used to represent a non-existent or invalid object or address."
-        },
-        "symbol": {
-          "title": "Symbol",
-          "description": "A unique and immutable primitive introduced in ES6, used as the key of an Object property."
+        "types": {
+          "string": {
+            "title": "String",
+            "description": "It's a sequence of characters used to represent text. For example, 'Hello, World!'."
+          },
+          "number": {
+            "title": "Number",
+            "description": "Represents both integer and floating-point numbers. For example, 42 or 3.14. JavaScript uses double-precision floating-point format for numbers."
+          },
+          "big_int": {
+            "title": "BigInt",
+            "description": "An integer with arbitrary precision. It's useful for very large numbers. For example, 9007199254740991n."
+          },
+          "boolean": {
+            "title": "Boolean",
+            "description": "Represents a logical entity and can have two values: true and false."
+          },
+          "undefined": {
+            "title": "Undefined",
+            "description": "A variable that has not been assigned a value has the value undefined."
+          },
+          "null": {
+            "title": "Null",
+            "description": "Denotes a null value. It's used to represent a non-existent or invalid object or address."
+          },
+          "symbol": {
+            "title": "Symbol",
+            "description": "A unique and immutable primitive introduced in ES6, used as the key of an Object property."
+          }
         }
       },
       "object_types": {
