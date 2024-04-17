@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { primitiveTypesNamespaces } from "@/constants/translationNamespaces";
+import { javascriptNamespaces } from "@/constants/translationNamespaces";
 import { useTranslations } from "@/hooks/useTranslations";
 
 export const PrimitiveTypes = () => {
-  const translations = useTranslations(primitiveTypesNamespaces);
+  const translations = useTranslations(javascriptNamespaces);
 
   if (!translations) {
     return;
@@ -12,44 +12,49 @@ export const PrimitiveTypes = () => {
 
   const { t } = translations;
 
+  const mainT = (key: string) =>
+    t(`syntax_and_basic_concepts.data_types.primitive_types.${key}`);
+
   return (
     <div>
-      <span>{t("primitive_types_name")}</span>
-      <p>{t("primitive_type_introduction")}</p>
+      {/* Primitive Types */}
+      <span>{mainT("title")}</span>
+      <p>{mainT("description")}</p>
       <ul>
         <li>
           <p>
-            <strong>String:</strong> {t("string_explanation")}
+            <strong>{mainT("types.string.title")}:</strong>{" "}
+            {mainT("types.string.description")}
           </p>
         </li>
         <li>
           <p>
-            <strong>Number:</strong> {t("number_explanation")}
+            <strong>{mainT("types.number.title")}:</strong>{" "}
+            {mainT("types.number.description")}
           </p>
         </li>
         <li>
           <p>
-            <strong>BigInt:</strong> {t("bigint_explanation")}
+            <strong>{mainT("types.big_int.title")}:</strong>{" "}
+            {mainT("types.big_int.description")}
           </p>
         </li>
         <li>
           <p>
-            <strong>Boolean:</strong> {t("boolean_explanation")}
+            <strong>{mainT("types.undefined.title")}:</strong>{" "}
+            {mainT("types.undefined.description")}
           </p>
         </li>
         <li>
           <p>
-            <strong>Undefined:</strong> {t("undefined_explanation")}
+            <strong>{mainT("types.null.title")}:</strong>{" "}
+            {mainT("types.null.description")}
           </p>
         </li>
         <li>
           <p>
-            <strong>Null:</strong> {t("null_explanation")}
-          </p>
-        </li>
-        <li>
-          <p>
-            <strong>Symbol:</strong> {t("symbol_explanation")}
+            <strong>{mainT("types.symbol.title")}:</strong>{" "}
+            {mainT("types.symbol.description")}
           </p>
         </li>
       </ul>
