@@ -1,40 +1,38 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
-import { useTranslations } from "@/hooks/useTranslations";
-import { objectTypesNamespaces } from "@/constants/translationNamespaces";
 
-export const ObjectTypes = () => {
-  const translations = useTranslations(objectTypesNamespaces);
+interface DataType {
+  title: string;
+  description: string;
+}
 
-  if (!translations) {
-    return;
-  }
+interface ObjectTypesProps {
+  data: {
+    title: string;
+    description: string;
+    items: DataType[];
+  };
+}
 
-  const { t } = translations;
-
+export const ObjectTypes = ({ data }: ObjectTypesProps) => {
   return (
+    /* Object Types */
     <div>
-      <span>{t("object_types_name")}</span>
-      <p>{t("object_type_introduction")}</p>
-      <ul>
-        <li>
-          <p>
-            <strong>Object:</strong> {t("object_explanation")}
-          </p>
-        </li>
-        <li>
-          <p>
-            <strong>Array:</strong> {t("array_explanation")}
-          </p>
-        </li>
-        <li>
-          <p>
-            <strong>Function:</strong> {t("function_explanation")}
-          </p>
-        </li>
-      </ul>
+      <span>{data.title}</span>
+      <p>{data.description}</p>
+      {
+        <ul>
+          {data.items.map((item) => (
+            <li key={item.title}>
+              <p>
+                <strong>{item.title}: </strong>
+                {item.description}
+              </p>
+            </li>
+          ))}
+        </ul>
+      }
     </div>
   );
 };
