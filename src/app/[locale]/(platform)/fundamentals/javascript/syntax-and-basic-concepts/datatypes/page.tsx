@@ -1,8 +1,8 @@
 import React from "react";
+import initTranslations from "@/app/i18n";
+import { dataTypesNamespaces } from "@/constants/translationNamespaces";
 import { ObjectTypes } from "./_components/ObjectTypes";
 import { PrimitiveTypes } from "./_components/PrimitiveTypes";
-import initTranslations from "@/app/i18n";
-import { javascriptNamespaces } from "@/constants/translationNamespaces";
 
 interface DataTypesProps {
   params: {
@@ -11,19 +11,32 @@ interface DataTypesProps {
 }
 
 const DataTypes = async ({ params: { locale } }: DataTypesProps) => {
-  const { t } = await initTranslations(locale, javascriptNamespaces);
+  const { t } = await initTranslations(locale, dataTypesNamespaces);
+  const { t: dataPrimitiveTypesT } = await initTranslations(
+    locale,
+    dataTypesNamespaces
+  );
+  const { t: dataObjectTypesT } = await initTranslations(
+    locale,
+    dataTypesNamespaces
+  );
 
-  const mainT = (key: string) =>
-    t(`syntax_and_basic_concepts.data_types.${key}`);
+  const dataPrimitiveTypes = dataPrimitiveTypesT("primitive_types", {
+    returnObjects: true,
+  });
+
+  const dataObjectTypes = dataObjectTypesT("object_types", {
+    returnObjects: true,
+  });
 
   return (
+    /* Data Types */
     <div>
-      {/* Data Types */}
-      <h1>{mainT("title")}</h1>
-      <p>{mainT("description")}</p>
+      <h1>{t("title")}</h1>
+      <p>{t("description")}</p>
 
-      <PrimitiveTypes />
-      <ObjectTypes />
+      {<PrimitiveTypes data={dataPrimitiveTypes} />}
+      <ObjectTypes data={dataObjectTypes} />
     </div>
   );
 };
