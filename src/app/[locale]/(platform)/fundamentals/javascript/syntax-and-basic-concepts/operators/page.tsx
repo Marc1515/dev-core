@@ -22,7 +22,17 @@ const Operators = async ({ params: { locale } }: OperatorsProps) => {
   const { t: commonT } = await initTranslations(locale, commonNamespaces);
   const { t: mainT } = await initTranslations(locale, operatorsNamespaces);
 
+  const { t: dataArithmeticOperatorsT } = await initTranslations(
+    locale,
+    operatorsNamespaces
+  );
+
+  const dataArithmeticOperators = dataArithmeticOperatorsT("arithmetic", {
+    returnObjects: true,
+  });
+
   return (
+    /* Operators */
     <div>
       <h1>{commonT("operator_title")}</h1>
       <span>{mainT("operators_main_function_title")}</span>
@@ -52,7 +62,7 @@ const Operators = async ({ params: { locale } }: OperatorsProps) => {
         </li>
       </ol>
 
-      <ArithmeticOperators />
+      <ArithmeticOperators data={dataArithmeticOperators} />
       <AssignmentOperators />
       <ComparisionOperators />
       <LogicalOperators />
