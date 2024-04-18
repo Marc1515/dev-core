@@ -1,54 +1,156 @@
 {
-  "add_and_assign_operator_explanation": "(Add and assign): Adds right operand to the left operand and assigns the result to the left operand.",
-  "addition_operator_explanation": "(Addition): Adds two operands.",
-  "and_operator_explanation": "(AND): Returns true if both operands are true.",
-  "arithmetic_operators_description": "These operators are used to perform mathematical calculations.",
-  "arithmetic_operators_title": "Arithmetic Operators",
-  "assignment_operator_explanation": "(Assignment): Assigns value from right side operands to left side operand.",
-  "assignment_operators_description": "Assignment operators are used to assign values to JavaScript variables.",
-  "assignment_operators_title": "Assignment Operators",
-  "comparision_operators_description": "Comparison operators are used to compare two values.",
-  "comparision_operators_title": "Comparision Operators",
-  "conditional_operator_description": "This operator takes three operands and is a shortcut for the (if) statement.",
-  "conditional_operator_explanation": "If the condition is true, value1 is returned; otherwise, value2 is returned.",
-  "conditional_operator_title": "Conditional (Ternary) Operator",
-  "decrement_operator_explanation": "(Decrement): Decreases an integer value by one.",
-  "divide_and_assign_operator_explanation": "(Divide and assign): Divides the left operand by the right operand and assigns the result to the left operand.",
-  "division_operator_explanation": "(Division): Divides the numerator by the denominator.",
-  "equal_to_operator_explanation": "(Equal to): Checks whether two values are equal.",
-  "greater_than_operator_explanation": "(Greater than) Checks if the first value is greater than the second one.",
-  "greater_than_or_equal_operator_explanation": "(Greater than or equal to) Checks if the first value is greater or equal than the second one.",
-  "increment_operator_explanation": "(Increment): Increases an integer value by one.",
-  "less_than_operator_explanation": "(Less than) Checks if the first value is less than the second one.",
-  "less_than_or_equal_operator_explanation": "(Less than) Checks if the first value is less or equal than the second one.",
-  "logical_operators_description": "Logical operators are used with Boolean (logical) values.",
-  "logical_operators_title": "Logical Operators",
-  "modulus_and_assign_operator_explanation": "(Modulus and assign): Takes modulus using two operands and assigns the result to the left operand.",
-  "modulus_operator_explanation": "(Modulus): Returns the division remainder.",
-  "multiplication_operator_explanation": "(Multiplication): Multiplies both operands.",
-  "multiply_and_assign_operator_explanation": "(Multiply and assign): Multiplies the right operand with the left operand and assigns the result to the left operand.",
-  "not_equal_to_operator_explanation": "(Not equal to): Checks if two values are not equal.",
-  "not_operator_explanation": "(NOT): Returns the opposite of the operand’s truth value.",
-  "operators_additional_concepts_explanation_oa": "Operator Associativity: Defines how operators of the same type (with the same precedence) are grouped in the absence of parentheses. For example, in 100 / 10 / 2, the left-to-right associativity of the division operator means the operation is resolved as (100 / 10) / 2.",
-  "operators_additional_concepts_explanation_op": "Operator Precedence: The rule that determines the order in which operations are performed in a complex expression. For example, in the expression 3 + 4 * 5, the multiplication operator has higher precedence than addition, so it is executed first.",
-  "operators_additional_concepts_explanation_se": "Short-circuit Evaluation: Some logical operators like && (logical  AND) and || (logical OR) do not evaluate the second operand if the result can already be determined with the first. This is useful for preventing runtime errors and improving program efficiency.",
-  "operators_additional_concepts_title": "Additional Concepts Related to Operators",
-  "operators_conclusion": "Operators are, therefore, indispensable tools in programming, allowing everything from simple calculations to controlling complex decision logic in software. A proper understanding and use of them are crucial for any developer.",
-  "operators_importance_explanation_cpf": "Control of Program Flow: Comparison and logical operators are essential in program decision-making, such as in conditional statements (if) and loops (for, while), where they control whether a code block should execute or repeat.",
-  "operators_importance_explanation_dm": "Data Manipulation: All programs manipulate data in some way, and operators are essential tools for effectively performing this manipulation, such as adjusting variable values or performing operations between them.",
-  "operators_importance_explanation_ec": "Expressiveness and Conciseness: Operators enable writing complex expressions in a concise and readable way, facilitating both the development and maintenance of code.",
-  "operators_importance_title": "Importance of Operators in Programming",
-  "operators_main_function_explanation": "The primary function of operators is to allow the execution of mathematical, logical, comparison, assignment, and other operations on variables and values. This includes everything from basic operations like addition and subtraction to more complex operations like bit manipulation or logical comparisons. For example, in a program calculating the total of a purchase, arithmetic operators would be used to add up the prices of the products.",
-  "operators_main_function_title": "Main Function of Operators",
-  "or_operator_explanation": "(OR): Returns true if at least one of the operands is true.",
-  "strictly_equal_to_operator_explanation": "(Strictly equal to): Checks both value and type equality.",
-  "strictly_not_equal_to_operator_explanation": "(Strictly not equal to): Checks if two values are not equal, considering the type.",
-  "string_operator_description": "Depending on the context, when the string operator is used between strings, it is used for concatenation.",
-  "string_operator_explanation": "(Concatenation): When used with strings, it concatenates (joins) them.",
-  "string_operator_title": "String Operator",
-  "subtract_and_assign_operator_explanation": "(Subtract and assign): Subtracts the right operand from the left operand and assigns the result to the left operand.",
-  "subtraction_operator_explanation": "(Subtraction): Subtracts the second operand from the first.",
-  "type_operator_instanceof": "Tests whether the prototype property of a constructor appears anywhere in the prototype chain of an object.",
-  "type_operators_title": "Type Operators",
-  "type_operator_typeof": "Returns a string indicating the type of the unevaluated operand."
+  "title": "Operators",
+  "description": "Operators in JavaScript are symbols that tell the language engine how to perform mathematical, comparison, or logical operations between variables and values. They allow you to manipulate the value of data, compare data, or combine logical conditions to control the flow of code execution. These operators are fundamental to performing calculations, making decisions in code based on conditions, and handling the logic behind user interaction and system response.",
+  "main_function": {
+    "title": "Main Function of Operators",
+    "description": "The primary function of operators is to allow the execution of mathematical, logical, comparison, assignment, and other operations on variables and values. This includes everything from basic operations like addition and subtraction to more complex operations like bit manipulation or logical comparisons. For example, in a program calculating the total of a purchase, arithmetic operators would be used to add up the prices of the products."
+  },
+  "importance": {
+    "title": "Importance of Operators in Programming",
+    "point_one": "Control of Program Flow: Comparison and logical operators are essential in program decision-making, such as in conditional statements (if) and loops (for, while), where they control whether a code block should execute or repeat.",
+    "point_two": "Data Manipulation: All programs manipulate data in some way, and operators are essential tools for effectively performing this manipulation, such as adjusting variable values or performing operations between them.",
+    "point_three": "Expressiveness and Conciseness: Operators enable writing complex expressions in a concise and readable way, facilitating both the development and maintenance of code."
+  },
+  "additional_concepts": {
+    "title": "Additional Concepts Related to Operators",
+    "point_one": "Operator Associativity: Defines how operators of the same type (with the same precedence) are grouped in the absence of parentheses. For example, in 100 / 10 / 2, the left-to-right associativity of the division operator means the operation is resolved as (100 / 10) / 2.",
+    "point_two": "Operator Precedence: The rule that determines the order in which operations are performed in a complex expression. For example, in the expression 3 + 4 * 5, the multiplication operator has higher precedence than addition, so it is executed first.",
+    "point_three": "Short-circuit Evaluation: Some logical operators like && (logical  AND) and || (logical OR) do not evaluate the second operand if the result can already be determined with the first. This is useful for preventing runtime errors and improving program efficiency."
+  },
+  "arithmetic": {
+    "title": "Arithmetic Operators",
+    "description": "These operators are used to perform mathematical calculations.",
+    "items": [
+      {
+        "title": "Addition",
+        "description": "Adds two operands."
+      },
+      {
+        "title": "Subtraction",
+        "description": "Subtracts the second operand from the first."
+      },
+      {
+        "title": "Multiplication",
+        "description": "Multiplies both operands."
+      },
+      {
+        "title": "Division",
+        "description": "Divides the numerator by the denominator."
+      },
+      {
+        "title": "Modulus",
+        "description": "Returns the division remainder."
+      },
+      {
+        "title": "Increment",
+        "description": "Increases an integer value by one."
+      },
+      {
+        "title": "Decrement",
+        "description": "Decreases an integer value by one."
+      }
+    ]
+  },
+  "assigment": {
+    "title": "Assignment Operators",
+    "description": "Assignment operators are used to assign values to JavaScript variables.",
+    "assignment": {
+      "title": "Assignment",
+      "description": "Assigns value from right side operands to left side operand."
+    },
+    "add_and_assign": {
+      "title": "Add and Assign",
+      "description": "Adds right operand to the left operand and assigns the result to the left operand."
+    },
+    "subtract_and_assign": {
+      "title": "Subtract and Assign",
+      "description": "Subtracts the right operand from the left operand and assigns the result to the left operand."
+    },
+    "multiply_and_assign": {
+      "title": "Multiply and Assign",
+      "description": "Multiplies the right operand with the left operand and assigns the result to the left operand."
+    },
+    "divide_and_assign": {
+      "title": "Divide and Assign",
+      "description": "Divides the left operand by the right operand and assigns the result to the left operand."
+    },
+    "modulus_and_assign": {
+      "title": "Modulus",
+      "description": "Takes modulus using two operands and assigns the result to the left operand."
+    }
+  },
+  "comparation": {
+    "title": "Comparision Operators",
+    "description": "Comparison operators are used to compare two values.",
+    "equal_to": {
+      "title": "Equal to",
+      "equal_to_operator_explanation": "Checks whether two values are equal."
+    },
+    "strictly_equal_to": {
+      "title": "Strictly Equal to",
+      "description": "Checks both value and type equality."
+    },
+    "not_equal_to": {
+      "title": "Not Equal to",
+      "description": "Checks if two values are not equal."
+    },
+    "strictly_not_equal_to": {
+      "title": "Strictly Not Equal to",
+      "description": "Checks if two values are not equal, considering the type."
+    },
+    "greater_than": {
+      "title": "Greater than",
+      "description": "Checks if the first value is greater than the second one."
+    },
+    "less_than": {
+      "title": "Less than",
+      "description": "Checks if the first value is less than the second one."
+    },
+    "greater_than_or_equal_to": {
+      "title": "Greater than or Equal to",
+      "description": "Checks if the first value is greater or equal than the second one."
+    },
+    "less_than_or_equal_to": {
+      "title": "Less than or Equal to",
+      "description": "Checks if the first value is less or equal than the second one."
+    }
+  },
+  "logical": {
+    "title": "Logical Operators",
+    "description": "Logical operators are used with Boolean (logical) values.",
+    "and": {
+      "title": "AND",
+      "description": "Returns true if both operands are true."
+    },
+    "or": {
+      "title": "OR",
+      "description": "Returns true if at least one of the operands is true."
+    },
+    "not": {
+      "title": "NOT",
+      "description": "Returns the opposite of the operand's truth value."
+    }
+  },
+  "string": {
+    "title": "+",
+    "description": "When used with strings, it concatenates (joins) them."
+  },
+  "ternary": {
+    "title": "Conditional (Ternary) Operator",
+    "point_one": "This operator takes three operands and is a shortcut for the (if) statement.",
+    "point_two": "If the condition is true, value1 is returned; otherwise, value2 is returned."
+  },
+  "type": {
+    "title": "Type Operators",
+    "description": "Type Operators",
+    "type_of": {
+      "title": "Typeof",
+      "description": "Returns a string indicating the type of the unevaluated operand."
+    },
+    "instance_of": {
+      "title": "Instanceof",
+      "description": "Tests whether the prototype property of a constructor appears anywhere in the prototype chain of an object."
+    }
+  },
+  "conclusion": "Operators are, therefore, indispensable tools in programming, allowing everything from simple calculations to controlling complex decision logic in software. A proper understanding and use of them are crucial for any developer."
 }
