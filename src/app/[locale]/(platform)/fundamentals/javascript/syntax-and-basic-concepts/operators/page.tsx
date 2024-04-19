@@ -1,15 +1,12 @@
 import React from "react";
+import loadTranslations from "@/actions/loadTranslations";
+import { operatorsNamespaces } from "@/constants/translationNamespaces";
 import { ArithmeticOperators } from "./_components/ArithmeticOperators";
 import { AssignmentOperators } from "./_components/AssignmentOperators";
 import { ComparisionOperators } from "./_components/ComparisionOperators";
 import { LogicalOperators } from "./_components/LogicalOperators";
 import { StringOperator } from "./_components/StringOperator";
-import initTranslations from "@/app/i18n";
-import {
-  commonNamespaces,
-  operatorsNamespaces,
-} from "@/constants/translationNamespaces";
-import { ConditionalOperators } from "./_components/ConditionalOperator";
+import { TernaryOperator } from "./_components/ConditionalOperator";
 import { TypeOperators } from "./_components/TypeOperators";
 
 interface OperatorsProps {
@@ -18,59 +15,50 @@ interface OperatorsProps {
   };
 }
 
+interface DescriptionItem {
+  description: string;
+}
+
 const Operators = async ({ params: { locale } }: OperatorsProps) => {
-  const { t: commonT } = await initTranslations(locale, commonNamespaces);
-  const { t: mainT } = await initTranslations(locale, operatorsNamespaces);
-
-  const { t: dataArithmeticOperatorsT } = await initTranslations(
+  const data = await loadTranslations({
     locale,
-    operatorsNamespaces
-  );
-
-  const dataArithmeticOperators = dataArithmeticOperatorsT("arithmetic", {
-    returnObjects: true,
+    namespace: operatorsNamespaces,
+    key: "data",
   });
 
   return (
     /* Operators */
     <div>
-      <h1>{commonT("operator_title")}</h1>
-      <span>{mainT("operators_main_function_title")}</span>
-      <p>{mainT("operators_main_function_explanation")}</p>
-      <span>{mainT("operators_importance_title")}</span>
+      <h1>{data.title}</h1>
+      <p>{data.description}</p>
+      <span>{data.main_function.title}</span>
+      <p>{data.main_function.description}</p>
+      <span>{data.importance.title}</span>
       <ol>
-        <li>
-          <p>{mainT("operators_importance_explanation_ec")}</p>
-        </li>
-        <li>
-          <p>{mainT("operators_importance_explanation_cpf")}</p>
-        </li>
-        <li>
-          <p>{mainT("operators_importance_explanation_dm")}</p>
-        </li>
+        {data.importance.items.map((item: DescriptionItem) => (
+          <li key={item.description}>
+            <p>{item.description}</p>
+          </li>
+        ))}
       </ol>
-      <span>{mainT("operators_additional_concepts_title")}</span>
+      <span>{data.additional_concepts.title}</span>
       <ol>
-        <li>
-          <p>{mainT("operators_additional_concepts_explanation_op")}</p>
-        </li>
-        <li>
-          <p>{mainT("operators_additional_concepts_explanation_oa")}</p>
-        </li>
-        <li>
-          <p>{mainT("operators_additional_concepts_explanation_se")}</p>
-        </li>
+        {data.additional_concepts.items.map((item: DescriptionItem) => (
+          <li key={item.description}>
+            <p>{item.description}</p>
+          </li>
+        ))}
       </ol>
 
-      <ArithmeticOperators data={dataArithmeticOperators} />
-      <AssignmentOperators />
-      <ComparisionOperators />
-      <LogicalOperators />
-      <StringOperator />
-      <ConditionalOperators />
-      <TypeOperators />
+      <ArithmeticOperators data={data.arithmetic} />
+      <AssignmentOperators data={data.assignment} />
+      <ComparisionOperators data={data.comparation} />
+      <LogicalOperators data={data.logical} />
+      <StringOperator data={data.string} />
+      <TernaryOperator data={data.ternary} />
+      <TypeOperators data={data.type} />
 
-      <p>{mainT("operators_conclusion")}</p>
+      <p>{data.conclusion}</p>
     </div>
   );
 };
