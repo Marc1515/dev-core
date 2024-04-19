@@ -1,39 +1,37 @@
 "use client";
 
 import React from "react";
-import { useTranslations } from "@/hooks/useTranslations";
-import { operatorsNamespaces } from "@/constants/translationNamespaces";
 
-export const LogicalOperators = () => {
-  const translations = useTranslations(operatorsNamespaces);
+interface ItemsType {
+  symbol: string;
+  title: string;
+  description: string;
+}
 
-  if (!translations) return;
+interface LogicalOperatorsProps {
+  data: {
+    title: string;
+    description: string;
+    items: ItemsType[];
+  };
+}
 
-  const { t } = translations;
-
+export const LogicalOperators = ({ data }: LogicalOperatorsProps) => {
   return (
     <div>
-      <span>{t("logical_operators_title")}</span>
-      <p>{t("logical_operators_description")}</p>
+      <span>{data.title}</span>
+      <p>{data.description}</p>
       <ul>
-        <li>
-          <p>
-            <strong>`&&`</strong>
-            {t("and_operator_explanation")}
-          </p>
-        </li>
-        <li>
-          <p>
-            <strong>`||`</strong>
-            {t("or_operator_explanation")}
-          </p>
-        </li>
-        <li>
-          <p>
-            <strong>`!`</strong>
-            {t("not_operator_explanation")}
-          </p>
-        </li>
+        {data.items.map((item) => (
+          <li key={item.title}>
+            <p>
+              <strong>
+                {item.title} ({item.symbol})
+              </strong>
+              : {item.description}
+            </p>
+          </li>
+        ))}
       </ul>
     </div>
   );

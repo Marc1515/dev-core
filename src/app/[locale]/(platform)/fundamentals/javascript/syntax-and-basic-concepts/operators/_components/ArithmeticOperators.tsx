@@ -2,7 +2,8 @@
 
 import React from "react";
 
-interface DataType {
+interface ItemsType {
+  symbol: string;
   title: string;
   description: string;
 }
@@ -11,7 +12,7 @@ interface ArithmeticOperatorsProps {
   data: {
     title: string;
     description: string;
-    items: DataType[];
+    items: ItemsType[];
   };
 }
 
@@ -24,8 +25,10 @@ export const ArithmeticOperators = ({ data }: ArithmeticOperatorsProps) => {
         {data.items.map((item) => (
           <li key={item.title}>
             <p>
-              <strong>{item.title}: </strong>
-              {item.description}
+              <strong>
+                {item.title} ({item.symbol})
+              </strong>
+              : {item.description}
             </p>
           </li>
         ))}

@@ -4,7 +4,15 @@ import React from "react";
 import { useTranslations } from "@/hooks/useTranslations";
 import { operatorsNamespaces } from "@/constants/translationNamespaces";
 
-export const StringOperator = () => {
+interface StringOperatorProps {
+  data: {
+    symbol: string;
+    title: string;
+    description: string;
+  };
+}
+
+export const StringOperator = ({ data }: StringOperatorProps) => {
   const translations = useTranslations(operatorsNamespaces);
 
   if (!translations) return;
@@ -13,13 +21,11 @@ export const StringOperator = () => {
 
   return (
     <div>
-      <span>{t("string_operator_title")}</span>
-      <p>{t("string_operator_description")}</p>
+      <span>{data.title}</span>
       <ul>
         <li>
           <p>
-            <strong>`+`</strong>
-            {t("string_operator_explanation")}
+            <strong>({data.symbol})</strong> : {data.description}
           </p>
         </li>
       </ul>

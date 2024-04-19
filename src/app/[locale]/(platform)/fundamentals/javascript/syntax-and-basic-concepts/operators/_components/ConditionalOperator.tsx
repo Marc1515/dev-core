@@ -1,27 +1,31 @@
 "use client";
 
 import React from "react";
-import { useTranslations } from "@/hooks/useTranslations";
-import { operatorsNamespaces } from "@/constants/translationNamespaces";
 
-export const ConditionalOperators = () => {
-  const translations = useTranslations(operatorsNamespaces);
+interface ItemsType {
+  description: string;
+}
 
-  if (!translations) return;
+interface TernaryOperatorProps {
+  data: {
+    symbol: string;
+    title: string;
+    description: string;
+    items: ItemsType[];
+  };
+}
 
-  const { t } = translations;
-
+export const TernaryOperator = ({ data }: TernaryOperatorProps) => {
   return (
     <div>
-      <span>{t("conditional_operator_title")}</span>
-      <p>{t("conditional_operator_description")}</p>
+      <span>{data.title}</span>
+      <p>
+        <strong>{data.description}</strong>
+      </p>
       <ul>
-        <li>
-          <p>
-            <strong>`condition ? value1 : value2`</strong>
-            {t("conditional_operator_explanation")}
-          </p>
-        </li>
+        {data.items.map((item) => (
+          <li key={item.description}>{item.description}</li>
+        ))}
       </ul>
     </div>
   );

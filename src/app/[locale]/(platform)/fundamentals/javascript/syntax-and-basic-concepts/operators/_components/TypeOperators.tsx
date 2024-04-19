@@ -4,7 +4,20 @@ import React from "react";
 import { useTranslations } from "@/hooks/useTranslations";
 import { operatorsNamespaces } from "@/constants/translationNamespaces";
 
-export const TypeOperators = () => {
+interface ItemsType {
+  title: string;
+  description: string;
+}
+
+interface TypeOperators {
+  data: {
+    title: string;
+    description: string;
+    items: ItemsType[];
+  };
+}
+
+export const TypeOperators = ({ data }: TypeOperators) => {
   const translations = useTranslations(operatorsNamespaces);
 
   if (!translations) return;
@@ -13,20 +26,16 @@ export const TypeOperators = () => {
 
   return (
     <div>
-      <span>{t("type_operators_title")}</span>
+      <span>{data.title}</span>
+      <p>{data.description}</p>
       <ul>
-        <li>
-          <p>
-            <strong>`typeof`</strong>
-            {t("type_operator_typeof")}
-          </p>
-        </li>
-        <li>
-          <p>
-            <strong>`instanceof`</strong>
-            {t("type_operator_instanceof")}
-          </p>
-        </li>
+        {data.items.map((item) => (
+          <li key={item.title}>
+            <p>
+              <strong>{item.title}: </strong> {item.description}
+            </p>
+          </li>
+        ))}
       </ul>
     </div>
   );
