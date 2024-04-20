@@ -1,21 +1,9 @@
 "use client";
 
 import React from "react";
+import { ObjectTypesData } from "./types";
 
-interface DataType {
-  title: string;
-  description: string;
-}
-
-interface ObjectTypesProps {
-  data: {
-    title: string;
-    description: string;
-    items: DataType[];
-  };
-}
-
-export const ObjectTypes = ({ data }: ObjectTypesProps) => {
+export const ObjectTypes = ({ data }: ObjectTypesData) => {
   return (
     /* Object Types */
     <div>

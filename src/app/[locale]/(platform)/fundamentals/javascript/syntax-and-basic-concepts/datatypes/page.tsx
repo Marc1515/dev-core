@@ -21,7 +21,7 @@ const DataTypes = async ({ params: { locale } }: DataTypesProps) => {
       <p>{data.description}</p>
 
       <PrimitiveTypes data={data.primitive_types} />
-      {<ObjectTypes data={data.object_types} />}
+      <ObjectTypes data={data.object_types} />
     </div>
   );
 };

@@ -1,21 +1,9 @@
 "use client";
 
 import React from "react";
+import { PrimitiveTypesData } from "./types";
 
-interface DataType {
-  title: string;
-  description: string;
-}
-
-interface PrimitiveTypesProps {
-  data: {
-    title: string;
-    description: string;
-    items: DataType[];
-  };
-}
-
-export const PrimitiveTypes = ({ data }: PrimitiveTypesProps) => {
+export const PrimitiveTypes = ({ data }: PrimitiveTypesData) => {
   return (
     /* Primitive Types */
     <div>
