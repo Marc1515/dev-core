@@ -1,10 +1,7 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
-import {
-  commonNamespaces,
-  controlStructuresNamespaces,
-} from "@/constants/translationNamespaces";
-import { Conditional } from "./_components/Conditional";
+import { controlStructuresNamespaces } from "@/constants/translationNamespaces";
+import { Conditional } from "./_components/Conditionals";
 import { Loops } from "./_components/Loops";
 
 interface ControlStructuresProps {
@@ -13,42 +10,40 @@ interface ControlStructuresProps {
   };
 }
 
+interface DescriptionItem {
+  description: string;
+}
+
 const ControlStructures = async ({
   params: { locale },
 }: ControlStructuresProps) => {
-  const { t: commonT } = await initTranslations(locale, commonNamespaces);
-  const { t: mainT } = await initTranslations(
-    locale,
-    controlStructuresNamespaces
-  );
+  const { t } = await initTranslations(locale, controlStructuresNamespaces);
+  const data = t("data", { returnObjects: true });
+  const conditionalsData = t("data.conditional_structures", {
+    returnObjects: true,
+  });
 
   return (
+    /* Control Structures */
     <div>
-      <h1>{commonT("control_structures_title")}</h1>
-      <p>{mainT("control_structures_description")}</p>
-      <span>{mainT("control_structures_main_function_title")}</span>
-      <p>{mainT("control_structures_main_function_explanation")}</p>
-      <span>{mainT("control_structures_importance_title")}</span>
+      <h1>{data.title}</h1>
+      <p>{data.description}</p>
+      <span>{data.main_function.title}</span>
+      <p>{data.main_function.description}</p>
+      <span>{data.importance.title}</span>
       <ul>
-        <li>
-          <p>{mainT("control_structures_importance_explanation_dd")}</p>
-        </li>
-        <li>
-          <p>{mainT("control_structures_importance_explanation_e")}</p>
-        </li>
-        <li>
-          <p>{mainT("control_structures_importance_explanation_fc")}</p>
-        </li>
+        {data.importance.items.map((item: DescriptionItem) => (
+          <li key={item.description}>
+            <p>{item.description}</p>
+          </li>
+        ))}
       </ul>
-
       <div>
-        <span>{mainT("sequential_structures_title")}</span>
-        <p>{mainT("sequential_structures_explanation")}</p>
-        <span>{mainT("conditional_structures_title")}</span>
-        <p>{mainT("conditional_structures_explanation")}</p>
-        <Conditional />
-        <span>{mainT("repetition_structures_title")}</span>
-        <p>{mainT("repetition_structures_explanation")}</p>
+        <span>{data.sequential_structures.title}</span>
+        <p>{data.sequential_structures.description}</p>
+        <Conditional data={conditionalsData} />
+        <span>{data.repetition_structures.title}</span>
+        <p>{data.repetition_structures.description}</p>
         <Loops />
       </div>
     </div>

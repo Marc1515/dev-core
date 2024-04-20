@@ -1,11 +1,10 @@
 "use client";
 
 import React from "react";
-import { useTranslations } from "@/hooks/useTranslations";
-import { controlStructuresNamespaces } from "@/constants/translationNamespaces";
 import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButton";
+import { ConditionalProps } from "./types";
 
-export const Conditional = () => {
+export const Conditional = ({ data }: ConditionalProps) => {
   const codeToCopy1 = `
   if (condition) {
     // code block executed if the condition is true
@@ -39,41 +38,37 @@ export const Conditional = () => {
       // code block if none of the above
   }`;
 
-  const translations = useTranslations(controlStructuresNamespaces);
-
-  if (!translations) return;
-
-  const { t: mainT } = translations;
-
   return (
     <div>
+      <span>{data.title}</span>
+      <p>{data.description}</p>
       <p>
-        <strong>If: </strong>
-        {mainT("if_explanation")}
+        <strong>{data.conditionals.if.title}: </strong>
+        {data.conditionals.if.description}
       </p>
       <div>
         <pre>{codeToCopy1}</pre>
         <ClipboardButton textToCopy={codeToCopy1} />
       </div>
       <p>
-        <strong>If-else: </strong>
-        {mainT("if_else_explanation")}
+        <strong>{data.conditionals.if_else.title}: </strong>
+        {data.conditionals.if_else.description}
       </p>
       <div>
         <pre>{codeToCopy2}</pre>
         <ClipboardButton textToCopy={codeToCopy2} />
       </div>
       <p>
-        <strong>If-else-if-else: </strong>
-        {mainT("if_else_if_else_explanation")}
+        <strong>{data.conditionals.if_else_if_else.title}: </strong>
+        {data.conditionals.if_else_if_else.description}
       </p>
       <div>
         <pre>{codeToCopy3}</pre>
         <ClipboardButton textToCopy={codeToCopy3} />
       </div>
       <p>
-        <strong>Switch: </strong>
-        {mainT("switch_explanation")}
+        <strong>{data.conditionals.switch.title}: </strong>
+        {data.conditionals.switch.description}
       </p>
       <div>
         <pre>{codeToCopy4}</pre>
