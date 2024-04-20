@@ -18,6 +18,7 @@ interface ComparisionOperatorsProps {
 
 export const ComparisionOperators = ({ data }: ComparisionOperatorsProps) => {
   return (
+    /* Comparision Operators */
     <div>
       <span>{data.title}</span>
       <p>{data.description}</p>

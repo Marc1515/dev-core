@@ -18,6 +18,7 @@ interface ArithmeticOperatorsProps {
 
 export const ArithmeticOperators = ({ data }: ArithmeticOperatorsProps) => {
   return (
+    /* Arithmetic Operators */
     <div>
       <span>{data.title}</span>
       <p>{data.description}</p>

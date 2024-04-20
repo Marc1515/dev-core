@@ -18,6 +18,7 @@ interface AssignmentOperatorsProps {
 
 export const AssignmentOperators = ({ data }: AssignmentOperatorsProps) => {
   return (
+    /* Assignment Operators */
     <div>
       <span>{data.title}</span>
       <p>{data.description}</p>

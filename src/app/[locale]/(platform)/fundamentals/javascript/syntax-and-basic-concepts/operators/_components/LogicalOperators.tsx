@@ -18,6 +18,7 @@ interface LogicalOperatorsProps {
 
 export const LogicalOperators = ({ data }: LogicalOperatorsProps) => {
   return (
+    /* Logical Operators */
     <div>
       <span>{data.title}</span>
       <p>{data.description}</p>

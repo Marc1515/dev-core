@@ -17,6 +17,7 @@ interface TernaryOperatorProps {
 
 export const TernaryOperator = ({ data }: TernaryOperatorProps) => {
   return (
+    /* Ternary Operator */
     <div>
       <span>{data.title}</span>
       <p>

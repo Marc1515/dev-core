@@ -1,5 +1,5 @@
 import React from "react";
-import loadTranslations from "@/actions/loadTranslations";
+import initTranslations from "@/app/i18n";
 import { operatorsNamespaces } from "@/constants/translationNamespaces";
 import { ArithmeticOperators } from "./_components/ArithmeticOperators";
 import { AssignmentOperators } from "./_components/AssignmentOperators";
@@ -20,11 +20,8 @@ interface DescriptionItem {
 }
 
 const Operators = async ({ params: { locale } }: OperatorsProps) => {
-  const data = await loadTranslations({
-    locale,
-    namespace: operatorsNamespaces,
-    key: "data",
-  });
+  const { t } = await initTranslations(locale, operatorsNamespaces);
+  const data = t("data", { returnObjects: true });
 
   return (
     /* Operators */

@@ -1,56 +1,58 @@
 {
-  "title": "Tipos de Datos",
-  "description": "Los tipos de datos en JavaScript son fundamentales para determinar cómo se pueden almacenar y manipular los datos dentro de un programa. Proporcionan una estructura que ayuda al lenguaje de programación a entender qué operaciones son posibles con esos datos y cómo deben ser manejados. Al definir tipos de datos como números, cadenas o booleanos, JavaScript puede optimizar el uso de la memoria y la ejecución de operaciones, asegurando que las interacciones con los datos sean predecibles y eficientes.",
-  "primitive_types": {
-    "title": "Tipos Primitivos",
-    "description": "Estos son los tipos básicos de datos:",
-    "items": [
-      {
-        "title": "String",
-        "description": "Es una secuencia de caracteres utilizada para representar texto. Por ejemplo, '¡Hola, mundo!'."
-      },
-      {
-        "title": "Number",
-        "description": "Representa números enteros y de punto flotante. Por ejemplo, 42 o 3.14. JavaScript utiliza el formato de punto flotante de doble precisión para los números."
-      },
-      {
-        "title": "BigInt",
-        "description": "Un entero con precisión arbitraria. Es útil para números muy grandes. Por ejemplo, 9007199254740991n."
-      },
-      {
-        "title": "Boolean",
-        "description": "Representa una entidad lógica y puede tener dos valores: verdadero y falso."
-      },
-      {
-        "title": "Undefined",
-        "description": "Una variable que no ha sido asignada tiene el valor indefinido."
-      },
-      {
-        "title": "Null",
-        "description": "Denota un valor nulo. Se utiliza para representar un objeto o dirección no existente o inválido."
-      },
-      {
-        "title": "Symbol",
-        "description": "Un primitivo único e inmutable introducido en ES6, utilizado como la clave de una propiedad de un Objeto."
-      }
-    ]
-  },
-  "object_types": {
-    "title": "Tipos de Objeto",
-    "description": "JavaScript te permite crear objetos, que son colecciones de propiedades:",
-    "items": [
-      {
-        "title": "Object",
-        "description": "La estructura más básica para almacenar datos en un formato de clave-valor. Por ejemplo, { name: 'John', age: 30 }."
-      },
-      {
-        "title": "Array",
-        "description": "Un tipo especial de objeto utilizado para almacenar colecciones ordenadas. Por ejemplo, ['manzana', 'banana', 'cereza']."
-      },
-      {
-        "title": "Function",
-        "description": "Un bloque de código diseñado para realizar una tarea particular. Las funciones también son objetos."
-      }
-    ]
+  "data": {
+    "title": "Tipos de Datos",
+    "description": "Los tipos de datos en JavaScript son fundamentales para determinar cómo se pueden almacenar y manipular los datos dentro de un programa. Proporcionan una estructura que ayuda al lenguaje de programación a entender qué operaciones son posibles con esos datos y cómo deben ser manejados. Al definir tipos de datos como números, cadenas o booleanos, JavaScript puede optimizar el uso de la memoria y la ejecución de operaciones, asegurando que las interacciones con los datos sean predecibles y eficientes.",
+    "primitive_types": {
+      "title": "Tipos Primitivos",
+      "description": "Estos son los tipos básicos de datos:",
+      "items": [
+        {
+          "title": "String",
+          "description": "Es una secuencia de caracteres utilizada para representar texto. Por ejemplo, '¡Hola, mundo!'."
+        },
+        {
+          "title": "Number",
+          "description": "Representa números enteros y de punto flotante. Por ejemplo, 42 o 3.14. JavaScript utiliza el formato de punto flotante de doble precisión para los números."
+        },
+        {
+          "title": "BigInt",
+          "description": "Un entero con precisión arbitraria. Es útil para números muy grandes. Por ejemplo, 9007199254740991n."
+        },
+        {
+          "title": "Boolean",
+          "description": "Representa una entidad lógica y puede tener dos valores: verdadero y falso."
+        },
+        {
+          "title": "Undefined",
+          "description": "Una variable que no ha sido asignada tiene el valor indefinido."
+        },
+        {
+          "title": "Null",
+          "description": "Denota un valor nulo. Se utiliza para representar un objeto o dirección no existente o inválido."
+        },
+        {
+          "title": "Symbol",
+          "description": "Un primitivo único e inmutable introducido en ES6, utilizado como la clave de una propiedad de un Objeto."
+        }
+      ]
+    },
+    "object_types": {
+      "title": "Tipos de Objeto",
+      "description": "JavaScript te permite crear objetos, que son colecciones de propiedades:",
+      "items": [
+        {
+          "title": "Object",
+          "description": "La estructura más básica para almacenar datos en un formato de clave-valor. Por ejemplo, { name: 'John', age: 30 }."
+        },
+        {
+          "title": "Array",
+          "description": "Un tipo especial de objeto utilizado para almacenar colecciones ordenadas. Por ejemplo, ['manzana', 'banana', 'cereza']."
+        },
+        {
+          "title": "Function",
+          "description": "Un bloque de código diseñado para realizar una tarea particular. Las funciones también son objetos."
+        }
+      ]
+    }
   }
 }

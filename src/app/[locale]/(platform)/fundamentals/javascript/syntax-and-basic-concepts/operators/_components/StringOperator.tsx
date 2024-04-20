@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import { useTranslations } from "@/hooks/useTranslations";
-import { operatorsNamespaces } from "@/constants/translationNamespaces";
 
 interface StringOperatorProps {
   data: {
@@ -13,13 +11,8 @@ interface StringOperatorProps {
 }
 
 export const StringOperator = ({ data }: StringOperatorProps) => {
-  const translations = useTranslations(operatorsNamespaces);
-
-  if (!translations) return;
-
-  const { t } = translations;
-
   return (
+    /* String Operator */
     <div>
       <span>{data.title}</span>
       <ul>
