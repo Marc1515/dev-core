@@ -34,182 +34,189 @@
         }
       ]
     },
-    "arithmetic": {
-      "title": "Arithmetic Operators",
-      "description": "These operators are used to perform mathematical calculations.",
-      "items": [
-        {
-          "symbol": "+",
-          "title": "Addition",
-          "description": "Adds two operands."
-        },
-        {
-          "symbol": "-",
-          "title": "Subtraction",
-          "description": "Subtracts the second operand from the first."
-        },
-        {
-          "symbol": "*",
-          "title": "Multiplication",
-          "description": "Multiplies both operands."
-        },
-        {
-          "symbol": "/",
-          "title": "Division",
-          "description": "Divides the numerator by the denominator."
-        },
-        {
-          "symbol": "%",
-          "title": "Modulus",
-          "description": "Returns the division remainder."
-        },
-        {
-          "symbol": "++",
-          "title": "Increment",
-          "description": "Increases an integer value by one."
-        },
-        {
-          "symbol": "--",
-          "title": "Decrement",
-          "description": "Decreases an integer value by one."
-        }
-      ]
-    },
-    "assignment": {
-      "title": "Assignment Operators",
-      "description": "Assignment operators are used to assign values to JavaScript variables.",
-      "items": [
-        {
-          "symbol": "=",
-          "title": "Assignment",
-          "description": "Assigns value from right side operands to left side operand."
-        },
-        {
-          "symbol": "+=",
-          "title": "Add and Assign",
-          "description": "Adds right operand to the left operand and assigns the result to the left operand."
-        },
-        {
-          "symbol": "-=",
-          "title": "Subtract and Assign",
-          "description": "Subtracts the right operand from the left operand and assigns the result to the left operand."
-        },
-        {
-          "symbol": "*=",
-          "title": "Multiply and Assign",
-          "description": "Multiplies the right operand with the left operand and assigns the result to the left operand."
-        },
-        {
-          "symbol": "/=",
-          "title": "Divide and Assign",
-          "description": "Divides the left operand by the right operand and assigns the result to the left operand."
-        },
-        {
-          "symbol": "%=",
-          "title": "Modulus",
-          "description": "Takes modulus using two operands and assigns the result to the left operand."
-        }
-      ]
-    },
-    "comparation": {
-      "title": "Comparision Operators",
-      "description": "Comparison operators are used to compare two values.",
-      "items": [
-        {
-          "symbol": "==",
-          "title": "Equal to",
-          "equal_to_operator_explanation": "Checks whether two values are equal."
-        },
-        {
-          "symbol": "===",
-          "title": "Strictly Equal to",
-          "description": "Checks both value and type equality."
-        },
-        {
-          "symbol": "!=",
-          "title": "Not Equal to",
-          "description": "Checks if two values are not equal."
-        },
-        {
-          "symbol": "!==",
-          "title": "Strictly Not Equal to",
-          "description": "Checks if two values are not equal, considering the type."
-        },
-        {
-          "symbol": ">",
-          "title": "Greater than",
-          "description": "Checks if the first value is greater than the second one."
-        },
-        {
-          "symbol": "<",
-          "title": "Less than",
-          "description": "Checks if the first value is less than the second one."
-        },
-        {
-          "symbol": ">=",
-          "title": "Greater than or Equal to",
-          "description": "Checks if the first value is greater or equal than the second one."
-        },
-        {
-          "symbol": "<=",
-          "title": "Less than or Equal to",
-          "description": "Checks if the first value is less or equal than the second one."
-        }
-      ]
-    },
-    "logical": {
-      "title": "Logical Operators",
-      "description": "Logical operators are used with Boolean (logical) values.",
-      "items": [
-        {
-          "symbol": "&&",
-          "title": "AND",
-          "description": "Returns true if both operands are true."
-        },
-        {
-          "symbol": "||",
-          "title": "OR",
-          "description": "Returns true if at least one of the operands is true."
-        },
-        {
-          "symbol": "!",
-          "title": "NOT",
-          "description": "Returns the opposite of the operand's truth value."
-        }
-      ]
-    },
-    "string": {
-      "symbol": "+",
-      "title": "String Operator",
-      "description": "When used with strings, it concatenates (joins) them."
-    },
-    "ternary": {
-      "symbol": "?",
-      "title": "Conditional (Ternary) Operator",
-      "description": "condition ? value1 : value2",
-      "items": [
-        {
-          "description": "This operator takes three operands and is a shortcut for the (if) statement."
-        },
-        {
-          "description": "If the condition is true, value1 is returned; otherwise, value2 is returned."
-        }
-      ]
-    },
-    "type": {
-      "title": "Type Operators",
-      "description": "Type Operators",
-      "items": [
-        {
-          "title": "Typeof",
-          "description": "Returns a string indicating the type of the unevaluated operand."
-        },
-        {
-          "title": "Instanceof",
-          "description": "Tests whether the prototype property of a constructor appears anywhere in the prototype chain of an object."
-        }
-      ]
-    },
+    "operators": [
+      {
+        "title": "Arithmetic Operators",
+        "description": "These operators are used to perform mathematical calculations.",
+        "items": [
+          {
+            "symbol": "+",
+            "title": "Addition",
+            "description": "Adds two operands."
+          },
+          {
+            "symbol": "-",
+            "title": "Subtraction",
+            "description": "Subtracts the second operand from the first."
+          },
+          {
+            "symbol": "*",
+            "title": "Multiplication",
+            "description": "Multiplies both operands."
+          },
+          {
+            "symbol": "/",
+            "title": "Division",
+            "description": "Divides the numerator by the denominator."
+          },
+          {
+            "symbol": "%",
+            "title": "Modulus",
+            "description": "Returns the division remainder."
+          },
+          {
+            "symbol": "++",
+            "title": "Increment",
+            "description": "Increases an integer value by one."
+          },
+          {
+            "symbol": "--",
+            "title": "Decrement",
+            "description": "Decreases an integer value by one."
+          }
+        ]
+      },
+      {
+        "title": "Assignment Operators",
+        "description": "Assignment operators are used to assign values to JavaScript variables.",
+        "items": [
+          {
+            "symbol": "=",
+            "title": "Assignment",
+            "description": "Assigns value from right side operands to left side operand."
+          },
+          {
+            "symbol": "+=",
+            "title": "Add and Assign",
+            "description": "Adds right operand to the left operand and assigns the result to the left operand."
+          },
+          {
+            "symbol": "-=",
+            "title": "Subtract and Assign",
+            "description": "Subtracts the right operand from the left operand and assigns the result to the left operand."
+          },
+          {
+            "symbol": "*=",
+            "title": "Multiply and Assign",
+            "description": "Multiplies the right operand with the left operand and assigns the result to the left operand."
+          },
+          {
+            "symbol": "/=",
+            "title": "Divide and Assign",
+            "description": "Divides the left operand by the right operand and assigns the result to the left operand."
+          },
+          {
+            "symbol": "%=",
+            "title": "Modulus",
+            "description": "Takes modulus using two operands and assigns the result to the left operand."
+          }
+        ]
+      },
+      {
+        "title": "Comparision Operators",
+        "description": "Comparison operators are used to compare two values.",
+        "items": [
+          {
+            "symbol": "==",
+            "title": "Equal to",
+            "equal_to_operator_explanation": "Checks whether two values are equal."
+          },
+          {
+            "symbol": "===",
+            "title": "Strictly Equal to",
+            "description": "Checks both value and type equality."
+          },
+          {
+            "symbol": "!=",
+            "title": "Not Equal to",
+            "description": "Checks if two values are not equal."
+          },
+          {
+            "symbol": "!==",
+            "title": "Strictly Not Equal to",
+            "description": "Checks if two values are not equal, considering the type."
+          },
+          {
+            "symbol": ">",
+            "title": "Greater than",
+            "description": "Checks if the first value is greater than the second one."
+          },
+          {
+            "symbol": "<",
+            "title": "Less than",
+            "description": "Checks if the first value is less than the second one."
+          },
+          {
+            "symbol": ">=",
+            "title": "Greater than or Equal to",
+            "description": "Checks if the first value is greater or equal than the second one."
+          },
+          {
+            "symbol": "<=",
+            "title": "Less than or Equal to",
+            "description": "Checks if the first value is less or equal than the second one."
+          }
+        ]
+      },
+      {
+        "title": "Logical Operators",
+        "description": "Logical operators are used with Boolean (logical) values.",
+        "items": [
+          {
+            "symbol": "&&",
+            "title": "AND",
+            "description": "Returns true if both operands are true."
+          },
+          {
+            "symbol": "||",
+            "title": "OR",
+            "description": "Returns true if at least one of the operands is true."
+          },
+          {
+            "symbol": "!",
+            "title": "NOT",
+            "description": "Returns the opposite of the operand's truth value."
+          }
+        ]
+      },
+      {
+        "title": "String Operator",
+        "description": "String Operator involves the use of the `+` symbol to handle and manipulate strings. This operator is primarily used to concatenate two or more strings, effectively joining them into a single string.",
+        "items": [
+          {
+            "symbol": "+",
+            "description": "When used with strings, it concatenates (joins) them."
+          }
+        ]
+      },
+      {
+        "title": "Conditional (Ternary) Operator",
+        "description": "Is a compact alternative to the if statement in JavaScript that decides which of two values to return based on a condition. This operator evaluates a condition and returns the first value if the condition is true, and the second value if it is false.",
+        "items": [
+          {
+            "symbol": "?",
+            "description": "This operator takes three operands and is a shortcut for the if statement. If the condition is true, value1 is returned; otherwise, value2 is returned."
+          }
+        ]
+      },
+
+      {
+        "title": "Type Operators",
+        "description": "Type Operators are used in JavaScript to evaluate the characteristics of variables and objects at runtime. They provide a means to gain insights about variable types and their relationships to constructors within the language's type system.",
+        "items": [
+          {
+            "symbol": "Typeof",
+            "title": "Type Of",
+            "description": "Returns a string indicating the type of the unevaluated operand."
+          },
+          {
+            "symbol": "Instanceof",
+            "title": "Instance Of",
+            "description": "Tests whether the prototype property of a constructor appears anywhere in the prototype chain of an object."
+          }
+        ]
+      }
+    ],
     "conclusion": "Operators are, therefore, indispensable tools in programming, allowing everything from simple calculations to controlling complex decision logic in software. A proper understanding and use of them are crucial for any developer."
   }
 }

@@ -20,57 +20,59 @@
         }
       ]
     },
-    "sequential_structures": {
-      "title": "Sequential Structures",
-      "description": "Sequential structures are the foundation of any program, where instructions are executed one after the other, in the order they appear in the script. There is no decision-making or repetition implicit in sequential structures."
-    },
-    "conditional_structures": {
-      "title": "Conditional Structures",
-      "description": "Conditional structures allow you to execute different sections of code depending on whether one or more conditions are true or false. Here are the main ones:",
-      "items": [
-        {
-          "title": "if",
-          "description": "The simplest of the conditional structures. Executes a block of code only if the specified condition is true."
-        },
-        {
-          "title": "if else",
-          "description": "Extends the (if) by allowing an alternative block of code to execute if the condition is false."
-        },
-        {
-          "title": "if else if else",
-          "description": "A chain of if and else to test multiple conditions sequentially."
-        },
-        {
-          "title": "switch",
-          "description": "Useful when you have multiple conditions that depend on the same value. It's clearer than using multiple (if-else) when comparing the same variable against different values."
-        }
-      ]
-    },
-    "repetition_structures": {
-      "title": "Repetition Structures (Loops)",
-      "description": "Loops allow repeating a block of code multiple times. The main repetition structures in JavaScript are:",
-      "items": [
-        {
-          "title": "for",
-          "description": "Ideal when you know how many times the loop should execute."
-        },
-        {
-          "title": "for in",
-          "description": "Especially useful for iterating over the properties of an object."
-        },
-        {
-          "title": "for of",
-          "description": "Used to iterate over elements of iterable structures like Arrays, Strings, Maps, NodeLists, etc."
-        },
-        {
-          "title": "while",
-          "description": "Useful when you want to repeat a block of code as long as a condition is true, but you don't know how many times you'll need to repeat it."
-        },
-        {
-          "title": "do while",
-          "description": "Similar to while, but it ensures that the code block is executed at least once."
-        }
-      ]
-    }
+    "structures": [
+      {
+        "title": "Sequential Structures",
+        "description": "Sequential structures are the foundation of any program, where instructions are executed one after the other, in the order they appear in the script. There is no decision-making or repetition implicit in sequential structures."
+      },
+      {
+        "title": "Conditional Structures",
+        "description": "Conditional structures allow you to execute different sections of code depending on whether one or more conditions are true or false. Here are the main ones:",
+        "items": [
+          {
+            "title": "if",
+            "description": "The simplest of the conditional structures. Executes a block of code only if the specified condition is true."
+          },
+          {
+            "title": "if else",
+            "description": "Extends the (if) by allowing an alternative block of code to execute if the condition is false."
+          },
+          {
+            "title": "if else if else",
+            "description": "A chain of if and else to test multiple conditions sequentially."
+          },
+          {
+            "title": "switch",
+            "description": "Useful when you have multiple conditions that depend on the same value. It's clearer than using multiple (if-else) when comparing the same variable against different values."
+          }
+        ]
+      },
+      {
+        "title": "Repetition Structures (Loops)",
+        "description": "Loops allow repeating a block of code multiple times. The main repetition structures in JavaScript are:",
+        "items": [
+          {
+            "title": "for",
+            "description": "Ideal when you know how many times the loop should execute."
+          },
+          {
+            "title": "for in",
+            "description": "Especially useful for iterating over the properties of an object."
+          },
+          {
+            "title": "for of",
+            "description": "Used to iterate over elements of iterable structures like Arrays, Strings, Maps, NodeLists, etc."
+          },
+          {
+            "title": "while",
+            "description": "Useful when you want to repeat a block of code as long as a condition is true, but you don't know how many times you'll need to repeat it."
+          },
+          {
+            "title": "do while",
+            "description": "Similar to while, but it ensures that the code block is executed at least once."
+          }
+        ]
+      }
+    ]
   }
 }

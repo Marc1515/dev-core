@@ -2,57 +2,59 @@
   "data": {
     "title": "Data Types",
     "description": "Data types in JavaScript are fundamental in determining how data can be stored and manipulated within a program. They provide a structure that helps the programming language understand what operations are possible with that data and how it should be handled. By defining data types such as numbers, strings or Booleans, JavaScript can optimise memory usage and operation execution, ensuring that interactions with data are predictable and efficient.",
-    "primitive_types": {
-      "title": "Primitive Types",
-      "description": "These are the basics types of data:",
-      "items": [
-        {
-          "title": "String",
-          "description": "It's a sequence of characters used to represent text. For example, 'Hello, World!'."
-        },
-        {
-          "title": "Number",
-          "description": "Represents both integer and floating-point numbers. For example, 42 or 3.14. JavaScript uses double-precision floating-point format for numbers."
-        },
-        {
-          "title": "BigInt",
-          "description": "An integer with arbitrary precision. It's useful for very large numbers. For example, 9007199254740991n."
-        },
-        {
-          "title": "Boolean",
-          "description": "Represents a logical entity and can have two values: true and false."
-        },
-        {
-          "title": "Undefined",
-          "description": "A variable that has not been assigned a value has the value undefined."
-        },
-        {
-          "title": "Null",
-          "description": "Denotes a null value. It's used to represent a non-existent or invalid object or address."
-        },
-        {
-          "title": "Symbol",
-          "description": "A unique and immutable primitive introduced in ES6, used as the key of an Object property."
-        }
-      ]
-    },
-    "object_types": {
-      "title": "Object Types",
-      "description": "JavaScript allows you to create objects, which are collections of properties:",
-      "items": [
-        {
-          "title": "Object",
-          "description": "The most basic structure for storing data in a key-value format. For example, { name: 'John', age: 30 }."
-        },
-        {
-          "title": "Array",
-          "description": "A special kind of object used for storing ordered collections. For example, ['apple', 'banana', 'cherry']."
-        },
-        {
-          "title": "Function",
-          "description": "A block of code designed to perform a particular task. Functions are objects too."
-        }
-      ]
-    }
+    "types": [
+      {
+        "title": "Primitive Types",
+        "description": "These are the basics types of data:",
+        "items": [
+          {
+            "title": "String",
+            "description": "It's a sequence of characters used to represent text. For example, 'Hello, World!'."
+          },
+          {
+            "title": "Number",
+            "description": "Represents both integer and floating-point numbers. For example, 42 or 3.14. JavaScript uses double-precision floating-point format for numbers."
+          },
+          {
+            "title": "BigInt",
+            "description": "An integer with arbitrary precision. It's useful for very large numbers. For example, 9007199254740991n."
+          },
+          {
+            "title": "Boolean",
+            "description": "Represents a logical entity and can have two values: true and false."
+          },
+          {
+            "title": "Undefined",
+            "description": "A variable that has not been assigned a value has the value undefined."
+          },
+          {
+            "title": "Null",
+            "description": "Denotes a null value. It's used to represent a non-existent or invalid object or address."
+          },
+          {
+            "title": "Symbol",
+            "description": "A unique and immutable primitive introduced in ES6, used as the key of an Object property."
+          }
+        ]
+      },
+      {
+        "title": "Object Types",
+        "description": "JavaScript allows you to create objects, which are collections of properties:",
+        "items": [
+          {
+            "title": "Object",
+            "description": "The most basic structure for storing data in a key-value format. For example, { name: 'John', age: 30 }."
+          },
+          {
+            "title": "Array",
+            "description": "A special kind of object used for storing ordered collections. For example, ['apple', 'banana', 'cherry']."
+          },
+          {
+            "title": "Function",
+            "description": "A block of code designed to perform a particular task. Functions are objects too."
+          }
+        ]
+      }
+    ]
   }
 }
