@@ -1,8 +1,7 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
 import { controlStructuresNamespaces } from "@/constants/translationNamespaces";
-import { ConditionalStructures } from "./_components/ConditionalsStructures";
-import { RepetitionStructures } from "./_components/RepetitionStructures";
+import { ControlStructures } from "./_components/ControlStructures";
 
 interface ControlStructuresProps {
   params: {
@@ -10,11 +9,7 @@ interface ControlStructuresProps {
   };
 }
 
-interface DescriptionItem {
-  description: string;
-}
-
-const ControlStructures = async ({
+const ControlStructuresPage = async ({
   params: { locale },
 }: ControlStructuresProps) => {
   const { t } = await initTranslations(locale, controlStructuresNamespaces);
@@ -23,29 +18,9 @@ const ControlStructures = async ({
   return (
     /* Control Structures */
     <div>
-      <h1>{data.title}</h1>
-      <p>{data.description}</p>
-      <span>{data.main_function.title}</span>
-      <p>{data.main_function.description}</p>
-      <span>{data.importance.title}</span>
-      <ul>
-        {data.importance.items.map((item: DescriptionItem) => (
-          <li key={item.description}>
-            <p>{item.description}</p>
-          </li>
-        ))}
-      </ul>
-      <div>
-        {/* Sequential Structures */}
-        <span>{data.sequential_structures.title}</span>
-        <p>{data.sequential_structures.description}</p>
-        {/* Conditional Structures */}
-        <ConditionalStructures data={data.conditional_structures} />
-        {/* Repetiotion Structures */}
-        <RepetitionStructures data={data.repetition_structures} />
-      </div>
+      <ControlStructures data={data} />
     </div>
   );
 };
 
-export default ControlStructures;
+export default ControlStructuresPage;

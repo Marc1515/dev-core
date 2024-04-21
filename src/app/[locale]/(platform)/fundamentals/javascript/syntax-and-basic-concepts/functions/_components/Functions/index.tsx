@@ -8,8 +8,10 @@ import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButt
 export const Functions = ({ data }: FunctionsTypes) => {
   return (
     <div>
+      {/* Introduction */}
       <span>{data.title}</span>
       <p>{data.description}</p>
+      {/* Each Function */}
       {data.items.map((item, index) => (
         <div key={index}>
           <span>{item.title}</span>
@@ -20,6 +22,8 @@ export const Functions = ({ data }: FunctionsTypes) => {
           </div>
         </div>
       ))}
+      {/* Conclusion */}
+      <p>{data.conclusion}</p>
     </div>
   );
 };
