@@ -1,24 +1,11 @@
 "use client";
 
 import React from "react";
+import { ComparasionOperatorsTypes } from "./types";
 
-interface ItemsType {
-  symbol: string;
-  title: string;
-  description: string;
-}
-
-interface AssignmentOperatorsProps {
-  data: {
-    title: string;
-    description: string;
-    items: ItemsType[];
-  };
-}
-
-export const AssignmentOperators = ({ data }: AssignmentOperatorsProps) => {
+export const ComparisionOperators = ({ data }: ComparasionOperatorsTypes) => {
   return (
-    /* Assignment Operators */
+    /* Comparision Operators */
     <div>
       <span>{data.title}</span>
       <p>{data.description}</p>

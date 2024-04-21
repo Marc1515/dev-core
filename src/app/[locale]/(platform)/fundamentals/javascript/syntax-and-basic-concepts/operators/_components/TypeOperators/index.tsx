@@ -1,21 +1,9 @@
 "use client";
 
 import React from "react";
+import { TypeOperatorTypes } from "./types";
 
-interface ItemsType {
-  title: string;
-  description: string;
-}
-
-interface TypeOperators {
-  data: {
-    title: string;
-    description: string;
-    items: ItemsType[];
-  };
-}
-
-export const TypeOperators = ({ data }: TypeOperators) => {
+export const TypeOperators = ({ data }: TypeOperatorTypes) => {
   return (
     /* Type Operators */
     <div>

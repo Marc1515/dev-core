@@ -1,24 +1,11 @@
 "use client";
 
 import React from "react";
+import { AssignmentOperatorsTypes } from "./types";
 
-interface ItemsType {
-  symbol: string;
-  title: string;
-  description: string;
-}
-
-interface LogicalOperatorsProps {
-  data: {
-    title: string;
-    description: string;
-    items: ItemsType[];
-  };
-}
-
-export const LogicalOperators = ({ data }: LogicalOperatorsProps) => {
+export const AssignmentOperators = ({ data }: AssignmentOperatorsTypes) => {
   return (
-    /* Logical Operators */
+    /* Assignment Operators */
     <div>
       <span>{data.title}</span>
       <p>{data.description}</p>

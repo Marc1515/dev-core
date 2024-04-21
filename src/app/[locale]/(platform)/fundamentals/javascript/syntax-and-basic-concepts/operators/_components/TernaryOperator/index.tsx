@@ -1,21 +1,9 @@
 "use client";
 
 import React from "react";
+import { TernaryOperatorTypes } from "./types";
 
-interface ItemsType {
-  description: string;
-}
-
-interface TernaryOperatorProps {
-  data: {
-    symbol: string;
-    title: string;
-    description: string;
-    items: ItemsType[];
-  };
-}
-
-export const TernaryOperator = ({ data }: TernaryOperatorProps) => {
+export const TernaryOperator = ({ data }: TernaryOperatorTypes) => {
   return (
     /* Ternary Operator */
     <div>

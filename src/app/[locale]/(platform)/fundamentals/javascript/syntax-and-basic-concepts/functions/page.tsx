@@ -9,6 +9,7 @@ import Closures from "./_components/Closures";
 import Callbacks from "./_components/Callbacks";
 import initTranslations from "@/app/i18n";
 import { functionsNamespaces } from "@/constants/translationNamespaces";
+import { Functions } from "./_components/Functions";
 
 interface FunctionPageProps {
   params: {
@@ -18,19 +19,21 @@ interface FunctionPageProps {
 
 const FunctionsPage = async ({ params: { locale } }: FunctionPageProps) => {
   const { t } = await initTranslations(locale, functionsNamespaces);
+  const data = t("data", { returnObjects: true });
 
   return (
     <div>
       <h1>{t("functions_name")}</h1>
       <p>{t("functions_introduction")}</p>
-      <FunctionsDeclarations />
+      <Functions data={data} />
+      {/*       <FunctionsDeclarations />
       <FunctionsExpressions />
       <ArrowFunctions />
       <ConstructorFunctions />
       <GeneratorFunctions />
       <AsyncFunctions />
       <Closures />
-      <Callbacks />
+      <Callbacks /> */}
       <p>{t("functions_conclusion")}</p>
     </div>
   );

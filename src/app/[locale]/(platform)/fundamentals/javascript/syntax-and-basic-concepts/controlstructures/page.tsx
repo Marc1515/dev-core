@@ -1,8 +1,8 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
 import { controlStructuresNamespaces } from "@/constants/translationNamespaces";
-import { Conditional } from "./_components/Conditionals";
-import { Loops } from "./_components/Loops";
+import { ConditionalStructures } from "./_components/ConditionalsStructures";
+import { RepetitionStructures } from "./_components/RepetitionStructures";
 
 interface ControlStructuresProps {
   params: {
@@ -19,9 +19,6 @@ const ControlStructures = async ({
 }: ControlStructuresProps) => {
   const { t } = await initTranslations(locale, controlStructuresNamespaces);
   const data = t("data", { returnObjects: true });
-  const conditionalsData = t("data.conditional_structures", {
-    returnObjects: true,
-  });
 
   return (
     /* Control Structures */
@@ -39,12 +36,13 @@ const ControlStructures = async ({
         ))}
       </ul>
       <div>
+        {/* Sequential Structures */}
         <span>{data.sequential_structures.title}</span>
         <p>{data.sequential_structures.description}</p>
-        <Conditional data={conditionalsData} />
-        <span>{data.repetition_structures.title}</span>
-        <p>{data.repetition_structures.description}</p>
-        <Loops />
+        {/* Conditional Structures */}
+        <ConditionalStructures data={data.conditional_structures} />
+        {/* Repetiotion Structures */}
+        <RepetitionStructures data={data.repetition_structures} />
       </div>
     </div>
   );

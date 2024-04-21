@@ -3,10 +3,10 @@ import initTranslations from "@/app/i18n";
 import { operatorsNamespaces } from "@/constants/translationNamespaces";
 import { ArithmeticOperators } from "./_components/ArithmeticOperators";
 import { AssignmentOperators } from "./_components/AssignmentOperators";
-import { ComparisionOperators } from "./_components/ComparisionOperators";
+import { ComparisionOperators } from "./_components/ComparasionOperators";
 import { LogicalOperators } from "./_components/LogicalOperators";
 import { StringOperator } from "./_components/StringOperator";
-import { TernaryOperator } from "./_components/ConditionalOperator";
+import { TernaryOperator } from "./_components/TernaryOperator";
 import { TypeOperators } from "./_components/TypeOperators";
 
 interface OperatorsProps {

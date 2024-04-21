@@ -1,16 +1,9 @@
 "use client";
 
 import React from "react";
+import { StringOperatorTypes } from "./types";
 
-interface StringOperatorProps {
-  data: {
-    symbol: string;
-    title: string;
-    description: string;
-  };
-}
-
-export const StringOperator = ({ data }: StringOperatorProps) => {
+export const StringOperator = ({ data }: StringOperatorTypes) => {
   return (
     /* String Operator */
     <div>

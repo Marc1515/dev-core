@@ -1,21 +1,42 @@
 {
-  "arrow_functions_explanation": "Introduced in ES6, arrow functions offer a shorter and more concise syntax. They do not have their own this, arguments, super, or new.target, which makes them an ideal choice for functions that do not define their own behavior, such as those used in callbacks or higher-order functions. They cannot be used as constructors.",
-  "arrow_functions_title": "Arrow Functions",
-  "async_functions_explanation": "Async functions, introduced in ES2017, are an addition that allows working with promises in a cleaner and more readable way using \"async\" and \"await\". They are particularly useful for handling asynchronous operations like API calls or file reads in a manner that resembles synchronous execution.",
-  "async_functions_title": "Async Functions",
-  "callbacks_explanation": "A callback is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. Callbacks are a fundamental concept in JavaScript, especially in asynchronous operations like handling events, server requests, or timers.",
-  "callbacks_title": "Callbacks",
-  "closures_explanation": "A closure is a function that remembers and continues to access variables from outside its scope even after the outer function has finished executing. This powerful feature of JavaScript allows you to create private variables and encapsulate functionality. Closures are created every time a function is created, at function creation time.",
-  "closures_title": "Closures",
-  "constructor_functions_explanation": "Constructor functions are used along with the new operator to create objects of a specific type. Traditionally, they have been used to implement what resembles classes before ES6 introduced class syntax in JavaScript.",
-  "constructor_functions_title": "Constructor Functions",
-  "functions_conclusion": "Each type of function in JavaScript has its purpose and situations where it is most useful. Understanding these different types will allow you to write clearer and more effective code, choosing the form of function that best suits your needs in each case.",
-  "functions_declarations_explanation": "Function declarations are perhaps the most traditional way of defining functions in JavaScript. They are characterized by having a name and do not require assignment to a variable. A distinctive aspect of this type of function is that they are hoisted, meaning they can be called before they appear in the code due to how JavaScript interprets functions.",
-  "functions_declarations_title": "Functions Declarations",
-  "functions_expressions_explanation": "Unlike function declarations, function expressions are assigned to a variable. These functions can be anonymous (without a name) or named. An important detail is that they are not hoisted, so you cannot call them before they are defined in the code.",
-  "functions_expressions_title": "Functions Expressions",
-  "functions_introduction": "Functions in JavaScript are blocks of code designed to perform a specific task. They are defined once and can be invoked or \"called\" as many times as necessary, which allows for code reuse and more efficient organization. Functions can receive data as input, called parameters, process that data, and return a result.",
-  "functions_name": "Functions",
-  "generator_functions_explanation": "Generator functions are a special type of function that can pause its execution and then continue from where it left off. This is achieved by using the \"yield\" keyword. They are useful for defining iterators or managing sequences of asynchronous operations more efficiently.",
-  "generator_functions_title": "Generator Functions"
+  "data": {
+    "title": "Functions",
+    "description": "Functions in JavaScript are blocks of code designed to perform a specific task. They are defined once and can be invoked or \"called\" as many times as necessary, which allows for code reuse and more efficient organization. Functions can receive data as input, called parameters, process that data, and return a result.",
+    "items": [
+      {
+        "title": "Functions Declarations",
+        "description": "Function declarations are perhaps the most traditional way of defining functions in JavaScript. They are characterized by having a name and do not require assignment to a variable. A distinctive aspect of this type of function is that they are hoisted, meaning they can be called before they appear in the code due to how JavaScript interprets functions."
+      },
+      {
+        "title": "Functions Expressions",
+        "description": "Unlike function declarations, function expressions are assigned to a variable. These functions can be anonymous (without a name) or named. An important detail is that they are not hoisted, so you cannot call them before they are defined in the code."
+      },
+      {
+        "title": "Arrow Functions",
+        "description": "Introduced in ES6, arrow functions offer a shorter and more concise syntax. They do not have their own this, arguments, super, or new.target, which makes them an ideal choice for functions that do not define their own behavior, such as those used in callbacks or higher-order functions. They cannot be used as constructors."
+      },
+      {
+        "title": "Constructor Functions",
+        "description": "Constructor functions are used along with the new operator to create objects of a specific type. Traditionally, they have been used to implement what resembles classes before ES6 introduced class syntax in JavaScript."
+      },
+      {
+        "title": "Generator Functions",
+        "description": "Generator functions are a special type of function that can pause its execution and then continue from where it left off. This is achieved by using the \"yield\" keyword. They are useful for defining iterators or managing sequences of asynchronous operations more efficiently."
+      },
+      {
+        "title": "Async Functions",
+        "description": "Async functions, introduced in ES2017, are an addition that allows working with promises in a cleaner and more readable way using \"async\" and \"await\". They are particularly useful for handling asynchronous operations like API calls or file reads in a manner that resembles synchronous execution."
+      },
+      {
+        "title": "Closures",
+        "description": "A closure is a function that remembers and continues to access variables from outside its scope even after the outer function has finished executing. This powerful feature of JavaScript allows you to create private variables and encapsulate functionality. Closures are created every time a function is created, at function creation time."
+      },
+      {
+        "title": "Callbacks",
+        "description": "A callback is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. Callbacks are a fundamental concept in JavaScript, especially in asynchronous operations like handling events, server requests, or timers."
+      }
+    ],
+
+    "conclusion": "Each type of function in JavaScript has its purpose and situations where it is most useful. Understanding these different types will allow you to write clearer and more effective code, choosing the form of function that best suits your needs in each case."
+  }
 }

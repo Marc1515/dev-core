@@ -1,24 +1,11 @@
 "use client";
 
 import React from "react";
+import { ArithmeticOperatorsTypes } from "./types";
 
-interface ItemsType {
-  symbol: string;
-  title: string;
-  description: string;
-}
-
-interface ComparisionOperatorsProps {
-  data: {
-    title: string;
-    description: string;
-    items: ItemsType[];
-  };
-}
-
-export const ComparisionOperators = ({ data }: ComparisionOperatorsProps) => {
+export const ArithmeticOperators = ({ data }: ArithmeticOperatorsTypes) => {
   return (
-    /* Comparision Operators */
+    /* Arithmetic Operators */
     <div>
       <span>{data.title}</span>
       <p>{data.description}</p>
