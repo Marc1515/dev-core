@@ -1,0 +1,29 @@
+{
+  "data": {
+    "title": "Select DOM Elements",
+    "items": [
+      {
+        "title": "getElementByID()",
+        "description": "Selects an element by its 'id' attribute."
+      },
+      {
+        "title": "getElementsByTagName()",
+        "description": "Selects all elements of a specific HTML 'tag' type"
+      },
+      {
+        "title": "getElementsByClassName()",
+
+        "description": "Selects all elements that have a specific 'class'."
+      },
+      {
+        "title": "querySelector()",
+        "description": "Selects the first element that matches a specified CSS selector."
+      },
+
+      {
+        "title": "querySelectorAll()",
+        "description": " Selects all elements that match a specified CSS selector"
+      }
+    ]
+  }
+}

@@ -26,4 +26,6 @@ export const arraysManipulationNamespaces = ["arraysManipulation"];
 
 export const domManipulationNamespaces = ["domManipulation"];
 
+export const selectElementsNamespaces = ["select-elements"];
+
 export const jsonNamespaces = ["json"];
