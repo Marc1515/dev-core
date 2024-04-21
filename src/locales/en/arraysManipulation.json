@@ -1,17 +1,34 @@
 {
-  "arrays_manipulation_introduction": "Arrays are structures that let you store multiple values in a single variable. JavaScript offers several methods for working with arrays:",
-  "am_add_and_remove_title": "Adding/Removing Elements:",
-  "am_add_and_remove_explanation_one": "Adds elements to the end of an array.",
-  "am_add_and_remove_explanation_two": "Removes the last element from an array.",
-  "am_add_and_remove_explanation_three": "Removes the first element from an array.",
-  "am_add_and_remove_explanation_four": "Adds elements to the beginning of an array.",
-  "iter_over_arrays_title": "Iter Over Arrays",
-  "iter_over_arrays_explanation": "Executes a function for each array element.",
-  "transform_arrays_title": "Transform Arrays",
-  "transform_arrays_explanation": "Creates a new array with the results of calling a provided function on every element in the array.",
-  "search_in_arrays_title": "Searching in Arrays",
-  "search_in_arrays_explanation": "Search for elements in an array that meet a condition.",
-  "sort_arrays_title": "Sort Arrays",
-  "sort_arrays_explanation": "Sorts the elements of an array in place and returns the array.",
-  "arrays_manipulation_conclusion": "This overview should help you understand the basics of string and array manipulation in JavaScript, enhancing your ability to handle data and improve the interactivity of your web applications."
+  "data": {
+    "title": "Arrays Manipulation",
+    "description": "Arrays are structures that let you store multiple values in a single variable. JavaScript offers several methods for working with arrays:",
+    "manipulation": [
+      {
+        "title": "Adding/Removing Elements:",
+        "items": [
+          { "description": "Adds elements to the end of an array." },
+          { "description": "Removes the last element from an array." },
+          { "description": "Removes the first element from an array." },
+          { "description": "Adds elements to the beginning of an array." }
+        ]
+      },
+      {
+        "title": "Iter Over Arrays",
+        "description": "Executes a function for each array element."
+      },
+      {
+        "title": "Transform Arrays",
+        "description": "Creates a new array with the results of calling a provided function on every element in the array."
+      },
+      {
+        "title": "Search in Arrays",
+        "description": "Search for elements in an array that meet a condition."
+      },
+      {
+        "title": "Sort Arrays",
+        "description": "Sorts the elements of an array in place and returns the array."
+      }
+    ],
+    "conclusion": "This overview should help you understand the basics of string and array manipulation in JavaScript, enhancing your ability to handle data and improve the interactivity of your web applications."
+  }
 }

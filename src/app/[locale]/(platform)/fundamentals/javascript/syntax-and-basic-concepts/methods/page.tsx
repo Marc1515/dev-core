@@ -1,10 +1,7 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
-import {
-  commonNamespaces,
-  methodsNamespaces,
-} from "@/constants/translationNamespaces";
-import { MethodExample } from "./_components/MethodExample";
+import { methodsNamespaces } from "@/constants/translationNamespaces";
+import { Methods } from "./_components/Methods";
 
 interface MethodsPageProps {
   params: {
@@ -13,14 +10,12 @@ interface MethodsPageProps {
 }
 
 const MethodsPage = async ({ params: { locale } }: MethodsPageProps) => {
-  const { t: commonT } = await initTranslations(locale, commonNamespaces);
-  const { t: mainT } = await initTranslations(locale, methodsNamespaces);
+  const { t } = await initTranslations(locale, methodsNamespaces);
+  const data = t("data", { returnObjects: true });
 
   return (
     <div>
-      <h1>{commonT("methods_title")}</h1>
-      <p>{mainT("methods_description")}</p>
-      <MethodExample />
+      <Methods data={data} />
     </div>
   );
 };

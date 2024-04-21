@@ -1,6 +1,7 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
-import { javascriptNamespaces } from "@/constants/translationNamespaces";
+import { variablesNamespaces } from "@/constants/translationNamespaces";
+import { Variables } from "./_components/Variables";
 
 interface VariablesProps {
   params: {
@@ -8,35 +9,15 @@ interface VariablesProps {
   };
 }
 
-const Variables = async ({ params: { locale } }: VariablesProps) => {
-  const { t } = await initTranslations(locale, javascriptNamespaces);
-
-  const mainT = (key: string) =>
-    t(`syntax_and_basic_concepts.variables.${key}`);
+const VariablesPage = async ({ params: { locale } }: VariablesProps) => {
+  const { t } = await initTranslations(locale, variablesNamespaces);
+  const data = t("data", { returnObjects: true });
 
   return (
     <div>
-      {/* Variables */}
-      <h1>{mainT("title")}</h1>
-      <p>{mainT("description")}</p>
-
-      <span>{mainT("main_function.title")}</span>
-      <p>{mainT("main_function.description")}</p>
-
-      <span>{mainT("importance.title")}</span>
-      <ol>
-        <li>
-          <p>{mainT("importance.point_one")}</p>
-        </li>
-        <li>
-          <p>{mainT("importance.point_one")}</p>
-        </li>
-        <li>
-          <p>{mainT("importance.point_one")}</p>
-        </li>
-      </ol>
+      <Variables data={data} />
     </div>
   );
 };
 
-export default Variables;
+export default VariablesPage;
