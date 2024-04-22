@@ -4,15 +4,15 @@ import initTranslations from "@/app/i18n";
 import { elementContentModificationNamespaces } from "@/constants/translationNamespaces";
 import { ElementContentModification } from "./_components/ElementContentModification";
 
-interface SelectElementsPageProps {
+interface ElementsContentModificationPageProps {
   params: {
     locale: string;
   };
 }
 
-const SelectElementsPage = async ({
+const ElementsContentModificationPage = async ({
   params: { locale },
-}: SelectElementsPageProps) => {
+}: ElementsContentModificationPageProps) => {
   const { t } = await initTranslations(
     locale,
     elementContentModificationNamespaces
@@ -25,4 +25,4 @@ const SelectElementsPage = async ({
   );
 };
 
-export default SelectElementsPage;
+export default ElementsContentModificationPage;
