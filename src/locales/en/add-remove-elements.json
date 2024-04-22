@@ -1,0 +1,20 @@
+{
+  "data": {
+    "title": "Add or Remove Elements",
+    "description": "",
+    "items": [
+      {
+        "title": "Elements Creation",
+        "description": "You can create new nodes in the DOM using the 'document.createElement()' method, which creates a new HTML element that you can configure (like adding text or styles) before inserting it into the document."
+      },
+      {
+        "title": "Elements Insertion",
+        "description": "Once an element has been created, you can insert it into the DOM using methods like 'appendChild()' or 'insertBefore()'. These methods allow you to specify where the new element should be placed in relation to other existing nodes."
+      },
+      {
+        "title": "Remove Elements",
+        "description": "To remove an element, you can use the 'removeChild()' method from the parent node of the element you want to delete, or use the 'remove()' method directly on the element you wish to remove."
+      }
+    ]
+  }
+}

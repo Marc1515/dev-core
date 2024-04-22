@@ -1,0 +1,20 @@
+{
+  "data": {
+    "title": "Events Handle",
+    "description": "",
+    "events": [
+      {
+        "title": "Adding Events",
+        "description": "Events are fundamental for interacting with the web page. The 'addEventListener()' method is used to assign an event to an element. For example, you can listen for click events, page load events, input changes, etc."
+      },
+      {
+        "title": "Handler Functions",
+        "description": "When an event is triggered, the associated function (or 'event handler') executes. This function can perform any number of actions, such as validating a form, opening a modal, etc."
+      },
+      {
+        "title": "Event Propagation",
+        "description": "Events in the DOM propagate in two phases: capture and bubble. You can control this behavior with the third argument of addEventListener(), setting true for capture or false for bubble."
+      }
+    ]
+  }
+}

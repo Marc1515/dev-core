@@ -1,0 +1,16 @@
+{
+  "data": {
+    "title": "Element Content Modification",
+    "description": "",
+    "modifications": [
+      {
+        "title": "textContent",
+        "description": "This property allows you to read or modify the internal text of an HTML element. When using 'textContent', any HTML tags within the content are treated as plain text and not interpreted as HTML."
+      },
+      {
+        "title": "innerHTML",
+        "description": "Unlike 'textContent', the 'innerHTML' property allows you to read or modify both the text and HTML inside an element. It is very useful for inserting new HTML structures within an element, but should be used with caution due to security risks like Cross-Site Scripting (XSS) attacks if the content is user-provided."
+      }
+    ]
+  }
+}

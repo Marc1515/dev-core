@@ -1,0 +1,16 @@
+{
+  "data": {
+    "title": "DOM Navigation",
+    "description": "",
+    "items": [
+      {
+        "title": "Parent, Child, and Sibling Nodes",
+        "description": "Parent, child, and sibling nodes: The DOM is structured like a tree of nodes. You can navigate this tree using properties like 'parentNode', 'childNodes', and 'nextSibling'."
+      },
+      {
+        "title": "Searching the DOM Tree",
+        "description": "Searching the DOM tree: Methods like 'getElementsByTagName()', 'getElementsByClassName()', and 'querySelector()' allow you to search for elements in the DOM based on different criteria, making it easier to manipulate specific elements."
+      }
+    ]
+  }
+}

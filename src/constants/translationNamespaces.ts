@@ -24,8 +24,20 @@ export const stringsManipulationNamespaces = ["stringsManipulation"];
 
 export const arraysManipulationNamespaces = ["arraysManipulation"];
 
-export const domManipulationNamespaces = ["domManipulation"];
+export const domManipulationNamespaces = ["dom-manipulation"];
 
 export const selectElementsNamespaces = ["select-elements"];
+
+export const elementContentModificationNamespaces = [
+  "element-content-modification",
+];
+
+export const stylesModificationNamespaces = ["styles-modification"];
+
+export const addRemoveElementsNamespaces = ["add-remove-elements"];
+
+export const eventsHandlerNamespaces = ["events-handler"];
+
+export const navigationNamespaces = ["navigation"];
 
 export const jsonNamespaces = ["json"];
