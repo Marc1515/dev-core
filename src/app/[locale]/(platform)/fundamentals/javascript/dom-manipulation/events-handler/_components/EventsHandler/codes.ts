@@ -5,6 +5,20 @@ button.addEventListener('click', function() {
     alert('Button was clicked!');
 });`;
 
+const functionsHandlerCode = `
+// Define a function to handle the specific event
+function handleButtonClick(event) {
+    console.log('Button clicked!');
+    // Additional logic can be added here
+}
+
+// Get the button element
+const button = document.getElementById('my-button');
+
+// Assign the event handler function to the click event
+button.addEventListener('click', handleButtonClick);
+`;
+
 const stopPropagationCode = `
 // Stop the propagation of an event
 button.addEventListener('click', function(event) {
@@ -12,4 +26,4 @@ button.addEventListener('click', function(event) {
     alert('Click event will not propagate further.');
 });`;
 
-export const codes = [addEventCode, stopPropagationCode];
+export const codes = [addEventCode, functionsHandlerCode, stopPropagationCode];
