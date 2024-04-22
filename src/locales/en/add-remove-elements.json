@@ -1,7 +1,7 @@
 {
   "data": {
     "title": "Add or Remove Elements",
-    "description": "",
+    "description": "This section covers the dynamic manipulation of the DOM by adding or removing elements. JavaScript provides methods to not only create new elements but also to insert them into the DOM or remove existing elements, allowing for real-time changes to the webpage structure.",
     "items": [
       {
         "title": "Elements Creation",

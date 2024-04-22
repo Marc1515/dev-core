@@ -1,7 +1,7 @@
 {
   "data": {
     "title": "Element Content Modification",
-    "description": "",
+    "description": "This section details how to manipulate the content within HTML elements using JavaScript. It focuses on two primary properties, 'textContent' and 'innerHTML', each offering different ways to modify or read an element's content, catering to needs for text manipulation or HTML content integration.",
     "modifications": [
       {
         "title": "textContent",

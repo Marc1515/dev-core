@@ -1,6 +1,7 @@
 {
   "data": {
     "title": "Select DOM Elements",
+    "description": "This section focuses on various methods provided by JavaScript to select elements from the DOM, allowing developers to pinpoint and manipulate specific parts of the webpage. Each method offers a different approach to selection based on attributes like ID, class, tag name, or any CSS selector, facilitating targeted and efficient DOM manipulation.",
     "items": [
       {
         "title": "getElementByID()",
@@ -8,21 +9,19 @@
       },
       {
         "title": "getElementsByTagName()",
-        "description": "Selects all elements of a specific HTML 'tag' type"
+        "description": "Selects all elements of a specific HTML 'tag' type."
       },
       {
         "title": "getElementsByClassName()",
-
         "description": "Selects all elements that have a specific 'class'."
       },
       {
         "title": "querySelector()",
         "description": "Selects the first element that matches a specified CSS selector."
       },
-
       {
         "title": "querySelectorAll()",
-        "description": " Selects all elements that match a specified CSS selector"
+        "description": "Selects all elements that match a specified CSS selector."
       }
     ]
   }
