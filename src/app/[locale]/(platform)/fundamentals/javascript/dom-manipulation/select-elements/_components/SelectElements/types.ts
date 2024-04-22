@@ -4,6 +4,7 @@ export interface SelectElementsTypes {
 
 interface Data {
   title: string;
+  description: string;
   items: Item[];
 }
 

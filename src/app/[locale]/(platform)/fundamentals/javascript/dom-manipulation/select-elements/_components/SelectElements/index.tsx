@@ -9,6 +9,7 @@ export const SelectElements = ({ data }: SelectElementsTypes) => {
   return (
     <div>
       <h1>{data.title}</h1>
+      <p>{data.description}</p>
       {data.items?.map((item, idx) => (
         <div key={idx}>
           <span>{item.title}</span>
