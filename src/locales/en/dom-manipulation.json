@@ -1,38 +1,39 @@
 {
-  "dom_manipulation_explanation": "Deepening the selection of DOM elements is fundamental to manipulate your web page effectively. Here's how you can use different methods to select elements in the DOM:",
-  "domm_key_concepts_title": "Key DOM Concepts",
-  "domm_select_dom_elements_title": "Select DOM Elements",
-  "domm_getElementById_explanation": "Selects an element by its 'id' attribute.",
-  "domm_getElementsByTagName_explanation": "Selects all elements of a specific HTML 'tag' type",
-  "domm_getElementsByClassName_explanation": "Selects all elements that have a specific 'class'.",
-  "domm_querySelector_explanation": "Selects the first element that matches a specified CSS selector.",
-  "domm_querySelectorAll_explanation": " Selects all elements that match a specified CSS selector",
-  "domm_basic_operations_in_the_dom_title": "Basic operations in the DOM",
-  "domm_element_content_modification_title": "Element Content Modification",
-  "domm_ecm_textContent_explanation": "This property allows you to read or modify the internal text of an HTML element. When using 'textContent', any HTML tags within the content are treated as plain text and not interpreted as HTML.",
-  "domm_ecm_innerHTML_explanation": "Unlike 'textContent', the 'innerHTML' property allows you to read or modify both the text and HTML inside an element. It is very useful for inserting new HTML structures within an element, but should be used with caution due to security risks like Cross-Site Scripting (XSS) attacks if the content is user-provided.",
-  "domm_style_change_title": "Style Change",
-  "domm_sc_accessing_styles_title": "Accessing Styles",
-  "domm_sc_accessing_styles_explanation": "Accessing styles: JavaScript enables you to modify the CSS styles of elements in the DOM via the 'style' property of an element. For example, element.style.backgroundColor = 'blue'; changes the background color of the element to blue.",
-  "domm_sc_manipulating_classes_title": "Manipulating Classes",
-  "domm_sc_manipulating_classes_explanation": "Manipulating classes: Sometimes, rather than directly changing the style of an element, it's more practical to add, remove, or toggle CSS classes. The functions 'classList.add()', 'classList.remove()', and 'classList.toggle()' are useful tools for this purpose.",
-  "domm_add_or_remove_elements_title": "Add or Remove Elements",
-  "domm_are_creating_elements_title": "Creating Elements",
-  "domm_are_creating_elements_explanation": "Creating elements: You can create new nodes in the DOM using the 'document.createElement()' method, which creates a new HTML element that you can configure (like adding text or styles) before inserting it into the document.",
-  "domm_are_inserting_elements_title": "Inserting Elements",
-  "domm_are_inserting_elements_explanation": "Inserting elements: Once an element has been created, you can insert it into the DOM using methods like 'appendChild()' or 'insertBefore()'. These methods allow you to specify where the new element should be placed in relation to other existing nodes.",
-  "domm_are_removing_elements_title": "Removing Elements",
-  "domm_are_removing_elements_explanation": "Removing elements: To remove an element, you can use the 'removeChild()' method from the parent node of the element you want to delete, or use the 'remove()' method directly on the element you wish to remove.",
-  "domm_events_handle_title": "Events Handle",
-  "domm_eh_adding_events_title": "Adding Events",
-  "domm_eh_adding_events_explanation": "Adding events: Events are fundamental for interacting with the web page. The 'addEventListener()' method is used to assign an event to an element. For example, you can listen for click events, page load events, input changes, etc.",
-  "domm_eh_event_handler_functions_title": "Handler Functions",
-  "domm_eh_event_handler_functions_explanation": "When an event is triggered, the associated function (or 'event handler') executes. This function can perform any number of actions, such as validating a form, opening a modal, etc.",
-  "domm_eh_event_propagation_title": "Event Propagation",
-  "domm_eh_event_propagation_explanation": "Event propagation: Events in the DOM propagate in two phases: capture and bubble. You can control this behavior with the third argument of addEventListener(), setting true for capture or false for bubble.",
-  "domm_dom_navigation_title": "DOM Navigation",
-  "domm_dn_parent_child_siviling_nodes_title": "Parent, Child, and Sibling Nodes",
-  "domm_dn_parent_child_siviling_nodes_explanation": "Parent, child, and sibling nodes: The DOM is structured like a tree of nodes. You can navigate this tree using properties like 'parentNode', 'childNodes', and 'nextSibling'.",
-  "domm_dn_searching_the_dom_three_title": "Searching the DOM Tree",
-  "domm_dn_searching_the_dom_three_explanation": "Searching the DOM tree: Methods like 'getElementsByTagName()', 'getElementsByClassName()', and 'querySelector()' allow you to search for elements in the DOM based on different criteria, making it easier to manipulate specific elements."
+  "data": {
+    "title": "DOM Manipulation",
+    "description": "The DOM (Document Object Model) is a representation of the HTML document as a tree of nodes. JavaScript can interact with the DOM to modify the content, structure or style of the page.",
+
+    "items": [
+      {
+        "path": "/fundamentals/javascript/dom-manipulation/select-elements",
+        "title": "Select Elements",
+        "description": "Selecting elements is the process of retrieving one or more elements from the DOM to manipulate them. This can be done using methods like `document.getElementById`, `document.querySelector`, and `document.querySelectorAll`."
+      },
+      {
+        "path": "/fundamentals/javascript/dom-manipulation/elements-content-modification",
+        "title": "Elements Content Manipulation",
+        "description": "This involves changing the textual or HTML content of DOM elements. Common methods for this include `textContent` and `innerHTML`, allowing scripts to update, add, or remove content dynamically."
+      },
+      {
+        "path": "/fundamentals/javascript/dom-manipulation/styles-modification",
+        "title": "Styles Modification",
+        "description": "Style modifications involve changing the CSS properties of elements to alter their appearance. This can be accomplished via the `style` property of DOM elements, allowing inline style changes like `element.style.backgroundColor = 'red';`."
+      },
+      {
+        "path": "/fundamentals/javascript/dom-manipulation/add-remove-elements",
+        "title": "Add or Remove Elements",
+        "description": "JavaScript can dynamically add or remove elements from the DOM using methods such as `appendChild`, `insertBefore`, `removeChild`, and `replaceChild`, allowing for dynamic updates to the page layout."
+      },
+      {
+        "path": "/fundamentals/javascript/dom-manipulation/events-handler",
+        "title": "Events Handler",
+        "description": "Event handling involves setting up listeners for various user interactions or browser events, like clicks or key presses, using methods like `addEventListener` or `removeEventListener`. This enables interactive and responsive web applications."
+      },
+      {
+        "path": "/fundamentals/javascript/dom-manipulation/navigation",
+        "title": "Navigation",
+        "description": "Navigation through the DOM tree involves using properties like `parentNode`, `childNodes`, and `nextSibling` to traverse between different nodes in the DOM, allowing scripts to locate and manipulate specific elements efficiently."
+      }
+    ]
+  }
 }
