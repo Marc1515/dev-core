@@ -1,7 +1,7 @@
 {
   "data": {
     "title": "DOM Navigation",
-    "description": "",
+    "description": "This section outlines techniques for navigating through the Document Object Model (DOM), focusing on how to access and locate various elements within the hierarchical tree structure of HTML documents. It highlights methods to identify parent, child, and sibling relationships among nodes as well as techniques for searching and retrieving elements based on different attributes like tags, classes, or CSS selectors.",
     "items": [
       {
         "title": "Parent, Child, and Sibling Nodes",
