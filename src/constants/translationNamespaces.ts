@@ -4,6 +4,8 @@ export const navbarNamespaces = ["navbar"];
 
 export const javascriptNamespaces = ["javascript"];
 
+export const syntaxAndBasicConceptsNamespaces = ["syntax-and-basic-concepts"];
+
 export const variablesNamespaces = ["variables"];
 
 export const dataTypesNamespaces = ["dataTypes"];
