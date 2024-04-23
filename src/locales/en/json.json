@@ -1,38 +1,23 @@
 {
-  "description": "JSON (JavaScript Object Notation) is a lightweight data interchange format, easy for humans to understand and simple for machines to parse. It is based on a subset of the JavaScript programming language, although it is language independent and can be used on many programming platforms.",
-  "json_syntax": {
-    "title": "JSON Syntax",
-    "explanation": "The syntax of JSON is a subset of JavaScript object syntax, with some specific rules:",
-    "data_in_key_value_pairs": {
-      "title": "Data in Key-Value Pairs",
-      "point_one": "JSON is made up of key-value pairs. Each key is followed by a colon (:) and the corresponding value.",
-      "point_two": "Keys must be strings, enclosed in double quotes.",
-      "point_three": "Values can be strings, numbers, objects, arrays, booleans (true/false), or null."
-    },
-    "objects": {
-      "title": "Objects",
-      "description": "Objects in JSON are collections of key-value pairs enclosed in curly braces ({})."
-    },
-    "arrays": {
-      "point_one": "Arrays in JSON are ordered lists of values, enclosed in square brackets ([]).",
-      "point_two": "The values within an array can be of any type, including other objects or arrays."
-    },
-    "data_formats": {
-      "title": "Data Formats",
-      "point_one": "Numbers: Numbers in JSON can be integers or floats but should not have special formats like dates or functions.",
-      "point_two": "Must be enclosed in double quotes.",
-      "point_three": "Booleans and Null: Represented by the keywords 'true', 'false', and 'null'."
-    },
-    "advantages": {
-      "title": "Advantages of JSON",
-      "point_one": "Readability: Its clear format makes it easy to understand, which is advantageous for development and debugging.",
-      "point_two": "Transmission Efficiency: Being a lightweight format, it is ideal for data exchange over networks where bandwidth may be a concern.",
-      "point_three": "Standardization: Its widespread acceptance as a data interchange format ensures that different systems and technologies can interact with each other effectively."
-    },
-    "common_uses": {
-      "title": "Common Uses of JSON",
-      "point_one": "APIs and Web Services: JSON is commonly used in web APIs to send responses from the server to the client. This allows web and mobile applications to process and use the data efficiently.",
-      "point_two": "Project Configuration: Many software projects use JSON for configuration files, like 'package.json' in Node.js projects, which facilitates the management of dependencies and scripts."
-    }
+  "data": {
+    "title": "JSON",
+    "description": "JSON (JavaScript Object Notation) is a lightweight data interchange format, easy for humans to understand and simple for machines to parse. It is based on a subset of the JavaScript programming language, although it is language independent and can be used on many programming platforms.",
+    "items": [
+      {
+        "path": "/fundamentals/javascript/json/json-syntax",
+        "title": "JSON Syntax",
+        "description": ""
+      },
+      {
+        "path": "/fundamentals/javascript/json/json-manipulation",
+        "title": "JSON Manipulation",
+        "description": "JSON manipulation is primarily about converting data between a string format, which is suitable for transmission, and a usable object format in JavaScript."
+      },
+      {
+        "path": "/fundamentals/javascript/json/json-apis",
+        "title": "JSON APIs",
+        "description": ""
+      }
+    ]
   }
 }

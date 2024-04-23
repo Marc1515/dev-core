@@ -43,3 +43,9 @@ export const eventsHandlerNamespaces = ["events-handler"];
 export const navigationNamespaces = ["navigation"];
 
 export const jsonNamespaces = ["json"];
+
+export const jsonSyntaxNamespaces = ["json-syntax"];
+
+export const jsonManipulationNamespaces = ["json-manipulation"];
+
+export const jsonApisNamespaces = ["json-apis"];
