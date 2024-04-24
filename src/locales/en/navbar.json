@@ -1,9 +1,40 @@
 {
-  "css3_description": "Used to design and customize the visual appearance of web pages, enabling control over layout, colors, fonts, and more.",
-  "db_name": "Data-Bases",
-  "fundamentals_name": "Fundamentals",
-  "home_name": "Home",
-  "html5_description": "It allows the structuring of content and is essential for defining the semantics and structure of websites.",
-  "javascript_description": "It's an interpreted programming language primarily used on the client-side for creating dynamic web pages, enabling interactivity with the user, data manipulation, and more.",
-  "typescript_description": "It's a superset of JavaScript, adding static types and class-based objects. It aids in developing large applications and compiles to JavaScript to be executed in the browser."
+  "data": {
+    "home": {
+      "title": "Home"
+    },
+    "fundamentals": {
+      "title": "Fundamentals",
+
+      "html5": {
+        "path": "/fundamentals/html5",
+        "title": "HTML5",
+        "description": "It allows the structuring of content and is essential for defining the semantics and structure of websites."
+      },
+      "css3": {
+        "path": "/fundamentals/css3",
+        "title": "CSS3",
+        "description": "Used to design and customize the visual appearance of web pages, enabling control over layout, colors, fonts, and more."
+      },
+      "javascript": {
+        "path": "/fundamentals/javascript",
+        "title": "JavaScript",
+        "description": "It's an interpreted programming language primarily used on the client-side for creating dynamic web pages, enabling interactivity with the user, data manipulation, and more."
+      },
+      "typescript": {
+        "path": "/fundamentals/typescript",
+        "title": "TypeScript",
+        "description": "It's a superset of JavaScript, adding static types and class-based objects. It aids in developing large applications and compiles to JavaScript to be executed in the browser."
+      }
+    },
+    "front_end": {
+      "title": "FrontEnd"
+    },
+    "back_end": {
+      "title": "BackEnd"
+    },
+    "data_bases": {
+      "title": "Data-Bases"
+    }
+  }
 }
