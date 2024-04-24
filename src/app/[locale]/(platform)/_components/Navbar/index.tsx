@@ -19,7 +19,7 @@ import { getNavbarData } from "./navbarData";
 import LanguageChanger from "@/lib/LanguageChanger";
 
 import { useTranslations } from "@/hooks/useTranslations";
-import { navbarNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
+import { navbarNamespaces } from "@/constants/namespaces/othersNamespaces";
 
 export const Navbar = () => {
   const translations = useTranslations(navbarNamespaces);
@@ -29,6 +29,7 @@ export const Navbar = () => {
   }
 
   const { t } = translations;
+
   const navbarData = getNavbarData(t);
 
   return (
@@ -38,7 +39,7 @@ export const Navbar = () => {
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                {t("home_name")}
+                {t("data.home.title")}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

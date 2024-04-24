@@ -11,27 +11,27 @@ export type NavbarDataType = NavbarSectionType[];
 
 export const getNavbarData = (t: (key: string) => string): NavbarDataType => [
   {
-    title: t("fundamentals_name"),
+    title: t("data.fundamentals.title"),
     items: [
       {
         label: "HTML5",
         href: "/fundamentals/html5",
-        description: t("html5_description"),
+        description: t("data.fundamentals.html5.description"),
       },
       {
         label: "CSS3",
         href: "/fundamentals/css3",
-        description: t("css3_description"),
+        description: t("data.fundamentals.css3.description"),
       },
       {
         label: "JavaScript",
         href: "/fundamentals/javascript",
-        description: t("javascript_description"),
+        description: t("data.fundamentals.javascript.description"),
       },
       {
         label: "TypeScript",
         href: "/fundamentals/typescript",
-        description: t("typescript_description"),
+        description: t("data.fundamentals.typescript.description"),
       },
     ],
   },
@@ -92,7 +92,7 @@ export const getNavbarData = (t: (key: string) => string): NavbarDataType => [
     ],
   },
   {
-    title: t("db_name"),
+    title: t("data.data_bases.title"),
     items: [
       {
         label: "Alert Dialog",
