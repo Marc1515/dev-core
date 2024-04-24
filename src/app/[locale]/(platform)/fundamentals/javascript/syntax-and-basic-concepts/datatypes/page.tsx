@@ -1,7 +1,7 @@
 import React from "react";
 
 import initTranslations from "@/app/i18n";
-import { dataTypesNamespaces } from "@/constants/translationNamespaces";
+import { dataTypesNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import { DataTypes } from "./_components/DataTypes";
 
 interface DataTypesProps {

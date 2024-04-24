@@ -1,7 +1,7 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
 import { JSONPageTypes } from "./types";
-import { jsonNamespaces } from "@/constants/translationNamespaces";
+import { jsonNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import Link from "next/link";
 
 interface JSONPageProps {

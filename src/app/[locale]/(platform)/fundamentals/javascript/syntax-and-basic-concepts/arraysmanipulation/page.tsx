@@ -1,6 +1,6 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
-import { arraysManipulationNamespaces } from "@/constants/translationNamespaces";
+import { arraysManipulationNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import { ArraysManipulation } from "./_components/ArraysManipulation";
 
 interface ArraysManipulationPageProps {

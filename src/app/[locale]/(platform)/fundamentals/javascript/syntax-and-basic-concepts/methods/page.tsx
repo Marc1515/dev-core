@@ -1,6 +1,6 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
-import { methodsNamespaces } from "@/constants/translationNamespaces";
+import { methodsNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import { Methods } from "./_components/Methods";
 
 interface MethodsPageProps {

@@ -1,7 +1,7 @@
 import React from "react";
 
 import initTranslations from "@/app/i18n";
-import { javascriptNamespaces } from "@/constants/translationNamespaces";
+import { javascriptNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import { JavascriptTypes } from "./types";
 import Link from "next/link";
 

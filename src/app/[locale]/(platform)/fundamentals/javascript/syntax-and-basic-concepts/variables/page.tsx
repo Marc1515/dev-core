@@ -1,6 +1,6 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
-import { variablesNamespaces } from "@/constants/translationNamespaces";
+import { variablesNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import { Variables } from "./_components/Variables";
 
 interface VariablesProps {

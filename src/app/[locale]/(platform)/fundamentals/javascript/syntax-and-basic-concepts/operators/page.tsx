@@ -1,6 +1,6 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
-import { operatorsNamespaces } from "@/constants/translationNamespaces";
+import { operatorsNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import { Operators } from "./_components/Operators";
 
 interface OperatorsProps {

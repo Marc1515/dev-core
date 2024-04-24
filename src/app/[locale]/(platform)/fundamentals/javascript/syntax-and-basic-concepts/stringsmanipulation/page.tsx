@@ -1,6 +1,6 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
-import { stringsManipulationNamespaces } from "@/constants/translationNamespaces";
+import { stringsManipulationNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 
 import { StringsManipulation } from "./_components/StringsManipulation";
 

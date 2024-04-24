@@ -1,7 +1,7 @@
 import React from "react";
 
 import initTranslations from "@/app/i18n";
-import { jsonApisNamespaces } from "@/constants/translationNamespaces";
+import { jsonApisNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import { JSONApis } from "./_components/JSONApis";
 
 interface JSONApisPageProps {

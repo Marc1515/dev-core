@@ -19,7 +19,7 @@ import { getNavbarData } from "./navbarData";
 import LanguageChanger from "@/lib/LanguageChanger";
 
 import { useTranslations } from "@/hooks/useTranslations";
-import { navbarNamespaces } from "@/constants/translationNamespaces";
+import { navbarNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 
 export const Navbar = () => {
   const translations = useTranslations(navbarNamespaces);

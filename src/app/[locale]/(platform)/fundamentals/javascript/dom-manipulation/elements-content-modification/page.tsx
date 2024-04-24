@@ -1,7 +1,7 @@
 import React from "react";
 
 import initTranslations from "@/app/i18n";
-import { elementContentModificationNamespaces } from "@/constants/translationNamespaces";
+import { elementContentModificationNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import { ElementContentModification } from "./_components/ElementContentModification";
 
 interface ElementsContentModificationPageProps {

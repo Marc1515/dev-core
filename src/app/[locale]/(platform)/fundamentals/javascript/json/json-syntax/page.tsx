@@ -1,7 +1,7 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
 import { JSONSyntaxPageTypes } from "./types";
-import { jsonSyntaxNamespaces } from "@/constants/translationNamespaces";
+import { jsonSyntaxNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import { JSONSyntax } from "./_components/JSONSyntax";
 
 interface JSONSyntaxPageProps {

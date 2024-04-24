@@ -1,7 +1,7 @@
 import React from "react";
 
 import initTranslations from "@/app/i18n";
-import { addRemoveElementsNamespaces } from "@/constants/translationNamespaces";
+import { addRemoveElementsNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import { AddRemoveElements } from "./_components/AddRemoveElements";
 
 interface AddRemoveElementsPageProps {

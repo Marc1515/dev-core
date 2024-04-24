@@ -1,6 +1,6 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
-import { controlStructuresNamespaces } from "@/constants/translationNamespaces";
+import { controlStructuresNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import { ControlStructures } from "./_components/ControlStructures";
 
 interface ControlStructuresProps {

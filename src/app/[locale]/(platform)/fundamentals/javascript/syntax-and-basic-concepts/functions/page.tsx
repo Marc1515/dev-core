@@ -1,7 +1,7 @@
 import React from "react";
 
 import initTranslations from "@/app/i18n";
-import { functionsNamespaces } from "@/constants/translationNamespaces";
+import { functionsNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import { Functions } from "./_components/Functions";
 
 interface FunctionPageProps {

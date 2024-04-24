@@ -1,7 +1,7 @@
 import React from "react";
 
 import initTranslations from "@/app/i18n";
-import { stylesModificationNamespaces } from "@/constants/translationNamespaces";
+import { stylesModificationNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import { StylesModification } from "./_components/StylesModification";
 
 interface StylesModificationPageProps {

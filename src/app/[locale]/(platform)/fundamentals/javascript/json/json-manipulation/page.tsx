@@ -1,5 +1,5 @@
 import initTranslations from "@/app/i18n";
-import { jsonManipulationNamespaces } from "@/constants/translationNamespaces";
+import { jsonManipulationNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import React from "react";
 import { JSONManipulation } from "./_components/JSONManipulation";
 

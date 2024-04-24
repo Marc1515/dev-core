@@ -1,5 +1,5 @@
 import React from "react";
-import { selectElementsNamespaces } from "@/constants/translationNamespaces";
+import { selectElementsNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import initTranslations from "@/app/i18n";
 import { SelectElements } from "./_components/SelectElements";
 

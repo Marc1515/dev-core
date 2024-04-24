@@ -1,6 +1,6 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
-import { syntaxAndBasicConceptsNamespaces } from "@/constants/translationNamespaces";
+import { syntaxAndBasicConceptsNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import Link from "next/link";
 import { SyntaxAndBasicConceptsTypes } from "./types";
 

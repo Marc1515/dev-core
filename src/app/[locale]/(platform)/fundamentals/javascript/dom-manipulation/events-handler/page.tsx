@@ -1,7 +1,7 @@
 import React from "react";
 
 import initTranslations from "@/app/i18n";
-import { eventsHandlerNamespaces } from "@/constants/translationNamespaces";
+import { eventsHandlerNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import { EventsHandler } from "./_components/EventsHandler";
 
 interface EventsHandlerPageProps {

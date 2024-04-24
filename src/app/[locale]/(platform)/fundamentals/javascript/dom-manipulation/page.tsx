@@ -1,6 +1,6 @@
 import React from "react";
 import initTranslations from "@/app/i18n";
-import { domManipulationNamespaces } from "@/constants/translationNamespaces";
+import { domManipulationNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import { DomManipulationTypes } from "./types";
 import Link from "next/link";
 
