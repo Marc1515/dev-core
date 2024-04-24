@@ -1,7 +1,3 @@
-export const commonNamespaces = ["common"];
-
-export const navbarNamespaces = ["navbar"];
-
 export const javascriptNamespaces = ["javascript"];
 
 export const syntaxAndBasicConceptsNamespaces = ["syntax-and-basic-concepts"];
