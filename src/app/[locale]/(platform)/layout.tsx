@@ -3,6 +3,7 @@ import { LocaleProvider } from "@/contexts/LocaleContext";
 import { Toaster } from "sonner";
 import { Navbar } from "./_components/Navbar";
 import TranslationsProvider from "@/lib/TranslationProvider";
+import { navbarNamespaces } from "@/constants/namespaces/othersNamespaces";
 
 interface PlatformLayoutProps {
   children: React.ReactNode;
@@ -16,20 +17,21 @@ const i18nNamespaces = [""];
 const PlatformLayout = async ({ children, params }: PlatformLayoutProps) => {
   const { locale } = params;
 
-  const { resources } = await initTranslations(locale, i18nNamespaces);
+  const { t } = await initTranslations(locale, navbarNamespaces);
+  const data = t("data", {
+    returnObjects: true,
+  });
 
   return (
-    <LocaleProvider initialLocale={locale}>
-      <TranslationsProvider
-        resources={resources}
-        locale={locale}
-        namespaces={i18nNamespaces}
-      >
-        <Toaster position="top-right" />
-        <Navbar />
-        <div>{children}</div>
-      </TranslationsProvider>
-    </LocaleProvider>
+    <TranslationsProvider
+      resources={data}
+      locale={locale}
+      namespaces={i18nNamespaces}
+    >
+      <Toaster position="top-right" />
+      <Navbar data={data} />
+      <div>{children}</div>
+    </TranslationsProvider>
   );
 };
 
