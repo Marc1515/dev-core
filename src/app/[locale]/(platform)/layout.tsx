@@ -28,7 +28,7 @@ const PlatformLayout = async ({ children, params }: PlatformLayoutProps) => {
       namespaces={i18nNamespaces}
     >
       <Toaster position="top-right" />
-      {/* <Navbar data={data} /> */}
+      <Navbar data={data} />
       <div className="h-full">{children}</div>
     </TranslationsProvider>
   );
