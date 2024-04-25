@@ -4,6 +4,8 @@ import { syntaxAndBasicConceptsNamespaces } from "@/constants/namespaces/javaScr
 import Link from "next/link";
 import { SyntaxAndBasicConceptsTypes } from "./types";
 
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 interface SyntaxAndBasicConceptsPageProps {
   params: {
     locale: string;
@@ -25,18 +27,20 @@ const SyntaxAndBasicConceptsPage = async ({
     <div>
       <h1>{data.title}</h1>
       <p>{data.description}</p>
-      <ul>
+      <div className="w-full h-full flex flex-wrap gap-x-10 justify-evenly items-center">
         {data.items.map((item, idx) => (
-          <li key={idx}>
-            <span>
-              <strong>
-                <Link href={item.path}>{item.title}</Link>
-              </strong>
-            </span>
-            <p>{item.description}</p>
-          </li>
+          <Link className="w-1/4" href={item.path} key={idx}>
+            <Card>
+              <CardHeader>
+                <CardTitle>{item.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>{item.description}</p>
+              </CardContent>
+            </Card>
+          </Link>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
