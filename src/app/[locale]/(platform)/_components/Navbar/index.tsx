@@ -1,6 +1,8 @@
 "use client";
 
 import React from "react";
+
+import { NavbarTypes } from "./types";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -18,19 +20,8 @@ import {
 import { getNavbarData } from "./navbarData";
 import LanguageChanger from "@/lib/LanguageChanger";
 
-import { useTranslations } from "@/hooks/useTranslations";
-import { navbarNamespaces } from "@/constants/namespaces/othersNamespaces";
-
-export const Navbar = () => {
-  const translations = useTranslations(navbarNamespaces);
-
-  if (!translations) {
-    return <div>Loading...</div>;
-  }
-
-  const { t } = translations;
-
-  const navbarData = getNavbarData(t);
+export const Navbar = ({ data }: NavbarTypes) => {
+  const navbarData = getNavbarData(data);
 
   return (
     <div>
@@ -39,7 +30,7 @@ export const Navbar = () => {
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                {t("data.home.title")}
+                {data.home.title}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

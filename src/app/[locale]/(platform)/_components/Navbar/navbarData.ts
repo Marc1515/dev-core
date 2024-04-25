@@ -1,3 +1,5 @@
+import { Data } from "./types";
+
 export type NavbarSectionType = {
   title: string;
   items: {
@@ -9,29 +11,29 @@ export type NavbarSectionType = {
 
 export type NavbarDataType = NavbarSectionType[];
 
-export const getNavbarData = (t: (key: string) => string): NavbarDataType => [
+export const getNavbarData = (data: Data): NavbarDataType => [
   {
-    title: t("data.fundamentals.title"),
+    title: data.fundamentals.title,
     items: [
       {
-        label: "HTML5",
-        href: "/fundamentals/html5",
-        description: t("data.fundamentals.html5.description"),
+        label: data.fundamentals.html5.title,
+        href: data.fundamentals.html5.path,
+        description: data.fundamentals.html5.description,
       },
       {
-        label: "CSS3",
-        href: "/fundamentals/css3",
-        description: t("data.fundamentals.css3.description"),
+        label: data.fundamentals.css3.title,
+        href: data.fundamentals.css3.path,
+        description: data.fundamentals.css3.description,
       },
       {
-        label: "JavaScript",
-        href: "/fundamentals/javascript",
-        description: t("data.fundamentals.javascript.description"),
+        label: data.fundamentals.javascript.title,
+        href: data.fundamentals.javascript.path,
+        description: data.fundamentals.javascript.description,
       },
       {
-        label: "TypeScript",
-        href: "/fundamentals/typescript",
-        description: t("data.fundamentals.typescript.description"),
+        label: data.fundamentals.typescript.title,
+        href: data.fundamentals.typescript.path,
+        description: data.fundamentals.typescript.description,
       },
     ],
   },
@@ -92,7 +94,7 @@ export const getNavbarData = (t: (key: string) => string): NavbarDataType => [
     ],
   },
   {
-    title: t("data.data_bases.title"),
+    title: data.data_bases.title,
     items: [
       {
         label: "Alert Dialog",

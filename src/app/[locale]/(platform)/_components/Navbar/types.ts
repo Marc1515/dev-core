@@ -1,8 +1,8 @@
-export interface NavbarDataTypes {
+export interface NavbarTypes {
   data: Data;
 }
 
-interface Data {
+export interface Data {
   home: Home;
   fundamentals: Fundamentals;
   front_end: Home;
