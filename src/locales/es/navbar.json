@@ -1,1 +1,39 @@
-{"css3_description":"Se utiliza para diseñar y personalizar la apariencia visual de páginas web, permitiendo controlar el diseño, los colores, las fuentes y más.","db_name":"Bases de Datos","fundamentals_name":"Fundamentos","home_name":"Inicio","html5_description":"Permite estructurar contenidos y es fundamental para definir la semántica y estructura de los sitios web.","javascript_description":"Es un lenguaje de programación interpretado que se utiliza principalmente en el lado del cliente para crear páginas web dinámicas, lo que permite la interactividad con el usuario, la manipulación de datos y más.","typescript_description":"Es un superconjunto de JavaScript, que agrega tipos estáticos y objetos basados en clases. Ayuda a desarrollar aplicaciones grandes y se compila en JavaScript para ejecutarlo en el navegador."}
+{
+  "data": {
+    "home": {
+      "title": "Inicio"
+    },
+    "fundamentals": {
+      "title": "Fundamentos",
+      "html5": {
+        "path": "/fundamentals/html5",
+        "title": "HTML5",
+        "description": "Permite la estructuración de contenido y es esencial para definir la semántica y estructura de los sitios web."
+      },
+      "css3": {
+        "path": "/fundamentals/css3",
+        "title": "CSS3",
+        "description": "Utilizado para diseñar y personalizar la apariencia visual de las páginas web, permitiendo control sobre el diseño, colores, fuentes y más."
+      },
+      "javascript": {
+        "path": "/fundamentals/javascript",
+        "title": "JavaScript",
+        "description": "Es un lenguaje de programación interpretado utilizado principalmente en el lado del cliente para crear páginas web dinámicas, permitiendo la interactividad con el usuario, la manipulación de datos y más."
+      },
+      "typescript": {
+        "path": "/fundamentals/typescript",
+        "title": "TypeScript",
+        "description": "Es un superconjunto de JavaScript, que añade tipos estáticos y objetos basados en clases. Ayuda en el desarrollo de aplicaciones grandes y se compila a JavaScript para ser ejecutado en el navegador."
+      }
+    },
+    "front_end": {
+      "title": "FrontEnd"
+    },
+    "back_end": {
+      "title": "BackEnd"
+    },
+    "data_bases": {
+      "title": "Bases de Datos"
+    }
+  }
+}

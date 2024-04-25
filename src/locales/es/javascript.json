@@ -1,12 +1,23 @@
 {
-  "control_strucutres_description": "Las estructuras de control son fundamentales en cualquier lenguaje de programación, incluido JavaScript, ya que dirigen el flujo de ejecución del código en función de determinadas condiciones o repitiendo acciones de forma controlada.",
-  "dataType_description": "El tipo de datos de una variable, por otro lado, define la naturaleza de los datos que la variable puede contener y las operaciones que se permiten con esos datos. Los tipos de datos incluyen categorías como números enteros, decimales (puntos flotantes), cadenas, booleanos, entre otros. Cada tipo de datos tiene un conjunto de operaciones válidas que se pueden realizar con él, y el lenguaje de programación utiliza esta información para gestionar la asignación de memoria y las operaciones de manera óptima.",
-  "difference_between_var_and_dt": "Primero es importante saber qué son las variables y los tipos de datos, ya que son conceptos diferentes aunque muy relacionados en la programación. Aquí te explico la diferencia entre una variable y un tipo de datos:",
-  "javascript_definition": "Es un lenguaje de programación interpretado que se utiliza principalmente en el lado del cliente para crear páginas web dinámicas, lo que permite la interactividad con el usuario, la manipulación de datos y más.",
-  "operator_description": "En programación, los operadores son símbolos especiales o palabras clave que indican al compilador o intérprete que realice operaciones específicas. Son fundamentales para manipular datos y variables en cualquier lenguaje de programación.",
-  "variable_description": "Una variable es un contenedor o almacenamiento en la memoria de la \"computadora\", identificado por un nombre único, que se utiliza para mantener temporalmente un valor durante la ejecución de un programa. Las variables le permiten hacer referencia a estos valores por su nombre para realizar operaciones sobre ellos, modificarlos o incluso pasarlos entre funciones. Esencialmente, una variable es como un cuadro donde puedes almacenar cosas (datos) y puedes cambiar el contenido del cuadro sin cambiar el cuadro en sí.",
-  "functions_description": "Una función es un bloque de código diseñado para realizar una tarea específica. Las funciones se definen una vez y se pueden llamar tantas veces como sea necesario. Esto permite reutilizar código y dividir programas complejos en tareas más pequeñas y manejables.",
-  "methods_description": "Un método es un tipo de función que está asociado con un objeto (o clase). En otras palabras, un método es una función que pertenece a un objeto. Esto significa que el método usualmente opera con los datos que están contenidos dentro de su objeto.",
-  "strings_manipulation_description": "Los strings son una secuencia de caracteres utilizados para representar texto. JavaScript proporciona muchos métodos para manipular strings:",
-  "arrays_manipulation_description": "Los arrays son estructuras que te permiten almacenar múltiples valores en una sola variable. JavaScript ofrece varios métodos para trabajar con arrays:"
+  "data": {
+    "title": "JavaScript",
+    "description": "Es un lenguaje de programación interpretado utilizado principalmente en el lado del cliente para crear páginas web dinámicas, permitiendo la interactividad con el usuario, la manipulación de datos y más.",
+    "items": [
+      {
+        "path": "/fundamentals/javascript/syntax-and-basic-concepts",
+        "title": "Sintaxis y Conceptos Básicos",
+        "description": "La sintaxis y los conceptos básicos de JavaScript son fundamentales para crear y controlar la funcionalidad de las páginas web. Permiten a los desarrolladores escribir instrucciones que el navegador puede interpretar y ejecutar, como manipular elementos HTML, reaccionar a eventos de usuarios y comunicarse con servidores. Comprender estos conceptos es crucial para implementar la lógica de control, estructurar el código de manera eficiente y realizar operaciones de datos, todo lo cual es esencial para desarrollar aplicaciones web interactivas y dinámicas."
+      },
+      {
+        "path": "/fundamentals/javascript/dom-manipulation",
+        "title": "Manipulación del DOM",
+        "description": "El DOM (Modelo de Objeto de Documento) es una representación del documento HTML como un árbol de nodos. JavaScript puede interactuar con el DOM para modificar el contenido, la estructura o el estilo de la página."
+      },
+      {
+        "path": "/fundamentals/javascript/json",
+        "title": "JSON",
+        "description": "JSON (Notación de Objetos de JavaScript) es un formato ligero de intercambio de datos, fácil de entender para los humanos y simple de analizar para las máquinas. Está basado en un subconjunto del lenguaje de programación JavaScript, aunque es independiente del lenguaje y puede ser utilizado en muchas plataformas de programación."
+      }
+    ]
+  }
 }
