@@ -1,5 +1,4 @@
 import initTranslations from "@/app/i18n";
-import { LocaleProvider } from "@/contexts/LocaleContext";
 import { Toaster } from "sonner";
 import { Navbar } from "./_components/Navbar";
 import TranslationsProvider from "@/lib/TranslationProvider";
@@ -29,8 +28,8 @@ const PlatformLayout = async ({ children, params }: PlatformLayoutProps) => {
       namespaces={i18nNamespaces}
     >
       <Toaster position="top-right" />
-      <Navbar data={data} />
-      <div>{children}</div>
+      {/* <Navbar data={data} /> */}
+      <div className="h-full">{children}</div>
     </TranslationsProvider>
   );
 };
