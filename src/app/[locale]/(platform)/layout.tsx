@@ -3,6 +3,9 @@ import { Toaster } from "sonner";
 import { Navbar } from "./_components/Navbar";
 import TranslationsProvider from "@/lib/TranslationProvider";
 import { navbarNamespaces } from "@/constants/namespaces/othersNamespaces";
+import { MobileSidebar } from "./_components/MobileSidebar";
+import { BurgerButton } from "./_components/BurgerButton";
+import { BurgerButtonProvider } from "@/contexts/BurgerButtonContext";
 
 interface PlatformLayoutProps {
   children: React.ReactNode;
@@ -28,9 +31,11 @@ const PlatformLayout = async ({ children, params }: PlatformLayoutProps) => {
       namespaces={i18nNamespaces}
     >
       <Toaster position="top-right" />
-      <div className="hidden md:block">
-        <Navbar data={data} />
-      </div>
+      <Navbar data={data} />
+      <BurgerButtonProvider>
+        <BurgerButton />
+        <MobileSidebar data={data} />
+      </BurgerButtonProvider>
       <div className="h-full">{children}</div>
     </TranslationsProvider>
   );
