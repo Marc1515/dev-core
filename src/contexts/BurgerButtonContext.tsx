@@ -1,36 +1,44 @@
 "use client";
 
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from "react";
 
-// Define el tipo para el contexto
 interface BurgerButtonContextType {
   isActive: boolean;
   toggleBurgerButton: () => void;
 }
 
-// Valor inicial por defecto
 const defaultValue: BurgerButtonContextType = {
   isActive: false,
-  toggleBurgerButton: () => {}, // Función vacía como placeholder
+  toggleBurgerButton: () => {},
 };
 
-// Crear el contexto con el valor inicial por defecto
 const BurgerButtonContext =
   createContext<BurgerButtonContextType>(defaultValue);
 
-// Define el tipo para las props del proveedor
 interface BurgerButtonProviderProps {
-  children: ReactNode; // Esto indica que puede recibir componentes hijos
+  children: ReactNode;
 }
 
-// Proveedor del contexto que gestiona el estado
 export const BurgerButtonProvider: React.FC<BurgerButtonProviderProps> = ({
   children,
 }) => {
   const [isActive, setIsActive] = useState(false);
 
-  // Función para cambiar el estado
   const toggleBurgerButton = () => setIsActive(!isActive);
+
+  useEffect(() => {
+    if (isActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isActive]);
 
   return (
     <BurgerButtonContext.Provider value={{ isActive, toggleBurgerButton }}>
@@ -39,5 +47,4 @@ export const BurgerButtonProvider: React.FC<BurgerButtonProviderProps> = ({
   );
 };
 
-// Hook personalizado para usar el contexto
 export const useBurgerButtonContext = () => useContext(BurgerButtonContext);
