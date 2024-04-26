@@ -24,7 +24,7 @@ export const Navbar = ({ data }: NavbarTypes) => {
   const navbarData = getNavbarData(data);
 
   return (
-    <div>
+    <div className="hidden md:block">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
