@@ -6,6 +6,14 @@ import { JavascriptTypes } from "./types";
 import Link from "next/link";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+import { CardsWrapper } from "../../_components/CardsWrapper";
 
 interface JavaScriptPageProps {
   params: {
@@ -19,27 +27,32 @@ const JavaScriptPage = async ({ params: { locale } }: JavaScriptPageProps) => {
     returnObjects: true,
   }) as JavascriptTypes["data"];
   return (
-    <div className="w-full h-full p-5 bg-green-400">
+    <>
       <div className="pb-10">
         <h1 className="text-3xl font-bold pb-5">{data.title}</h1>
         <p>{data.description}</p>
       </div>
 
-      <div className="w-full h-full flex flex-col gap-x-10 justify-evenly items-center">
+      <CardsWrapper>
         {data.items.map((item, idx) => (
-          <Link href={item.path} key={idx}>
-            <Card>
-              <CardHeader>
+          <Card key={idx}>
+            <CardHeader>
+              <Link href={item.path}>
                 <CardTitle>{item.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>{item.description}</p>
-              </CardContent>
-            </Card>
-          </Link>
+              </Link>
+            </CardHeader>
+            <CardContent>
+              <Accordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>read me...</AccordionTrigger>
+                  <AccordionContent>{item.description}</AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </CardContent>
+          </Card>
         ))}
-      </div>
-    </div>
+      </CardsWrapper>
+    </>
   );
 };
 

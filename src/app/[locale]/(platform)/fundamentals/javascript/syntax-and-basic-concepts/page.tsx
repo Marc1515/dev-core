@@ -5,6 +5,13 @@ import Link from "next/link";
 import { SyntaxAndBasicConceptsTypes } from "./types";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardsWrapper } from "../../../_components/CardsWrapper";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 interface SyntaxAndBasicConceptsPageProps {
   params: {
@@ -24,24 +31,31 @@ const SyntaxAndBasicConceptsPage = async ({
   }) as SyntaxAndBasicConceptsTypes["data"];
 
   return (
-    <div>
-      <h1>{data.title}</h1>
-      <p>{data.description}</p>
-      <div className="w-full h-full flex flex-wrap gap-x-10 justify-evenly items-center">
-        {data.items.map((item, idx) => (
-          <Link className="w-1/4" href={item.path} key={idx}>
-            <Card>
-              <CardHeader>
-                <CardTitle>{item.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>{item.description}</p>
-              </CardContent>
-            </Card>
-          </Link>
-        ))}
+    <>
+      <div className="pb-10">
+        <h1 className="text-3xl font-bold pb-5">{data.title}</h1>
+        <p>{data.description}</p>
       </div>
-    </div>
+      <CardsWrapper>
+        {data.items.map((item, idx) => (
+          <Card key={idx}>
+            <CardHeader>
+              <Link href={item.path}>
+                <CardTitle>{item.title}</CardTitle>
+              </Link>
+            </CardHeader>
+            <CardContent>
+              <Accordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>read me...</AccordionTrigger>
+                  <AccordionContent>{item.description}</AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </CardContent>
+          </Card>
+        ))}
+      </CardsWrapper>
+    </>
   );
 };
 

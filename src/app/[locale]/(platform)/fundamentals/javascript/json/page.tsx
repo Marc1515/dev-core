@@ -3,6 +3,14 @@ import initTranslations from "@/app/i18n";
 import { JSONPageTypes } from "./types";
 import { jsonNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import Link from "next/link";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
+import { CardsWrapper } from "../../../_components/CardsWrapper";
 
 interface JSONPageProps {
   params: {
@@ -17,23 +25,31 @@ const JSONPage = async ({ params: { locale } }: JSONPageProps) => {
   }) as JSONPageTypes["data"];
 
   return (
-    <div>
-      <h1>{data.title}</h1>
-      <p>{data.description}</p>
-
-      <ul>
+    <>
+      <div className="pb-10">
+        <h1 className="text-3xl font-bold pb-5">{data.title}</h1>
+        <p>{data.description}</p>
+      </div>
+      <CardsWrapper>
         {data.items.map((item, idx) => (
-          <li key={idx}>
-            <span>
-              <strong>
-                <Link href={item.path}>{item.title}</Link>
-              </strong>
-            </span>
-            <p>{item.description}</p>
-          </li>
+          <Card key={idx}>
+            <CardHeader>
+              <Link href={item.path}>
+                <CardTitle>{item.title}</CardTitle>
+              </Link>
+            </CardHeader>
+            <CardContent>
+              <Accordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>read me...</AccordionTrigger>
+                  <AccordionContent>{item.description}</AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </CardContent>
+          </Card>
         ))}
-      </ul>
-    </div>
+      </CardsWrapper>
+    </>
   );
 };
 
