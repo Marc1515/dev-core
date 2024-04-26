@@ -6,6 +6,7 @@ import { navbarNamespaces } from "@/constants/namespaces/othersNamespaces";
 import { MobileSidebar } from "./_components/MobileSidebar";
 import { BurgerButton } from "./_components/BurgerButton";
 import { BurgerButtonProvider } from "@/contexts/BurgerButtonContext";
+import { MainWrapperContent } from "./_components/MainWrapperContent";
 
 interface PlatformLayoutProps {
   children: React.ReactNode;
@@ -36,7 +37,7 @@ const PlatformLayout = async ({ children, params }: PlatformLayoutProps) => {
         <BurgerButton />
         <MobileSidebar data={data} />
       </BurgerButtonProvider>
-      <div className="h-full">{children}</div>
+      <MainWrapperContent>{children}</MainWrapperContent>
     </TranslationsProvider>
   );
 };
