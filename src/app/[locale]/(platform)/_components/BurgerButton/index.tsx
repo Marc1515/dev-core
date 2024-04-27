@@ -7,10 +7,10 @@ export const BurgerButton = () => {
   const { isActive, toggleBurgerButton } = useBurgerButtonContext();
 
   return (
-    <div className="fixed top-0 right-0 p-4 z-10 md:hidden">
+    <div className="relative top-0 right-0 p-4 md:hidden">
       <button className="relative group" onClick={toggleBurgerButton}>
         <div
-          className={`relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-slate-700 ring-0 ring-gray-300 ${
+          className={`relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-sky-600 ring-0 ring-gray-300 ${
             isActive ? "hover:ring-8 focus:ring-4" : ""
           } ring-opacity-30 duration-200 shadow-md`}
         >
