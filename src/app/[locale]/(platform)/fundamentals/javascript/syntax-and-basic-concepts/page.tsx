@@ -5,6 +5,9 @@ import Link from "next/link";
 import { SyntaxAndBasicConceptsTypes } from "./types";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { IntroWrapper } from "../../../_components/IntroWrapper";
+import { IntroTitle } from "../../../_components/IntroWrapper/_components/IntroTitle";
+import { IntroDescription } from "../../../_components/IntroWrapper/_components/IntroDescription";
 import { CardsWrapper } from "../../../_components/CardsWrapper";
 import {
   Accordion,
@@ -32,10 +35,11 @@ const SyntaxAndBasicConceptsPage = async ({
 
   return (
     <>
-      <div className="pb-10">
-        <h1 className="text-3xl font-bold pb-5">{data.title}</h1>
-        <p>{data.description}</p>
-      </div>
+      <IntroWrapper>
+        <IntroTitle>{data.title}</IntroTitle>
+        <IntroDescription>{data.description}</IntroDescription>
+      </IntroWrapper>
+
       <CardsWrapper>
         {data.items.map((item, idx) => (
           <Card key={idx}>

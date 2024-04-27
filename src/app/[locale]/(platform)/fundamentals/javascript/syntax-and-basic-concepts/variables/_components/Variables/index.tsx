@@ -2,13 +2,18 @@
 
 import React from "react";
 import { VariablesTypes } from "./types";
+import { IntroWrapper } from "@/app/[locale]/(platform)/_components/IntroWrapper";
+import { IntroTitle } from "@/app/[locale]/(platform)/_components/IntroWrapper/_components/IntroTitle";
+import { IntroDescription } from "@/app/[locale]/(platform)/_components/IntroWrapper/_components/IntroDescription";
 
 export const Variables = ({ data }: VariablesTypes) => {
   return (
     <div>
       {/* Variables */}
-      <h1>{data.title}</h1>
-      <p>{data.description}</p>
+      <IntroWrapper>
+        <IntroTitle>{data.title}</IntroTitle>
+        <IntroDescription>{data.description}</IntroDescription>
+      </IntroWrapper>
 
       <span>{data.main_function.title}</span>
       <p>{data.main_function.description}</p>

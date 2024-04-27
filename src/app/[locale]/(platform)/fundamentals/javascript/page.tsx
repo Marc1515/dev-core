@@ -5,6 +5,11 @@ import { javascriptNamespaces } from "@/constants/namespaces/javaScriptNamespace
 import { JavascriptTypes } from "./types";
 import Link from "next/link";
 
+import { IntroWrapper } from "../../_components/IntroWrapper";
+import { IntroTitle } from "../../_components/IntroWrapper/_components/IntroTitle";
+import { IntroDescription } from "../../_components/IntroWrapper/_components/IntroDescription";
+import { CardsWrapper } from "../../_components/CardsWrapper";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
@@ -12,8 +17,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
-import { CardsWrapper } from "../../_components/CardsWrapper";
 
 interface JavaScriptPageProps {
   params: {
@@ -28,10 +31,10 @@ const JavaScriptPage = async ({ params: { locale } }: JavaScriptPageProps) => {
   }) as JavascriptTypes["data"];
   return (
     <>
-      <div className="pb-10">
-        <h1 className="text-3xl font-bold pb-5">{data.title}</h1>
-        <p>{data.description}</p>
-      </div>
+      <IntroWrapper>
+        <IntroTitle>{data.title}</IntroTitle>
+        <IntroDescription>{data.description}</IntroDescription>
+      </IntroWrapper>
 
       <Accordion type="single" collapsible>
         <CardsWrapper>
