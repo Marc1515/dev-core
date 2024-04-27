@@ -3,31 +3,39 @@
 import React from "react";
 
 import { DataTypesTypes } from "./types";
+import { IntroWrapper } from "@/app/[locale]/(platform)/_components/IntroWrapper";
+import { IntroTitle } from "@/app/[locale]/(platform)/_components/IntroWrapper/_components/IntroTitle";
+import { IntroDescription } from "@/app/[locale]/(platform)/_components/IntroWrapper/_components/IntroDescription";
+import { ListWrapper } from "@/app/[locale]/(platform)/_components/ListWrapper";
+import { TitleList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/TitleList";
+import { DescriptionList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/DescriptionList";
+import { ContentList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList";
+import { ItemList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList/_components/ItemsList";
 
 export const DataTypes = ({ data }: DataTypesTypes) => {
   return (
     <div>
       {/* Introduction */}
-      <h1>{data.title}</h1>
-      <p>{data.description}</p>
+      <IntroWrapper>
+        <IntroTitle>{data.title}</IntroTitle>
+        <IntroDescription>{data.description}</IntroDescription>
+      </IntroWrapper>
       {/* Each Data Type */}
-      {data.types.map((item, index) => (
-        <div key={index}>
+      {data.types.map((item, idx) => (
+        <ListWrapper key={idx}>
           {/* Introduction */}
-          <span>{item.title}</span>
-          <p>{item.description}</p>
+          <TitleList>{item.title}</TitleList>
+          <DescriptionList>{item.description}</DescriptionList>
           {/* Each Type */}
-          <ul>
-            {item.items.map((item, index) => (
-              <li key={index}>
-                <p>
-                  <strong>{item.title}: </strong>
-                  {item.description}
-                </p>
-              </li>
+          <ContentList>
+            {item.items.map((item, idx) => (
+              <ItemList key={idx}>
+                <strong>{item.title}: </strong>
+                {item.description}
+              </ItemList>
             ))}
-          </ul>
-        </div>
+          </ContentList>
+        </ListWrapper>
       ))}
     </div>
   );
