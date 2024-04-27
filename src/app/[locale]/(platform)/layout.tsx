@@ -4,9 +4,9 @@ import { Navbar } from "./_components/Navbar";
 import TranslationsProvider from "@/lib/TranslationProvider";
 import { navbarNamespaces } from "@/constants/namespaces/othersNamespaces";
 import { MobileSidebar } from "./_components/MobileSidebar";
-import { BurgerButton } from "./_components/BurgerButton";
 import { BurgerButtonProvider } from "@/contexts/BurgerButtonContext";
 import { MainWrapperContent } from "./_components/MainWrapperContent";
+import { MobileNavbar } from "./_components/MobileNavbar";
 
 interface PlatformLayoutProps {
   children: React.ReactNode;
@@ -34,7 +34,7 @@ const PlatformLayout = async ({ children, params }: PlatformLayoutProps) => {
       <Toaster position="top-right" />
       <Navbar data={data} />
       <BurgerButtonProvider>
-        <BurgerButton />
+        <MobileNavbar />
         <MobileSidebar data={data} />
       </BurgerButtonProvider>
       <MainWrapperContent>{children}</MainWrapperContent>
