@@ -33,25 +33,25 @@ const JavaScriptPage = async ({ params: { locale } }: JavaScriptPageProps) => {
         <p>{data.description}</p>
       </div>
 
-      <CardsWrapper>
-        {data.items.map((item, idx) => (
-          <Card key={idx}>
-            <CardHeader>
-              <Link href={item.path}>
-                <CardTitle>{item.title}</CardTitle>
-              </Link>
-            </CardHeader>
-            <CardContent>
-              <Accordion type="single" collapsible>
-                <AccordionItem value="item-1">
+      <Accordion type="single" collapsible>
+        <CardsWrapper>
+          {data.items.map((item, idx) => (
+            <Card key={idx}>
+              <CardHeader>
+                <Link href={item.path}>
+                  <CardTitle>{item.title}</CardTitle>
+                </Link>
+              </CardHeader>
+              <CardContent>
+                <AccordionItem value={item.title}>
                   <AccordionTrigger>read me...</AccordionTrigger>
                   <AccordionContent>{item.description}</AccordionContent>
                 </AccordionItem>
-              </Accordion>
-            </CardContent>
-          </Card>
-        ))}
-      </CardsWrapper>
+              </CardContent>
+            </Card>
+          ))}
+        </CardsWrapper>
+      </Accordion>
     </>
   );
 };
