@@ -10,11 +10,13 @@ import React, {
 
 interface BurgerButtonContextType {
   isActive: boolean;
+  setIsActive: (isActive: boolean) => void;
   toggleBurgerButton: () => void;
 }
 
 const defaultValue: BurgerButtonContextType = {
   isActive: false,
+  setIsActive: () => {},
   toggleBurgerButton: () => {},
 };
 
@@ -41,7 +43,9 @@ export const BurgerButtonProvider: React.FC<BurgerButtonProviderProps> = ({
   }, [isActive]);
 
   return (
-    <BurgerButtonContext.Provider value={{ isActive, toggleBurgerButton }}>
+    <BurgerButtonContext.Provider
+      value={{ isActive, setIsActive, toggleBurgerButton }}
+    >
       {children}
     </BurgerButtonContext.Provider>
   );
