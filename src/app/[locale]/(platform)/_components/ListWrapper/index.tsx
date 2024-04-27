@@ -5,5 +5,5 @@ interface ListWrapperProps {
 }
 
 export const ListWrapper = ({ children }: ListWrapperProps) => {
-  return <div className="w-full h-full">{children}</div>;
+  return <div className="w-full h-full py-5">{children}</div>;
 };

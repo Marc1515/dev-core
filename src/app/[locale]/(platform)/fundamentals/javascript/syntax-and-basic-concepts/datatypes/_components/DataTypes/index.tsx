@@ -11,6 +11,7 @@ import { TitleList } from "@/app/[locale]/(platform)/_components/ListWrapper/_co
 import { DescriptionList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/DescriptionList";
 import { ContentList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList";
 import { ItemList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList/_components/ItemsList";
+import { TitleItemList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList/_components/ItemsList/_components/TitleItemList";
 
 export const DataTypes = ({ data }: DataTypesTypes) => {
   return (
@@ -30,7 +31,7 @@ export const DataTypes = ({ data }: DataTypesTypes) => {
           <ContentList>
             {item.items.map((item, idx) => (
               <ItemList key={idx}>
-                <strong>{item.title}: </strong>
+                <TitleItemList>{item.title}: </TitleItemList>
                 {item.description}
               </ItemList>
             ))}

@@ -5,5 +5,9 @@ interface DescriptionListProps {
 }
 
 export const DescriptionList = ({ children }: DescriptionListProps) => {
-  return <p>{children}</p>;
+  return (
+    <div className="pb-5">
+      <p>{children}</p>
+    </div>
+  );
 };

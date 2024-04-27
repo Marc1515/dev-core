@@ -5,5 +5,9 @@ interface TitleListProps {
 }
 
 export const TitleList = ({ children }: TitleListProps) => {
-  return <span>{children}</span>;
+  return (
+    <div className="pb-5">
+      <span className="text-xl font-bold">{children}</span>;
+    </div>
+  );
 };
