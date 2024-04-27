@@ -6,10 +6,6 @@ export const variablesNamespaces = ["variables"];
 
 export const dataTypesNamespaces = ["dataTypes"];
 
-export const objectTypesNamespaces = ["objectTypes"];
-
-export const primitiveTypesNamespaces = ["primitiveTypes"];
-
 export const operatorsNamespaces = ["operators"];
 
 export const controlStructuresNamespaces = ["controlStructures"];
