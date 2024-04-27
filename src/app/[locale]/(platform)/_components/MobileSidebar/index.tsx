@@ -17,7 +17,9 @@ import { useBurgerButtonContext } from "@/contexts/BurgerButtonContext";
 
 export const MobileSidebar = ({ data }: MobileSidebarTypes) => {
   const moblileSidebarData = getMobileSidebarData(data);
-  const { isActive } = useBurgerButtonContext();
+  const { isActive, setIsActive } = useBurgerButtonContext();
+
+  const sheetCloserHandler = () => setIsActive(false);
 
   return (
     <div
@@ -25,27 +27,28 @@ export const MobileSidebar = ({ data }: MobileSidebarTypes) => {
         isActive ? "transform translate-x-0" : "transform translate-x-[-100%]"
       } md:hidden`}
     >
-      <Link href="/">
+      <Link onClick={sheetCloserHandler} href="/">
         <span>{data.home.title}</span>
       </Link>
-      {moblileSidebarData.map((item, idx) => (
-        <div key={idx}>
-          <Accordion type="single" collapsible>
-            <AccordionItem value="item-1">
-              <AccordionTrigger>{item.title}</AccordionTrigger>
-              <AccordionContent>
-                <ul>
-                  {item.items.map((item, idx) => (
-                    <li key={idx}>
-                      <Link href={item.href}>{item.label}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
-      ))}
+      <Accordion type="single" collapsible>
+        {moblileSidebarData.map((item, idx) => (
+          <AccordionItem key={idx} value={item.title}>
+            <AccordionTrigger>{item.title}</AccordionTrigger>
+            <AccordionContent>
+              <ul>
+                {item.items.map((item, idx) => (
+                  <li key={idx}>
+                    <Link onClick={sheetCloserHandler} href={item.href}>
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+      <LanguageChanger />
     </div>
   );
 };
