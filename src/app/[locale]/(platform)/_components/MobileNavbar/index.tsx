@@ -1,5 +1,5 @@
 import React from "react";
-import { BurgerButton } from "../BurgerButton";
+import { BurgerButton } from "./_components/BurgerButton";
 
 export const MobileNavbar = () => {
   return (
