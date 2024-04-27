@@ -12,6 +12,7 @@ import { DescriptionList } from "@/app/[locale]/(platform)/_components/ListWrapp
 import { ContentList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList";
 import { ItemList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList/_components/ItemsList";
 import { TitleItemList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList/_components/ItemsList/_components/TitleItemList";
+import { Separator } from "@/components/ui/separator";
 
 export const DataTypes = ({ data }: DataTypesTypes) => {
   return (
@@ -30,10 +31,15 @@ export const DataTypes = ({ data }: DataTypesTypes) => {
           {/* Each Type */}
           <ContentList>
             {item.items.map((item, idx) => (
-              <ItemList key={idx}>
-                <TitleItemList>{item.title}: </TitleItemList>
-                {item.description}
-              </ItemList>
+              <div key={idx}>
+                <ItemList>
+                  <TitleItemList>{item.title}: </TitleItemList>
+                  {item.description}
+                </ItemList>
+                {item.title !== "Symbol" && item.title !== "Function" && (
+                  <Separator />
+                )}
+              </div>
             ))}
           </ContentList>
         </ListWrapper>
