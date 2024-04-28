@@ -1,9 +1,9 @@
 import React from "react";
 
-interface IntroWrapperProps {
+interface BasicBoxWrapperProps {
   children: React.ReactNode;
 }
 
-export const IntroWrapper = ({ children }: IntroWrapperProps) => {
+export const BasicBoxWrapper = ({ children }: BasicBoxWrapperProps) => {
   return <div className="pb-10">{children}</div>;
 };
