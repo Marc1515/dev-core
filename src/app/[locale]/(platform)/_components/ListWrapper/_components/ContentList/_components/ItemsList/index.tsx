@@ -5,9 +5,5 @@ interface ItemListProps {
 }
 
 export const ItemList = ({ children }: ItemListProps) => {
-  return (
-    <li>
-      <p>{children}</p>
-    </li>
-  );
+  return <li>{children}</li>;
 };
