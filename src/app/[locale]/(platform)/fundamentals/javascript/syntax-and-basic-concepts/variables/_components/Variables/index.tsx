@@ -2,18 +2,18 @@
 
 import React from "react";
 import { VariablesTypes } from "./types";
-import { IntroWrapper } from "@/app/[locale]/(platform)/_components/IntroWrapper";
-import { IntroTitle } from "@/app/[locale]/(platform)/_components/IntroWrapper/_components/IntroTitle";
-import { IntroDescription } from "@/app/[locale]/(platform)/_components/IntroWrapper/_components/IntroDescription";
+import { BasicBoxWrapper } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper";
+import { IntroTitle } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper/_components/IntroTitle";
+import { BasicDescription } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper/_components/BasicDescription";
 
 export const Variables = ({ data }: VariablesTypes) => {
   return (
     <div>
       {/* Variables */}
-      <IntroWrapper>
+      <BasicBoxWrapper>
         <IntroTitle>{data.title}</IntroTitle>
-        <IntroDescription>{data.description}</IntroDescription>
-      </IntroWrapper>
+        <BasicDescription>{data.description}</BasicDescription>
+      </BasicBoxWrapper>
 
       <span>{data.main_function.title}</span>
       <p>{data.main_function.description}</p>
