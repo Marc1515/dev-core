@@ -10,13 +10,16 @@
       "title": "Importance of Operators in Programming",
       "items": [
         {
-          "description": "Control of Program Flow: Comparison and logical operators are essential in program decision-making, such as in conditional statements (if) and loops (for, while), where they control whether a code block should execute or repeat."
+          "title": "Control of Program Flow",
+          "description": "Comparison and logical operators are essential in program decision-making, such as in conditional statements (if) and loops (for, while), where they control whether a code block should execute or repeat."
         },
         {
-          "description": "Data Manipulation: All programs manipulate data in some way, and operators are essential tools for effectively performing this manipulation, such as adjusting variable values or performing operations between them."
+          "title": "Data Manipulation",
+          "description": "All programs manipulate data in some way, and operators are essential tools for effectively performing this manipulation, such as adjusting variable values or performing operations between them."
         },
         {
-          "description": "Expressiveness and Conciseness: Operators enable writing complex expressions in a concise and readable way, facilitating both the development and maintenance of code."
+          "title": "Expressiveness and Conciseness",
+          "description": "Operators enable writing complex expressions in a concise and readable way, facilitating both the development and maintenance of code."
         }
       ]
     },
@@ -24,13 +27,16 @@
       "title": "Additional Concepts Related to Operators",
       "items": [
         {
-          "description": "Operator Associativity: Defines how operators of the same type (with the same precedence) are grouped in the absence of parentheses. For example, in 100 / 10 / 2, the left-to-right associativity of the division operator means the operation is resolved as (100 / 10) / 2."
+          "title": "Operator Associativity",
+          "description": "Defines how operators of the same type (with the same precedence) are grouped in the absence of parentheses. For example, in 100 / 10 / 2, the left-to-right associativity of the division operator means the operation is resolved as (100 / 10) / 2."
         },
         {
-          "description": "Operator Precedence: The rule that determines the order in which operations are performed in a complex expression. For example, in the expression 3 + 4 * 5, the multiplication operator has higher precedence than addition, so it is executed first."
+          "title": "Operator Precedence",
+          "description": "The rule that determines the order in which operations are performed in a complex expression. For example, in the expression 3 + 4 * 5, the multiplication operator has higher precedence than addition, so it is executed first."
         },
         {
-          "description": "Short-circuit Evaluation: Some logical operators like && (logical  AND) and || (logical OR) do not evaluate the second operand if the result can already be determined with the first. This is useful for preventing runtime errors and improving program efficiency."
+          "title": "Short-circuit Evaluation",
+          "description": "Some logical operators like && (logical  AND) and || (logical OR) do not evaluate the second operand if the result can already be determined with the first. This is useful for preventing runtime errors and improving program efficiency."
         }
       ]
     },
