@@ -15,6 +15,7 @@ interface Importance {
 }
 
 interface Item {
+  title: string;
   description: string;
 }
 
