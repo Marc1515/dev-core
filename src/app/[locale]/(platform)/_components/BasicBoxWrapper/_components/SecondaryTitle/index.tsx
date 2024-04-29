@@ -5,5 +5,5 @@ interface SecondaryTitleProps {
 }
 
 export const SecondaryTitle = ({ children }: SecondaryTitleProps) => {
-  return <span className="text-xl font-bold pb-5">{children}</span>;
+  return <span className="block text-xl font-bold pb-5">{children}</span>;
 };
