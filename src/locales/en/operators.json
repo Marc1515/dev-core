@@ -125,7 +125,7 @@
           {
             "symbol": "==",
             "title": "Equal to",
-            "equal_to_operator_explanation": "Checks whether two values are equal."
+            "description": "Checks whether two values are equal."
           },
           {
             "symbol": "===",
