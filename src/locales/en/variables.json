@@ -10,13 +10,16 @@
       "title": "Importance of Variables in Programming",
       "items": [
         {
-          "description": "Code Reusability: By using variables, you can write code that is reusable and adaptable. For example, instead of manually programming data-specific operations, you can perform operations on variables that can contain any data assigned to them during execution."
+          "title": "Code Reusability",
+          "description": "By using variables, you can write code that is reusable and adaptable. For example, instead of manually programming data-specific operations, you can perform operations on variables that can contain any data assigned to them during execution."
         },
         {
-          "description": "Data Manipulation: Variables allow you to manipulate data dynamically. For example, you can collect input from a user, store it in a variable, and then use that input in various functions and calculations within your program."
+          "title": "Data Manipulation",
+          "description": "Variables allow you to manipulate data dynamically. For example, you can collect input from a user, store it in a variable, and then use that input in various functions and calculations within your program."
         },
         {
-          "description": "Organization and Readability: Variables help organize code, making it more readable and maintainable. Instead of constantly repeating values (such as numbers or specific strings), you can use variables with meaningful names that make the code more understandable at first glance."
+          "title": "Organization and Readability",
+          "description": "Variables help organize code, making it more readable and maintainable. Instead of constantly repeating values (such as numbers or specific strings), you can use variables with meaningful names that make the code more understandable at first glance."
         }
       ]
     }
