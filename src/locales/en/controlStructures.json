@@ -10,13 +10,16 @@
       "title": "Importance in Programming",
       "items": [
         {
-          "description": "Dynamic Decisions: Without control structures, a program would always execute the same sequence of instructions from start to finish. Control structures enable decision-making at runtime, adapting the behavior of the program to different situations and input data."
+          "title": "Dynamic Decisions",
+          "description": "Without control structures, a program would always execute the same sequence of instructions from start to finish. Control structures enable decision-making at runtime, adapting the behavior of the program to different situations and input data."
         },
         {
-          "description": "Efficiency: They handle repetitive tasks without the need to write the same code many times, which simplifies development and reduces the likelihood of errors. For example, a loop can process the elements of a data list, applying the same operations to each element, which would be impractical to code manually if the list is large."
+          "title": "Efficiency",
+          "description": "They handle repetitive tasks without the need to write the same code many times, which simplifies development and reduces the likelihood of errors. For example, a loop can process the elements of a data list, applying the same operations to each element, which would be impractical to code manually if the list is large."
         },
         {
-          "description": "Flow Control: They are essential for tasks such as data validation, where the program must decide what action to take depending on whether the information meets certain criteria. They are also crucial in creating user menus and processing user responses."
+          "title": "Flow Control",
+          "description": "They are essential for tasks such as data validation, where the program must decide what action to take depending on whether the information meets certain criteria. They are also crucial in creating user menus and processing user responses."
         }
       ]
     },
