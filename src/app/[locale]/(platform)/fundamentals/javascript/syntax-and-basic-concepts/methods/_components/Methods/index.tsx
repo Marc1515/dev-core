@@ -8,6 +8,7 @@ import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButt
 /* Wrappers */
 import {
   BasicBoxWrapper,
+  CodeBox,
   CodeWrapper,
 } from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
@@ -32,10 +33,10 @@ export const Methods = ({ data }: MethodsTypes) => {
         <BasicDescription>{data.description}</BasicDescription>
       </BasicBoxWrapper>
       {/* Code */}
-      <>
-        <CodeWrapper>{methodCode}</CodeWrapper>
+      <CodeWrapper>
+        <CodeBox>{methodCode}</CodeBox>
         <ClipboardButton textToCopy={methodCode} />
-      </>
+      </CodeWrapper>
       {/* Key Differncies */}
       <BasicBoxWrapper>
         <SecondaryTitle>{data.key_differences.title}</SecondaryTitle>

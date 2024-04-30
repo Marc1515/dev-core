@@ -8,6 +8,7 @@ import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButt
 /* Wrappers */
 import {
   BasicBoxWrapper,
+  CodeBox,
   CodeWrapper,
 } from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
@@ -33,10 +34,10 @@ export const StylesModification = ({ data }: StylesModificationTypes) => {
             <SecondaryTitle>{modification.title}</SecondaryTitle>
             <BasicDescription>{modification.description}</BasicDescription>
             {/* Code */}
-            <>
-              <CodeWrapper>{codes[idx]}</CodeWrapper>
+            <CodeWrapper>
+              <CodeBox>{codes[idx]}</CodeBox>
               <ClipboardButton textToCopy={codes[idx]} />
-            </>
+            </CodeWrapper>
           </Fragment>
         ))}
       </BasicBoxWrapper>

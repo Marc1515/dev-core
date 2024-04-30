@@ -36,3 +36,8 @@ export const CodeWrapper = ({ children }: WrappersProps) => {
     </div>
   );
 };
+
+/* CodeBox */
+export const CodeBox = ({ children }: WrappersProps) => {
+  return <pre className="w-full overflow-x-auto">{children}</pre>;
+};

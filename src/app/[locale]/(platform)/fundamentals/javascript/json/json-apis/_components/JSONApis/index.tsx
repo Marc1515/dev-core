@@ -8,6 +8,7 @@ import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButt
 /* Wrappers */
 import {
   BasicBoxWrapper,
+  CodeBox,
   CodeWrapper,
 } from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
@@ -35,8 +36,11 @@ export const JSONApis = ({ data }: JSONApisTypes) => {
           {item.description ? (
             <>
               <BasicDescription>{item.description}</BasicDescription>
-              <CodeWrapper>{codes[idx]}</CodeWrapper>
-              <ClipboardButton textToCopy={codes[idx]} />
+              {/* Code */}
+              <CodeWrapper>
+                <CodeBox>{codes[idx]}</CodeBox>
+                <ClipboardButton textToCopy={codes[idx]} />
+              </CodeWrapper>
             </>
           ) : (
             <List>

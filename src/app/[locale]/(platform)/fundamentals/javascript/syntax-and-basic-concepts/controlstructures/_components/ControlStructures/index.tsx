@@ -9,6 +9,7 @@ import {
   BasicBoxWrapper,
   ListWrapper,
   CodeWrapper,
+  CodeBox,
 } from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
 import {
@@ -20,7 +21,6 @@ import {
 import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
 /* List */
 import { List, ItemList } from "@/app/[locale]/(platform)/_components/Lists";
-import { Code } from "@/app/[locale]/(platform)/_components/Code";
 
 export const ControlStructures = ({ data }: ControlStructuresTypes) => {
   return (
@@ -59,7 +59,7 @@ export const ControlStructures = ({ data }: ControlStructuresTypes) => {
                     <SubTitle>{item.title}</SubTitle>
                     <BasicDescription>{item.description}</BasicDescription>
                     <CodeWrapper>
-                      <Code>{RepetitionCodes[idx]}</Code>
+                      <CodeBox>{RepetitionCodes[idx]}</CodeBox>
                       <ClipboardButton textToCopy={RepetitionCodes[idx]} />
                     </CodeWrapper>
                   </Fragment>
@@ -69,7 +69,7 @@ export const ControlStructures = ({ data }: ControlStructuresTypes) => {
                     <SubTitle>{item.title}</SubTitle>
                     <BasicDescription>{item.description}</BasicDescription>
                     <CodeWrapper>
-                      <Code>{ConditionalCodes[idx]}</Code>
+                      <CodeBox>{ConditionalCodes[idx]}</CodeBox>
                       <ClipboardButton textToCopy={ConditionalCodes[idx]} />
                     </CodeWrapper>
                   </Fragment>

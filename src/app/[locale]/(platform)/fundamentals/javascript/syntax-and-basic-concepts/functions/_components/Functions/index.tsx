@@ -7,6 +7,7 @@ import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButt
 /* Wrappers */
 import {
   BasicBoxWrapper,
+  CodeBox,
   CodeWrapper,
 } from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
@@ -34,10 +35,10 @@ export const Functions = ({ data }: FunctionsTypes) => {
           <Fragment key={index}>
             <SecondaryTitle>{item.title}</SecondaryTitle>
             <BasicDescription>{item.description}</BasicDescription>
-            <>
-              <CodeWrapper>{codes[index]}</CodeWrapper>
+            <CodeWrapper>
+              <CodeBox>{codes[index]}</CodeBox>
               <ClipboardButton textToCopy={codes[index]} />
-            </>
+            </CodeWrapper>
           </Fragment>
         ))}
       </BasicBoxWrapper>
