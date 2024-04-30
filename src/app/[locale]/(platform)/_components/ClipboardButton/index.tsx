@@ -25,7 +25,7 @@ const ClipboardButton = ({ textToCopy }: ClipboardButtonProps) => {
 
   return (
     <Button
-      className="bg-sky-600 hover:bg-sky-600 p-2 h-8"
+      className="text-xl p-0 h-0 mt-6 mr-4"
       onClick={() => toast.success("Copied!")}
       ref={buttonRef}
     >

@@ -74,3 +74,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+.codeWrapperShadow {
+  border-radius: 5px;
+  background: #0284C7;
+  box-shadow: inset 7px 7px 14px #015f8f,
+              inset -7px -7px 14px #03a9ff;
+}

@@ -31,9 +31,7 @@ export const ListWrapper = ({ children }: WrappersProps) => {
 /* Code Wrapper */
 export const CodeWrapper = ({ children }: WrappersProps) => {
   return (
-    <div className="flex pl-5 pb-5 mb-10 rounded border border-gray-400 shadow-inner">
-      {children}
-    </div>
+    <div className="flex pl-5 pb-5 mb-10 codeWrapperShadow">{children}</div>
   );
 };
 
