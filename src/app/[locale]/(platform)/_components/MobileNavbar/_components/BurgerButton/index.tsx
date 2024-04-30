@@ -10,8 +10,8 @@ export const BurgerButton = () => {
     <div className="relative top-0 right-0 p-4 md:hidden">
       <button className="relative group" onClick={toggleBurgerButton}>
         <div
-          className={`relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-sky-600 ring-0 ring-gray-300 ${
-            isActive ? "hover:ring-8 focus:ring-4" : ""
+          className={`relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-radial-darkblue ring-0 ring-gray-300 ${
+            isActive ? "active:ring-8 focus:ring-4" : ""
           } ring-opacity-30 duration-200 shadow-md`}
         >
           <div className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">

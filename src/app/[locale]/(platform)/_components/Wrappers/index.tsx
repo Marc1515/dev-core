@@ -6,7 +6,9 @@ interface WrappersProps {
 
 /* Main Wrapper Content */
 export const MainWrapperContent = ({ children }: WrappersProps) => {
-  return <div className="w-full h-full p-5 pt-20 bg-sky-600">{children}</div>;
+  return (
+    <div className="w-full h-full p-5 pt-20 bg-radial-custom">{children}</div>
+  );
 };
 
 /* Basic Box Wrapper */
