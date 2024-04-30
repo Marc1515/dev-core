@@ -6,14 +6,12 @@ interface WrappersProps {
 
 /* Main Wrapper Content */
 export const MainWrapperContent = ({ children }: WrappersProps) => {
-  return (
-    <div className="w-full h-full p-5 pt-[6rem] bg-sky-600">{children}</div>
-  );
+  return <div className="w-full h-full p-5 pt-20 bg-sky-600">{children}</div>;
 };
 
 /* Basic Box Wrapper */
 export const BasicBoxWrapper = ({ children }: WrappersProps) => {
-  return <div className="pb-10">{children}</div>;
+  return <div className="py-5">{children}</div>;
 };
 
 /* Cards Wrapper */
@@ -32,5 +30,9 @@ export const ListWrapper = ({ children }: WrappersProps) => {
 
 /* Code Wrapper */
 export const CodeWrapper = ({ children }: WrappersProps) => {
-  return <pre className="overflow-x-auto">{children}</pre>;
+  return (
+    <div className="flex pl-5 pb-5 mb-10 rounded border border-gray-400 shadow-inner">
+      {children}
+    </div>
+  );
 };
