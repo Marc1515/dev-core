@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import ClipboardJS from "clipboard";
 import { toast } from "sonner";
+import { FaCopy } from "react-icons/fa";
 
 interface ClipboardButtonProps {
   textToCopy: string;
@@ -23,8 +24,12 @@ const ClipboardButton = ({ textToCopy }: ClipboardButtonProps) => {
   }, [textToCopy]);
 
   return (
-    <Button onClick={() => toast.success("Copied!")} ref={buttonRef}>
-      Copiar
+    <Button
+      className="bg-sky-600 hover:bg-sky-600 p-2 h-8"
+      onClick={() => toast.success("Copied!")}
+      ref={buttonRef}
+    >
+      <FaCopy />
     </Button>
   );
 };

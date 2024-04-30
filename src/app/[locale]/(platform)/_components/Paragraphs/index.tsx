@@ -6,7 +6,7 @@ interface ParagraphsProps {
 
 /* Basic Description */
 export const BasicDescription = ({ children }: ParagraphsProps) => {
-  return <p>{children}</p>;
+  return <p className="pb-5">{children}</p>;
 };
 
 /* Conclusion */
