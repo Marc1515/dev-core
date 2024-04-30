@@ -3,11 +3,11 @@
     "title": "Control Structures",
     "description": "Control structures are fundamental in any programming language, including JavaScript, as they guide the execution flow of the code based on certain conditions or by repeating actions in a controlled manner. Here I explain their main function and importance in general terms:",
     "main_function": {
-      "title": "Control Structures Main Function",
+      "title": "Main Function",
       "description": "The primary function of control structures is to make decisions and manage the program flow based on logical conditions or iterations. They allow the program to react differently according to the input data or the state of the application, and execute blocks of code repeatedly without needing to duplicate the code."
     },
     "importance": {
-      "title": "Importance in Programming",
+      "title": "Importance",
       "items": [
         {
           "title": "Dynamic Decisions",
