@@ -18,11 +18,7 @@ interface Structure {
 
 interface Importance {
   title: string;
-  items: Item[];
-}
-
-interface Item {
-  description: string;
+  items: Mainfunction[];
 }
 
 interface Mainfunction {

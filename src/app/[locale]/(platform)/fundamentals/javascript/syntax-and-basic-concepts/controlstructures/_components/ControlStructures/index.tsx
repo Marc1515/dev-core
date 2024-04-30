@@ -4,19 +4,26 @@ import React, { Fragment } from "react";
 import { ControlStructuresTypes } from "./types";
 import { ConditionalCodes, RepetitionCodes } from "./codes";
 import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButton";
-import { BasicBoxWrapper } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper";
-import { IntroTitle } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper/_components/IntroTitle";
-import { BasicDescription } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper/_components/BasicDescription";
-import { SecondaryTitle } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper/_components/SecondaryTitle";
-import { ListWrapper } from "@/app/[locale]/(platform)/_components/ListWrapper";
-import { ContentList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList";
-import { ItemList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList/_components/ItemsList";
-import { DescriptionItemList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList/_components/ItemsList/_components/DescriptionItemList";
-import { CodeBox } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper/_components/CodeBox";
+/* Wrappers */
+import {
+  BasicBoxWrapper,
+  ListWrapper,
+  CodeWrapper,
+} from "@/app/[locale]/(platform)/_components/Wrappers";
+/* Titles */
+import {
+  IntroTitle,
+  SecondaryTitle,
+  SubTitle,
+} from "@/app/[locale]/(platform)/_components/Titles";
+/* Paragraphs */
+import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
+/* List */
+import { List, ItemList } from "@/app/[locale]/(platform)/_components/Lists";
 
 export const ControlStructures = ({ data }: ControlStructuresTypes) => {
   return (
-    <div>
+    <>
       {/* Introduction */}
       <BasicBoxWrapper>
         <IntroTitle>{data.title}</IntroTitle>
@@ -30,13 +37,14 @@ export const ControlStructures = ({ data }: ControlStructuresTypes) => {
       {/* Importance */}
       <ListWrapper>
         <SecondaryTitle>{data.importance.title}</SecondaryTitle>
-        <ContentList>
+        <List>
           {data.importance.items.map((item, index) => (
             <ItemList key={index}>
-              <DescriptionItemList>{item.description}</DescriptionItemList>
+              <SubTitle>{item.title}</SubTitle>
+              <BasicDescription>{item.description}</BasicDescription>
             </ItemList>
           ))}
-        </ContentList>
+        </List>
       </ListWrapper>
       {/* Structures */}
       <BasicBoxWrapper>
@@ -47,20 +55,20 @@ export const ControlStructures = ({ data }: ControlStructuresTypes) => {
             {structure.title === "Repetition Structures (Loops)"
               ? structure.items?.map((item, idx) => (
                   <Fragment key={idx}>
-                    <SecondaryTitle>{item.title}</SecondaryTitle>
+                    <SubTitle>{item.title}</SubTitle>
                     <BasicDescription>{item.description}</BasicDescription>
                     <>
-                      <CodeBox>{RepetitionCodes[idx]}</CodeBox>
+                      <CodeWrapper>{RepetitionCodes[idx]}</CodeWrapper>
                       <ClipboardButton textToCopy={RepetitionCodes[idx]} />
                     </>
                   </Fragment>
                 ))
               : structure.items?.map((item, idx) => (
                   <Fragment key={idx}>
-                    <SecondaryTitle>{item.title}</SecondaryTitle>
+                    <SubTitle>{item.title}</SubTitle>
                     <BasicDescription>{item.description}</BasicDescription>
                     <>
-                      <CodeBox>{ConditionalCodes[idx]}</CodeBox>
+                      <CodeWrapper>{ConditionalCodes[idx]}</CodeWrapper>
                       <ClipboardButton textToCopy={ConditionalCodes[idx]} />
                     </>
                   </Fragment>
@@ -68,6 +76,6 @@ export const ControlStructures = ({ data }: ControlStructuresTypes) => {
           </Fragment>
         ))}
       </BasicBoxWrapper>
-    </div>
+    </>
   );
 };

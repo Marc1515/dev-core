@@ -5,7 +5,7 @@ import TranslationsProvider from "@/lib/TranslationProvider";
 import { navbarNamespaces } from "@/constants/namespaces/othersNamespaces";
 import { MobileSidebar } from "./_components/MobileSidebar";
 import { BurgerButtonProvider } from "@/contexts/BurgerButtonContext";
-import { MainWrapperContent } from "./_components/MainWrapperContent";
+import { MainWrapperContent } from "./_components/Wrappers";
 import { MobileNavbar } from "./_components/MobileNavbar";
 
 interface PlatformLayoutProps {

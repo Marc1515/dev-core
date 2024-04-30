@@ -3,15 +3,22 @@
 import React from "react";
 
 import { DataTypesTypes } from "./types";
-import { BasicBoxWrapper } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper";
-import { IntroTitle } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper/_components/IntroTitle";
-import { BasicDescription } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper/_components/BasicDescription";
-import { ListWrapper } from "@/app/[locale]/(platform)/_components/ListWrapper";
-import { TitleList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/TitleList";
-import { DescriptionList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/DescriptionList";
-import { ContentList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList";
-import { ItemList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList/_components/ItemsList";
-import { TitleItemList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList/_components/ItemsList/_components/TitleItemList";
+/* Wrappers */
+import {
+  BasicBoxWrapper,
+  ListWrapper,
+} from "@/app/[locale]/(platform)/_components/Wrappers";
+/* Titles */
+import {
+  IntroTitle,
+  SecondaryTitle,
+  SubTitle,
+} from "@/app/[locale]/(platform)/_components/Titles";
+/* Paragraphs */
+import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
+/* Lists */
+import { List, ItemList } from "@/app/[locale]/(platform)/_components/Lists";
+
 import { Separator } from "@/components/ui/separator";
 
 export const DataTypes = ({ data }: DataTypesTypes) => {
@@ -26,14 +33,14 @@ export const DataTypes = ({ data }: DataTypesTypes) => {
       {data.types.map((item, idx) => (
         <ListWrapper key={idx}>
           {/* List Introduction */}
-          <TitleList>{item.title}</TitleList>
-          <DescriptionList>{item.description}</DescriptionList>
+          <SecondaryTitle>{item.title}</SecondaryTitle>
+          <BasicDescription>{item.description}</BasicDescription>
           {/* Each Item */}
-          <ContentList>
+          <List>
             {item.items.map((item, idx) => (
               <div key={idx}>
                 <ItemList>
-                  <TitleItemList>{item.title}: </TitleItemList>
+                  <SubTitle>{item.title}: </SubTitle>
                   {item.description}
                 </ItemList>
                 {item.title !== "Symbol" && item.title !== "Function" && (
@@ -41,7 +48,7 @@ export const DataTypes = ({ data }: DataTypesTypes) => {
                 )}
               </div>
             ))}
-          </ContentList>
+          </List>
         </ListWrapper>
       ))}
     </div>

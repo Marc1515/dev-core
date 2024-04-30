@@ -10,7 +10,12 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import { CardsWrapper } from "../../../_components/CardsWrapper";
+/* Wrappers */
+import { BasicBoxWrapper, CardsWrapper } from "../../../_components/Wrappers";
+/* Titles */
+import { IntroTitle } from "../../../_components/Titles";
+/* Paragraphs */
+import { BasicDescription } from "../../../_components/Paragraphs";
 
 interface DOMManipulationPageProps {
   params: {
@@ -28,10 +33,10 @@ const DOMManipulationPage = async ({
 
   return (
     <>
-      <div className="pb-10">
-        <h1 className="text-3xl font-bold pb-5">{data.title}</h1>
-        <p>{data.description}</p>
-      </div>
+      <BasicBoxWrapper>
+        <IntroTitle>{data.title}</IntroTitle>
+        <BasicDescription>{data.description}</BasicDescription>
+      </BasicBoxWrapper>
       <CardsWrapper>
         {data.items.map((item, idx) => (
           <Card key={idx}>

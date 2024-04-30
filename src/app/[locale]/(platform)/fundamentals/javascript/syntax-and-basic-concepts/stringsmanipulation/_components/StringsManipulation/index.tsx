@@ -1,38 +1,57 @@
 "use client";
 
-import React from "react";
+import React, { Fragment } from "react";
 
 import { StringsManipulationTypes } from "./types";
 import { codes } from "./codes";
 import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButton";
+/* Wrappers */
+import {
+  BasicBoxWrapper,
+  CodeWrapper,
+} from "@/app/[locale]/(platform)/_components/Wrappers";
+/* Titles */
+import {
+  IntroTitle,
+  SecondaryTitle,
+} from "@/app/[locale]/(platform)/_components/Titles";
+/* Paragraphs */
+import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
+/* Lists */
+import { ItemList, List } from "@/app/[locale]/(platform)/_components/Lists";
 
 export const StringsManipulation = ({ data }: StringsManipulationTypes) => {
   return (
-    <div>
+    <>
       {/* Introduction */}
-      <h1>{data.title}</h1>
-      <p>{data.description}</p>
+      <BasicBoxWrapper>
+        <IntroTitle>{data.title}</IntroTitle>
+        <BasicDescription>{data.description}</BasicDescription>
+      </BasicBoxWrapper>
       {/* Each Manipulation Type */}
-      {data.manipulation.map((item, idx) => (
-        <div key={idx}>
-          <span>{item.title}</span>
-          <ul>
-            {!item.description ? (
-              item.items?.map((item, idx) => (
-                <li key={idx}>
-                  <p>{item.description}</p>
-                </li>
-              ))
-            ) : (
-              <p>{item.description}</p>
-            )}
-          </ul>
-          <div>
-            <pre>{codes[idx]}</pre>
-            <ClipboardButton textToCopy={codes[idx]} />
-          </div>
-        </div>
-      ))}
-    </div>
+      <BasicBoxWrapper>
+        {data.manipulation.map((item, idx) => (
+          <Fragment key={idx}>
+            <SecondaryTitle>{item.title}</SecondaryTitle>
+            <List>
+              {!item.description ? (
+                item.items?.map((item, idx) => (
+                  <ItemList key={idx}>
+                    <BasicDescription>{item.description}</BasicDescription>
+                  </ItemList>
+                ))
+              ) : (
+                <BasicDescription>{item.description}</BasicDescription>
+              )}
+            </List>
+            {/* Code */}
+            <>
+              <CodeWrapper>{codes[idx]}</CodeWrapper>
+              <ClipboardButton textToCopy={codes[idx]} />
+            </>
+          </Fragment>
+        ))}
+      </BasicBoxWrapper>
+    </>
   );
 };

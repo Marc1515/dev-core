@@ -2,16 +2,21 @@
 
 import React from "react";
 import { VariablesTypes } from "./types";
-import { BasicBoxWrapper } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper";
-import { IntroTitle } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper/_components/IntroTitle";
-import { BasicDescription } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper/_components/BasicDescription";
-import { SecondaryTitle } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper/_components/SecondaryTitle";
-import { ListWrapper } from "@/app/[locale]/(platform)/_components/ListWrapper";
-import { TitleList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/TitleList";
-import { ContentList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList";
-import { DescriptionList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/DescriptionList";
-import { ItemList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList/_components/ItemsList";
-import { TitleItemList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList/_components/ItemsList/_components/TitleItemList";
+/* Wrappers */
+import {
+  BasicBoxWrapper,
+  ListWrapper,
+} from "@/app/[locale]/(platform)/_components/Wrappers";
+/* Titles */
+import {
+  IntroTitle,
+  SecondaryTitle,
+  SubTitle,
+} from "@/app/[locale]/(platform)/_components/Titles";
+/* Paragraphs */
+import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
+/* Lists */
+import { List, ItemList } from "@/app/[locale]/(platform)/_components/Lists";
 
 export const Variables = ({ data }: VariablesTypes) => {
   return (
@@ -30,15 +35,15 @@ export const Variables = ({ data }: VariablesTypes) => {
 
       {/* Importance */}
       <ListWrapper>
-        <TitleList>{data.importance.title}</TitleList>
-        <ContentList>
+        <SecondaryTitle>{data.importance.title}</SecondaryTitle>
+        <List>
           {data.importance.items.map((item, idx) => (
             <ItemList key={idx}>
-              <TitleItemList>{item.title}</TitleItemList>
-              <DescriptionList>{item.description}</DescriptionList>
+              <SubTitle>{item.title}</SubTitle>
+              <BasicDescription>{item.description}</BasicDescription>
             </ItemList>
           ))}
-        </ContentList>
+        </List>
       </ListWrapper>
     </>
   );

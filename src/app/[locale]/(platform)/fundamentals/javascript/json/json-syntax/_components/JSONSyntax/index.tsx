@@ -1,38 +1,57 @@
 "use client";
 
-import React from "react";
+import React, { Fragment } from "react";
 
 import { JSONSyntaxTypes } from "./types";
 import { codes } from "./codes";
 import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButton";
+/* Wrappers */
+import {
+  BasicBoxWrapper,
+  CodeWrapper,
+} from "@/app/[locale]/(platform)/_components/Wrappers";
+/* Titles */
+import {
+  IntroTitle,
+  SecondaryTitle,
+} from "@/app/[locale]/(platform)/_components/Titles";
+/* Paragraphs */
+import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
+/* Lists */
+import { ItemList, List } from "@/app/[locale]/(platform)/_components/Lists";
 
 export const JSONSyntax = ({ data }: JSONSyntaxTypes) => {
   return (
-    <div>
-      <h1>{data.title}</h1>
-      <p>{data.description}</p>
+    <>
+      {/* Introduction */}
+      <BasicBoxWrapper>
+        <IntroTitle>{data.title}</IntroTitle>
+        <BasicDescription>{data.description}</BasicDescription>
+      </BasicBoxWrapper>
 
-      {data.items.map((item, idx) => (
-        <div key={idx}>
-          <span>
-            <strong>{item.title}</strong>
-          </span>
-          <p>{item.description}</p>
-          <ul>
-            {item.items?.map((item, idx) => (
-              <li key={idx}>
-                <p>{item.description}</p>
-              </li>
-            ))}
-          </ul>
-          {codes[idx] === "" ? null : (
-            <div>
-              <pre>{codes[idx]}</pre>
-              <ClipboardButton textToCopy={codes[idx]} />
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
+      {/* Each Explanation */}
+      <BasicBoxWrapper>
+        {data.items.map((item, idx) => (
+          <Fragment key={idx}>
+            <SecondaryTitle>{item.title}</SecondaryTitle>
+            <BasicDescription>{item.description}</BasicDescription>
+            <List>
+              {item.items?.map((item, idx) => (
+                <ItemList key={idx}>
+                  <BasicDescription>{item.description}</BasicDescription>
+                </ItemList>
+              ))}
+            </List>
+            {codes[idx] === "" ? null : (
+              /* Code */
+              <>
+                <CodeWrapper>{codes[idx]}</CodeWrapper>
+                <ClipboardButton textToCopy={codes[idx]} />
+              </>
+            )}
+          </Fragment>
+        ))}
+      </BasicBoxWrapper>
+    </>
   );
 };

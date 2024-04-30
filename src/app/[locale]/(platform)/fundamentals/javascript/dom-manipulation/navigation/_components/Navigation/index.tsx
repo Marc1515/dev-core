@@ -1,26 +1,45 @@
 "use client";
 
-import React from "react";
+import React, { Fragment } from "react";
 
 import { NavigationTypes } from "./types";
 import { codes } from "./codes";
 import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButton";
+/* Wrappers */
+import {
+  BasicBoxWrapper,
+  CodeWrapper,
+} from "@/app/[locale]/(platform)/_components/Wrappers";
+/* Titles */
+import {
+  IntroTitle,
+  SecondaryTitle,
+} from "@/app/[locale]/(platform)/_components/Titles";
+/* Paragraphs */
+import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
 
 export const Navigation = ({ data }: NavigationTypes) => {
   return (
-    <div>
-      <h1>{data.title}</h1>
-      <p>{data.description}</p>
-      {data.items.map((item, idx) => (
-        <div key={idx}>
-          <span>{item.title}</span>
-          <p>{item.description}</p>
-          <div>
-            <pre>{codes[idx]}</pre>
-            <ClipboardButton textToCopy={codes[idx]} />
-          </div>
-        </div>
-      ))}
-    </div>
+    <>
+      {/* Introduction */}
+      <BasicBoxWrapper>
+        <IntroTitle>{data.title}</IntroTitle>
+        <BasicDescription>{data.description}</BasicDescription>
+      </BasicBoxWrapper>
+      {/* Each Type of Navigation */}
+      <BasicBoxWrapper>
+        {data.items.map((item, idx) => (
+          <Fragment key={idx}>
+            <SecondaryTitle>{item.title}</SecondaryTitle>
+            <BasicDescription>{item.description}</BasicDescription>
+            {/* Code */}
+            <>
+              <CodeWrapper>{codes[idx]}</CodeWrapper>
+              <ClipboardButton textToCopy={codes[idx]} />
+            </>
+          </Fragment>
+        ))}
+      </BasicBoxWrapper>
+    </>
   );
 };

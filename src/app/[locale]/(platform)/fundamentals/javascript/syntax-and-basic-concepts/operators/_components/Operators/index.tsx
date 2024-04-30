@@ -3,18 +3,24 @@
 import React, { Fragment } from "react";
 
 import { OperatorsTypes } from "./types";
-import { BasicBoxWrapper } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper";
-import { BasicDescription } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper/_components/BasicDescription";
-import { IntroTitle } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper/_components/IntroTitle";
-import { ListWrapper } from "@/app/[locale]/(platform)/_components/ListWrapper";
-import { TitleList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/TitleList";
-import { ContentList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList";
-import { ItemList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList/_components/ItemsList";
-import { DescriptionItemList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList/_components/ItemsList/_components/DescriptionItemList";
-import { TitleItemList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/ContentList/_components/ItemsList/_components/TitleItemList";
-import { SecondaryTitle } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper/_components/SecondaryTitle";
-import { DescriptionList } from "@/app/[locale]/(platform)/_components/ListWrapper/_components/DescriptionList";
-import { Conclusion } from "@/app/[locale]/(platform)/_components/BasicBoxWrapper/_components/Conclusion";
+/* Wrappers */
+import {
+  BasicBoxWrapper,
+  ListWrapper,
+} from "@/app/[locale]/(platform)/_components/Wrappers";
+/* Titles */
+import {
+  IntroTitle,
+  SecondaryTitle,
+  SubTitle,
+} from "@/app/[locale]/(platform)/_components/Titles";
+/* Paragraphs */
+import {
+  BasicDescription,
+  Conclusion,
+} from "@/app/[locale]/(platform)/_components/Paragraphs";
+/* List */
+import { List, ItemList } from "@/app/[locale]/(platform)/_components/Lists";
 
 export const Operators = ({ data }: OperatorsTypes) => {
   return (
@@ -31,53 +37,51 @@ export const Operators = ({ data }: OperatorsTypes) => {
       </BasicBoxWrapper>
       {/* Importance */}
       <ListWrapper>
-        <TitleList>{data.importance.title}</TitleList>
-        <ContentList>
+        <SecondaryTitle>{data.importance.title}</SecondaryTitle>
+        <List>
           {data.importance.items.map((item, index) => (
             <Fragment key={index}>
               <ItemList>
-                <TitleItemList>{item.title}</TitleItemList>
-                <DescriptionItemList>{item.description}</DescriptionItemList>
+                <SubTitle>{item.title}</SubTitle>
+                <BasicDescription>{item.description}</BasicDescription>
               </ItemList>
             </Fragment>
           ))}
-        </ContentList>
+        </List>
       </ListWrapper>
       {/* Additional Concepts */}
       <ListWrapper>
-        <TitleList>{data.additional_concepts.title}</TitleList>
-        <ContentList>
+        <SecondaryTitle>{data.additional_concepts.title}</SecondaryTitle>
+        <List>
           {data.importance.items.map((item, index) => (
             <Fragment key={index}>
               <ItemList>
-                <TitleItemList>{item.title}</TitleItemList>
-                <DescriptionItemList>{item.description}</DescriptionItemList>
+                <SubTitle>{item.title}</SubTitle>
+                <BasicDescription>{item.description}</BasicDescription>
               </ItemList>
             </Fragment>
           ))}
-        </ContentList>
+        </List>
       </ListWrapper>
-      {/* All Operator */}
+      {/* All Operators */}
       <ListWrapper>
         {data.operators.map((operator, index) => (
           <Fragment key={index}>
-            <TitleList>{operator.title}</TitleList>
-            <DescriptionList>{operator.description}</DescriptionList>
+            <SecondaryTitle>{operator.title}</SecondaryTitle>
+            <BasicDescription>{operator.description}</BasicDescription>
             {/* Each Operator */}
-            <ContentList>
+            <List>
               {operator.items?.map((item, index) => (
                 <Fragment key={index}>
                   <ItemList>
-                    <TitleItemList>
+                    <SubTitle>
                       {item.title} ({item.symbol}):
-                    </TitleItemList>
-                    <DescriptionItemList>
-                      {item.description}
-                    </DescriptionItemList>
+                    </SubTitle>
+                    <BasicDescription>{item.description}</BasicDescription>
                   </ItemList>
                 </Fragment>
               ))}
-            </ContentList>
+            </List>
           </Fragment>
         ))}
       </ListWrapper>

@@ -1,41 +1,55 @@
 "use client";
 
-import React from "react";
+import React, { Fragment } from "react";
 
 import { JSONApisTypes } from "./types";
 import { codes } from "./codes";
 import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButton";
+/* Wrappers */
+import {
+  BasicBoxWrapper,
+  CodeWrapper,
+} from "@/app/[locale]/(platform)/_components/Wrappers";
+/* Titles */
+import {
+  IntroTitle,
+  SecondaryTitle,
+  SubTitle,
+} from "@/app/[locale]/(platform)/_components/Titles";
+/* Paragraphs */
+import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
+/* Lists */
+import { ItemList, List } from "@/app/[locale]/(platform)/_components/Lists";
 
 export const JSONApis = ({ data }: JSONApisTypes) => {
   return (
-    <div>
-      <h1>{data.title}</h1>
-      <p>{data.description}</p>
+    <>
+      {/* Introduction */}
+      <BasicBoxWrapper>
+        <IntroTitle>{data.title}</IntroTitle>
+        <BasicDescription>{data.description}</BasicDescription>
+      </BasicBoxWrapper>
       {data.items.map((item, idx) => (
-        <div key={idx}>
-          <span>
-            <strong>{item.title}</strong>
-          </span>
+        <Fragment key={idx}>
+          <SecondaryTitle>{item.title}</SecondaryTitle>
           {item.description ? (
-            <div>
-              <p>{item.description}</p>
-              <div>
-                <pre>{codes[idx]}</pre>
-                <ClipboardButton textToCopy={codes[idx]} />
-              </div>
-            </div>
+            <>
+              <BasicDescription>{item.description}</BasicDescription>
+              <CodeWrapper>{codes[idx]}</CodeWrapper>
+              <ClipboardButton textToCopy={codes[idx]} />
+            </>
           ) : (
-            <ul>
+            <List>
               {item.items?.map((item, idx) => (
-                <li key={idx}>
-                  <span>{item.title}</span>
-                  <p>{item.description}</p>
-                </li>
+                <ItemList key={idx}>
+                  <SubTitle>{item.title}</SubTitle>
+                  <BasicDescription>{item.description}</BasicDescription>
+                </ItemList>
               ))}
-            </ul>
+            </List>
           )}
-        </div>
+        </Fragment>
       ))}
-    </div>
+    </>
   );
 };

@@ -5,10 +5,13 @@ import Link from "next/link";
 import { SyntaxAndBasicConceptsTypes } from "./types";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BasicBoxWrapper } from "../../../_components/BasicBoxWrapper";
-import { IntroTitle } from "../../../_components/BasicBoxWrapper/_components/IntroTitle";
-import { BasicDescription } from "../../../_components/BasicBoxWrapper/_components/BasicDescription";
-import { CardsWrapper } from "../../../_components/CardsWrapper";
+/* Wrappers */
+import { BasicBoxWrapper, CardsWrapper } from "../../../_components/Wrappers";
+/* Titles */
+import { IntroTitle } from "../../../_components/Titles";
+/* Paragraphs */
+import { BasicDescription } from "../../../_components/Paragraphs";
+
 import {
   Accordion,
   AccordionContent,
