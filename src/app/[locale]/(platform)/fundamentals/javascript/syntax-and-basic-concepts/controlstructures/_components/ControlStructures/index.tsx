@@ -20,6 +20,7 @@ import {
 import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
 /* List */
 import { List, ItemList } from "@/app/[locale]/(platform)/_components/Lists";
+import { Code } from "@/app/[locale]/(platform)/_components/Code";
 
 export const ControlStructures = ({ data }: ControlStructuresTypes) => {
   return (
@@ -57,20 +58,20 @@ export const ControlStructures = ({ data }: ControlStructuresTypes) => {
                   <Fragment key={idx}>
                     <SubTitle>{item.title}</SubTitle>
                     <BasicDescription>{item.description}</BasicDescription>
-                    <>
-                      <CodeWrapper>{RepetitionCodes[idx]}</CodeWrapper>
+                    <CodeWrapper>
+                      <Code>{RepetitionCodes[idx]}</Code>
                       <ClipboardButton textToCopy={RepetitionCodes[idx]} />
-                    </>
+                    </CodeWrapper>
                   </Fragment>
                 ))
               : structure.items?.map((item, idx) => (
                   <Fragment key={idx}>
                     <SubTitle>{item.title}</SubTitle>
                     <BasicDescription>{item.description}</BasicDescription>
-                    <>
-                      <CodeWrapper>{ConditionalCodes[idx]}</CodeWrapper>
+                    <CodeWrapper>
+                      <Code>{ConditionalCodes[idx]}</Code>
                       <ClipboardButton textToCopy={ConditionalCodes[idx]} />
-                    </>
+                    </CodeWrapper>
                   </Fragment>
                 ))}
           </Fragment>
