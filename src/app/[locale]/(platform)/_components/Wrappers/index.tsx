@@ -1,4 +1,8 @@
+"use client";
+
 import React from "react";
+
+import { useDarkModeContext } from "@/contexts/DarkModeContext";
 
 interface WrappersProps {
   children: React.ReactNode;
@@ -6,9 +10,7 @@ interface WrappersProps {
 
 /* Main Wrapper Content */
 export const MainWrapperContent = ({ children }: WrappersProps) => {
-  return (
-    <div className="w-full h-full p-5 pt-20 bg-radial-custom">{children}</div>
-  );
+  return <div className="w-full h-full p-5 pt-20">{children}</div>;
 };
 
 /* Basic Box Wrapper */
@@ -18,8 +20,13 @@ export const BasicBoxWrapper = ({ children }: WrappersProps) => {
 
 /* Cards Wrapper */
 export const CardsWrapper = ({ children }: WrappersProps) => {
+  const { isDarkActive } = useDarkModeContext();
   return (
-    <div className="w-full h-full flex flex-col gap-y-5 justify-evenly">
+    <div
+      className={`w-full h-full flex flex-col gap-y-5 justify-evenly ${
+        !isDarkActive ? "bg-custom-background" : "dark:bg-custom-background"
+      }`}
+    >
       {children}
     </div>
   );
