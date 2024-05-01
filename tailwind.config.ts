@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
-const config = {
-  darkMode: ["class"],
+const config: Config = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -72,19 +72,8 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      backgroundImage: {
-        radial:
-          "radial-gradient(circle, rgba(92, 70, 156, 1) 0%, rgba(29, 38, 125, 1) 35%, rgba(12, 19, 79, 1) 100%)",
-        "gradient-200deg":
-          "linear-gradient(200deg, rgba(92, 70, 156, 1) 0%, rgba(29, 38, 125, 1) 35%, rgba(12, 19, 79, 1) 100%)",
-        "gradient-custom":
-          "linear-gradient(200deg, rgba(119, 176, 170, 1) 0%, rgba(19, 93, 102, 1) 17%, rgba(0, 60, 67, 1) 35%)",
-        "gradient-200deg-deepblue":
-          "linear-gradient(200deg, rgba(83, 92, 145, 1) 0%, rgba(27, 26, 85, 1) 26%, rgba(7, 15, 43, 1) 52%)",
-        "radial-custom":
-          "radial-gradient(circle, rgba(83, 92, 145, 1) 0%, rgba(27, 26, 85, 1) 22%, rgba(7, 15, 43, 1) 41%)",
-        "radial-darkblue":
-          "radial-gradient(circle, rgba(7, 15, 43, 1) 53%, rgba(27, 26, 85, 1) 79%, rgba(83, 92, 145, 1) 100%)",
+      backgroundColor: {
+        "custom-background": "var(--background)",
       },
     },
   },
