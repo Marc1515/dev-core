@@ -11,7 +11,7 @@ interface WrappersProps {
 /* Main Wrapper Content */
 export const MainWrapperContent = ({ children }: WrappersProps) => {
   return (
-    <div className="w-full h-full p-5 pt-20 dark:bg-custom-gradient bg-custom-gradient">
+    <div className="w-full h-full p-5 pt-20 dark:bg-custom-gradient bg-custom-gradient transition-all duration-500">
       {children}
     </div>
   );
