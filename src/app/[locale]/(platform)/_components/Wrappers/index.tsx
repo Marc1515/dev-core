@@ -10,7 +10,11 @@ interface WrappersProps {
 
 /* Main Wrapper Content */
 export const MainWrapperContent = ({ children }: WrappersProps) => {
-  return <div className="w-full h-full p-5 pt-20">{children}</div>;
+  return (
+    <div className="w-full h-full p-5 pt-20 dark:bg-custom-gradient bg-custom-gradient">
+      {children}
+    </div>
+  );
 };
 
 /* Basic Box Wrapper */
@@ -20,13 +24,8 @@ export const BasicBoxWrapper = ({ children }: WrappersProps) => {
 
 /* Cards Wrapper */
 export const CardsWrapper = ({ children }: WrappersProps) => {
-  const { isDarkActive } = useDarkModeContext();
   return (
-    <div
-      className={`w-full h-full flex flex-col gap-y-5 justify-evenly ${
-        !isDarkActive ? "bg-custom-background" : "dark:bg-custom-background"
-      }`}
-    >
+    <div className="w-full h-full flex flex-col gap-y-5 justify-evenly">
       {children}
     </div>
   );

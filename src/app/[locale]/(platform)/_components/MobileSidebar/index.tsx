@@ -30,7 +30,7 @@ export const MobileSidebar = ({ data }: MobileSidebarTypes) => {
 
   return (
     <div
-      className={`fixed px-5 pt-[150px] w-full h-full flex flex-col bg-gradient-200deg-deepblue transition-transform duration-300 ease-in-out ${
+      className={`fixed px-5 pt-[150px] w-full h-full flex flex-col  dark:bg-custom-gradient bg-custom-gradient transition-transform duration-300 ease-in-out ${
         isActive ? "transform translate-x-0" : "transform translate-x-[-100%]"
       } md:hidden`}
     >
