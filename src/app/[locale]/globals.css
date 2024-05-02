@@ -6,6 +6,9 @@
   :root {
     --custom-gradient: linear-gradient(225deg, rgba(111, 109, 176, 1) 0%, rgba(124, 122, 184, 1) 12%, rgba(137, 136, 191, 1) 24%, rgba(146, 144, 195, 1) 39%, rgba(164, 162, 205, 1) 53%);
     --foreground: 222.2 84% 4.9%;
+    --box-code-background: #9290C3;
+    --box-code-hard-shadow: #7067a0;
+    --box-code-soft-shadow: #aea4e1;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -38,6 +41,9 @@
   .dark {
     --custom-gradient: linear-gradient(225deg, rgba(14, 30, 88, 1) 0%, rgba(11, 24, 70, 1) 22%, rgba(7, 15, 43, 1) 35%, rgba(6, 14, 39, 1) 48%, rgba(5, 13, 35, 1) 61%);
     --foreground: 210 40% 98%;
+    --box-code-background: #060E27;
+    --box-code-hard-shadow: #04091c;
+    --box-code-soft-shadow: #0d163d;
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -77,8 +83,7 @@
 
 .codeWrapperShadow {
   border-radius: 5px;
-  background: #0284C7;
-  box-shadow: inset 7px 7px 14px #015f8f,
-              inset -7px -7px 14px #03a9ff;
+  background: var(--box-code-background);
+  box-shadow: inset 7px 7px 14px var(--box-code-hard-shadow),  /* Más oscuro */
+              inset -7px -7px 14px var(--box-code-soft-shadow); /* Más claro */
 }
-
