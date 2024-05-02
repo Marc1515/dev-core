@@ -27,7 +27,8 @@ export const DarkModeButton = () => {
     <>
       <Button
         onClick={() => setDarkMode(!darkMode)}
-        className="text-foreground dark:text-foreground dark:bg-custom-gradient bg-custom-gradient"
+        className="text-foreground dark:text-foreground bg-transparent border-2 border-slate-400 dark:border-slate-800"
+        variant={"defaultActive"}
       >
         {!darkMode ? <MdOutlineLightMode /> : <MdDarkMode />}
       </Button>
