@@ -36,8 +36,8 @@ export const ElementContentModification = ({
             <BasicDescription>{modification.description}</BasicDescription>
             {/* Code */}
             <CodeWrapper>
-              <CodeBox>{codes[idx]}</CodeBox>
               <ClipboardButton textToCopy={codes[idx]} />
+              <CodeBox>{codes[idx]}</CodeBox>
             </CodeWrapper>
           </Fragment>
         ))}

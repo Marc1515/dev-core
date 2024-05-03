@@ -46,8 +46,8 @@ export const JSONSyntax = ({ data }: JSONSyntaxTypes) => {
             {codes[idx] === "" ? null : (
               /* Code */
               <CodeWrapper>
-                <CodeBox>{codes[idx]}</CodeBox>
                 <ClipboardButton textToCopy={codes[idx]} />
+                <CodeBox>{codes[idx]}</CodeBox>
               </CodeWrapper>
             )}
           </Fragment>

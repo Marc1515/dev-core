@@ -36,8 +36,8 @@ export const Functions = ({ data }: FunctionsTypes) => {
             <SecondaryTitle>{item.title}</SecondaryTitle>
             <BasicDescription>{item.description}</BasicDescription>
             <CodeWrapper>
-              <CodeBox>{codes[index]}</CodeBox>
               <ClipboardButton textToCopy={codes[index]} />
+              <CodeBox>{codes[index]}</CodeBox>
             </CodeWrapper>
           </Fragment>
         ))}

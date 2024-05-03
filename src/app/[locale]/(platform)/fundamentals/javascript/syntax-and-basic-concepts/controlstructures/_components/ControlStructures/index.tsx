@@ -59,8 +59,8 @@ export const ControlStructures = ({ data }: ControlStructuresTypes) => {
                     <SubTitle>{item.title}</SubTitle>
                     <BasicDescription>{item.description}</BasicDescription>
                     <CodeWrapper>
-                      <CodeBox>{RepetitionCodes[idx]}</CodeBox>
                       <ClipboardButton textToCopy={RepetitionCodes[idx]} />
+                      <CodeBox>{RepetitionCodes[idx]}</CodeBox>
                     </CodeWrapper>
                   </Fragment>
                 ))
@@ -69,8 +69,8 @@ export const ControlStructures = ({ data }: ControlStructuresTypes) => {
                     <SubTitle>{item.title}</SubTitle>
                     <BasicDescription>{item.description}</BasicDescription>
                     <CodeWrapper>
-                      <CodeBox>{ConditionalCodes[idx]}</CodeBox>
                       <ClipboardButton textToCopy={ConditionalCodes[idx]} />
+                      <CodeBox>{ConditionalCodes[idx]}</CodeBox>
                     </CodeWrapper>
                   </Fragment>
                 ))}

@@ -35,8 +35,8 @@ export const StylesModification = ({ data }: StylesModificationTypes) => {
             <BasicDescription>{modification.description}</BasicDescription>
             {/* Code */}
             <CodeWrapper>
-              <CodeBox>{codes[idx]}</CodeBox>
               <ClipboardButton textToCopy={codes[idx]} />
+              <CodeBox>{codes[idx]}</CodeBox>
             </CodeWrapper>
           </Fragment>
         ))}

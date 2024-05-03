@@ -34,8 +34,8 @@ export const Methods = ({ data }: MethodsTypes) => {
       </BasicBoxWrapper>
       {/* Code */}
       <CodeWrapper>
-        <CodeBox>{methodCode}</CodeBox>
         <ClipboardButton textToCopy={methodCode} />
+        <CodeBox>{methodCode}</CodeBox>
       </CodeWrapper>
       {/* Key Differncies */}
       <BasicBoxWrapper>

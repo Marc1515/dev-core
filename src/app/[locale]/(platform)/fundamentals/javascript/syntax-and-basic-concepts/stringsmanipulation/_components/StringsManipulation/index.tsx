@@ -47,8 +47,8 @@ export const StringsManipulation = ({ data }: StringsManipulationTypes) => {
             </List>
             {/* Code */}
             <CodeWrapper>
-              <CodeBox>{codes[idx]}</CodeBox>
               <ClipboardButton textToCopy={codes[idx]} />
+              <CodeBox>{codes[idx]}</CodeBox>
             </CodeWrapper>
           </Fragment>
         ))}

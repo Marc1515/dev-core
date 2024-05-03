@@ -84,6 +84,6 @@
 .codeWrapperShadow {
   border-radius: 5px;
   background: var(--box-code-background);
-  box-shadow: inset 7px 7px 14px var(--box-code-hard-shadow),  /* Más oscuro */
-              inset -7px -7px 14px var(--box-code-soft-shadow); /* Más claro */
+  box-shadow: inset 7px 7px 14px var(--box-code-hard-shadow),
+              inset -7px -7px 14px var(--box-code-soft-shadow);
 }

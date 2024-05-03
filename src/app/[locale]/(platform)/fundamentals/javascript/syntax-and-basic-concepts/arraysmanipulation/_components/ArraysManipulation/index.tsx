@@ -46,8 +46,8 @@ export const ArraysManipulation = ({ data }: ArraysManipulationTypes) => {
               )}
             </List>
             <CodeWrapper>
-              <CodeBox>{codes[idx]}</CodeBox>
               <ClipboardButton textToCopy={codes[idx]} />
+              <CodeBox>{codes[idx]}</CodeBox>
             </CodeWrapper>
           </Fragment>
         ))}
