@@ -39,11 +39,13 @@ export const ListWrapper = ({ children }: WrappersProps) => {
 /* Code Wrapper */
 export const CodeWrapper = ({ children }: WrappersProps) => {
   return (
-    <div className="flex pl-5 pb-5 mb-10 codeWrapperShadow">{children}</div>
+    <div className="flex flex-col items-end pr-4 mb-10 codeWrapperShadow">
+      {children}
+    </div>
   );
 };
 
 /* CodeBox */
 export const CodeBox = ({ children }: WrappersProps) => {
-  return <pre className="w-full overflow-x-auto">{children}</pre>;
+  return <pre className="w-full pb-5 pl-5 overflow-x-auto">{children}</pre>;
 };
