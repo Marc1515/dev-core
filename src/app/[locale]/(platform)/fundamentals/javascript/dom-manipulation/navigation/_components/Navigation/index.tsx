@@ -4,13 +4,8 @@ import React, { Fragment } from "react";
 
 import { NavigationTypes } from "./types";
 import { codes } from "./codes";
-import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButton";
 /* Wrappers */
-import {
-  BasicBoxWrapper,
-  CodeBox,
-  CodeWrapper,
-} from "@/app/[locale]/(platform)/_components/Wrappers";
+import { BasicBoxWrapper } from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
 import {
   IntroTitle,
@@ -18,6 +13,7 @@ import {
 } from "@/app/[locale]/(platform)/_components/Titles";
 /* Paragraphs */
 import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
+import { CodeComponent } from "@/app/[locale]/(platform)/_components/CodeComponent";
 
 export const Navigation = ({ data }: NavigationTypes) => {
   return (
@@ -34,10 +30,7 @@ export const Navigation = ({ data }: NavigationTypes) => {
             <SecondaryTitle>{item.title}</SecondaryTitle>
             <BasicDescription>{item.description}</BasicDescription>
             {/* Code */}
-            <CodeWrapper>
-              <ClipboardButton textToCopy={codes[idx]} />
-              <CodeBox>{codes[idx]}</CodeBox>
-            </CodeWrapper>
+            <CodeComponent codeToCopy={codes} idx={idx} />
           </Fragment>
         ))}
       </BasicBoxWrapper>

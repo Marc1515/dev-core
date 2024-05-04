@@ -4,13 +4,8 @@ import React, { Fragment } from "react";
 
 import { StringsManipulationTypes } from "./types";
 import { codes } from "./codes";
-import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButton";
 /* Wrappers */
-import {
-  BasicBoxWrapper,
-  CodeBox,
-  CodeWrapper,
-} from "@/app/[locale]/(platform)/_components/Wrappers";
+import { BasicBoxWrapper } from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
 import {
   IntroTitle,
@@ -20,6 +15,7 @@ import {
 import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
 /* Lists */
 import { ItemList, List } from "@/app/[locale]/(platform)/_components/Lists";
+import { CodeComponent } from "@/app/[locale]/(platform)/_components/CodeComponent";
 
 export const StringsManipulation = ({ data }: StringsManipulationTypes) => {
   return (
@@ -46,10 +42,7 @@ export const StringsManipulation = ({ data }: StringsManipulationTypes) => {
               )}
             </List>
             {/* Code */}
-            <CodeWrapper>
-              <ClipboardButton textToCopy={codes[idx]} />
-              <CodeBox>{codes[idx]}</CodeBox>
-            </CodeWrapper>
+            <CodeComponent codeToCopy={codes} idx={idx} />
           </Fragment>
         ))}
       </BasicBoxWrapper>

@@ -1,15 +1,13 @@
 "use client";
 
 import React, { Fragment } from "react";
+
 import { ControlStructuresTypes } from "./types";
 import { ConditionalCodes, RepetitionCodes } from "./codes";
-import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButton";
 /* Wrappers */
 import {
   BasicBoxWrapper,
   ListWrapper,
-  CodeWrapper,
-  CodeBox,
 } from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
 import {
@@ -21,6 +19,7 @@ import {
 import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
 /* List */
 import { List, ItemList } from "@/app/[locale]/(platform)/_components/Lists";
+import { CodeComponent } from "@/app/[locale]/(platform)/_components/CodeComponent";
 
 export const ControlStructures = ({ data }: ControlStructuresTypes) => {
   return (
@@ -58,20 +57,14 @@ export const ControlStructures = ({ data }: ControlStructuresTypes) => {
                   <Fragment key={idx}>
                     <SubTitle>{item.title}</SubTitle>
                     <BasicDescription>{item.description}</BasicDescription>
-                    <CodeWrapper>
-                      <ClipboardButton textToCopy={RepetitionCodes[idx]} />
-                      <CodeBox>{RepetitionCodes[idx]}</CodeBox>
-                    </CodeWrapper>
+                    <CodeComponent codeToCopy={RepetitionCodes} idx={idx} />
                   </Fragment>
                 ))
               : structure.items?.map((item, idx) => (
                   <Fragment key={idx}>
                     <SubTitle>{item.title}</SubTitle>
                     <BasicDescription>{item.description}</BasicDescription>
-                    <CodeWrapper>
-                      <ClipboardButton textToCopy={ConditionalCodes[idx]} />
-                      <CodeBox>{ConditionalCodes[idx]}</CodeBox>
-                    </CodeWrapper>
+                    <CodeComponent codeToCopy={ConditionalCodes} idx={idx} />
                   </Fragment>
                 ))}
           </Fragment>

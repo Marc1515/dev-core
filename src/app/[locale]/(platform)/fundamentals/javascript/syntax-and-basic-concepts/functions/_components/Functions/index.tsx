@@ -1,15 +1,11 @@
 "use client";
 
 import React, { Fragment } from "react";
+
 import { FunctionsTypes } from "./types";
 import { codes } from "./codes";
-import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButton";
 /* Wrappers */
-import {
-  BasicBoxWrapper,
-  CodeBox,
-  CodeWrapper,
-} from "@/app/[locale]/(platform)/_components/Wrappers";
+import { BasicBoxWrapper } from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
 import {
   IntroTitle,
@@ -20,6 +16,7 @@ import {
   BasicDescription,
   Conclusion,
 } from "@/app/[locale]/(platform)/_components/Paragraphs";
+import { CodeComponent } from "@/app/[locale]/(platform)/_components/CodeComponent";
 
 export const Functions = ({ data }: FunctionsTypes) => {
   return (
@@ -31,14 +28,11 @@ export const Functions = ({ data }: FunctionsTypes) => {
       </BasicBoxWrapper>
       {/* Each Function */}
       <BasicBoxWrapper>
-        {data.items.map((item, index) => (
-          <Fragment key={index}>
+        {data.items.map((item, idx) => (
+          <Fragment key={idx}>
             <SecondaryTitle>{item.title}</SecondaryTitle>
             <BasicDescription>{item.description}</BasicDescription>
-            <CodeWrapper>
-              <ClipboardButton textToCopy={codes[index]} />
-              <CodeBox>{codes[index]}</CodeBox>
-            </CodeWrapper>
+            <CodeComponent codeToCopy={codes} idx={idx} />
           </Fragment>
         ))}
       </BasicBoxWrapper>

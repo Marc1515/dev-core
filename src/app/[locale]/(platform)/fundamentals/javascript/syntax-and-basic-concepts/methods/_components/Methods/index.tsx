@@ -4,13 +4,9 @@ import React from "react";
 
 import { MethodsTypes } from "./types";
 import { methodCode } from "./codes";
-import ClipboardButton from "@/app/[locale]/(platform)/_components/ClipboardButton";
+
 /* Wrappers */
-import {
-  BasicBoxWrapper,
-  CodeBox,
-  CodeWrapper,
-} from "@/app/[locale]/(platform)/_components/Wrappers";
+import { BasicBoxWrapper } from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
 import {
   IntroTitle,
@@ -23,6 +19,7 @@ import {
 } from "@/app/[locale]/(platform)/_components/Paragraphs";
 /* Lists */
 import { ItemList, List } from "@/app/[locale]/(platform)/_components/Lists";
+import { CodeComponent } from "@/app/[locale]/(platform)/_components/CodeComponent";
 
 export const Methods = ({ data }: MethodsTypes) => {
   return (
@@ -33,10 +30,7 @@ export const Methods = ({ data }: MethodsTypes) => {
         <BasicDescription>{data.description}</BasicDescription>
       </BasicBoxWrapper>
       {/* Code */}
-      <CodeWrapper>
-        <ClipboardButton textToCopy={methodCode} />
-        <CodeBox>{methodCode}</CodeBox>
-      </CodeWrapper>
+      <CodeComponent codeToCopy={methodCode} />
       {/* Key Differncies */}
       <BasicBoxWrapper>
         <SecondaryTitle>{data.key_differences.title}</SecondaryTitle>
