@@ -2,8 +2,6 @@
 
 import React from "react";
 
-import { useDarkModeContext } from "@/contexts/DarkModeContext";
-
 interface WrappersProps {
   children: React.ReactNode;
 }
@@ -34,18 +32,4 @@ export const CardsWrapper = ({ children }: WrappersProps) => {
 /* List Wrapper */
 export const ListWrapper = ({ children }: WrappersProps) => {
   return <div className="w-full h-full py-5">{children}</div>;
-};
-
-/* Code Wrapper */
-export const CodeWrapper = ({ children }: WrappersProps) => {
-  return (
-    <div className="flex flex-col items-end pr-4 mb-10 codeWrapperShadow">
-      {children}
-    </div>
-  );
-};
-
-/* CodeBox */
-export const CodeBox = ({ children }: WrappersProps) => {
-  return <pre className="w-full pb-5 pl-5 overflow-x-auto">{children}</pre>;
 };
