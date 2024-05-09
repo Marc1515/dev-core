@@ -19,10 +19,10 @@ export const SelectElements = ({ data }: SelectElementsTypes) => {
   return (
     <>
       {/* Introduction */}
-      <BasicBoxWrapper>
+      <>
         <IntroTitle>{data.title}</IntroTitle>
         <BasicDescription>{data.description}</BasicDescription>
-      </BasicBoxWrapper>
+      </>
       {/* Each Selector */}
       <BasicBoxWrapper>
         {data.items?.map((item, idx) => (

@@ -22,31 +22,33 @@ export const JSONApis = ({ data }: JSONApisTypes) => {
   return (
     <>
       {/* Introduction */}
-      <BasicBoxWrapper>
+      <>
         <IntroTitle>{data.title}</IntroTitle>
         <BasicDescription>{data.description}</BasicDescription>
+      </>
+      <BasicBoxWrapper>
+        {data.items.map((item, idx) => (
+          <Fragment key={idx}>
+            <SecondaryTitle>{item.title}</SecondaryTitle>
+            {item.description ? (
+              <>
+                <BasicDescription>{item.description}</BasicDescription>
+                {/* Code */}
+                <CodeComponent codeToCopy={codes} idx={idx} />
+              </>
+            ) : (
+              <List>
+                {item.items?.map((item, idx) => (
+                  <ItemList key={idx}>
+                    <SubTitle>{item.title}</SubTitle>
+                    <BasicDescription>{item.description}</BasicDescription>
+                  </ItemList>
+                ))}
+              </List>
+            )}
+          </Fragment>
+        ))}
       </BasicBoxWrapper>
-      {data.items.map((item, idx) => (
-        <Fragment key={idx}>
-          <SecondaryTitle>{item.title}</SecondaryTitle>
-          {item.description ? (
-            <>
-              <BasicDescription>{item.description}</BasicDescription>
-              {/* Code */}
-              <CodeComponent codeToCopy={codes} idx={idx} />
-            </>
-          ) : (
-            <List>
-              {item.items?.map((item, idx) => (
-                <ItemList key={idx}>
-                  <SubTitle>{item.title}</SubTitle>
-                  <BasicDescription>{item.description}</BasicDescription>
-                </ItemList>
-              ))}
-            </List>
-          )}
-        </Fragment>
-      ))}
     </>
   );
 };

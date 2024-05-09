@@ -25,8 +25,8 @@ export const FirstIdxBoxWrapper = ({ children }: WrappersProps) => {
   return <div className="pt-20">{children}</div>;
 };
 
-/*Idx Box Wrapper */
-export const IdxBoxWrapper = ({ children }: WrappersProps) => {
+/*Second Idx Box Wrapper */
+export const SecondIdxBoxWrapper = ({ children }: WrappersProps) => {
   return <div className="pt-16">{children}</div>;
 };
 

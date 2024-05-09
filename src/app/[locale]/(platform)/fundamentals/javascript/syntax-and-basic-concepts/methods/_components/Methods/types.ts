@@ -15,5 +15,6 @@ interface Keydifferences {
 }
 
 interface Item {
+  title: string;
   description: string;
 }

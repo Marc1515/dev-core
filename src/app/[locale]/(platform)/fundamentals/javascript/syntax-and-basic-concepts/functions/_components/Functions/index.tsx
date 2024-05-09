@@ -22,10 +22,10 @@ export const Functions = ({ data }: FunctionsTypes) => {
   return (
     <>
       {/* Introduction */}
-      <BasicBoxWrapper>
+      <>
         <IntroTitle>{data.title}</IntroTitle>
         <BasicDescription>{data.description}</BasicDescription>
-      </BasicBoxWrapper>
+      </>
       {/* Each Function */}
       <BasicBoxWrapper>
         {data.items.map((item, idx) => (
@@ -37,9 +37,9 @@ export const Functions = ({ data }: FunctionsTypes) => {
         ))}
       </BasicBoxWrapper>
       {/* Conclusion */}
-      <BasicBoxWrapper>
+      <>
         <Conclusion>{data.conclusion}</Conclusion>
-      </BasicBoxWrapper>
+      </>
     </>
   );
 };

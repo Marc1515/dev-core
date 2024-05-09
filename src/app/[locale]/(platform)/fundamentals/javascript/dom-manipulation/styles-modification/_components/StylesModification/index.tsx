@@ -19,10 +19,10 @@ export const StylesModification = ({ data }: StylesModificationTypes) => {
   return (
     <>
       {/* Introduction */}
-      <BasicBoxWrapper>
+      <>
         <IntroTitle>{data.title}</IntroTitle>
         <BasicDescription>{data.description}</BasicDescription>
-      </BasicBoxWrapper>
+      </>
       {/* Each Style Modification */}
       <BasicBoxWrapper>
         {data.modifications.map((modification, idx) => (

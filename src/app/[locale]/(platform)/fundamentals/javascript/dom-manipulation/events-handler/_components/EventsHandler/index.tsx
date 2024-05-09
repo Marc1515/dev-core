@@ -19,10 +19,10 @@ export const EventsHandler = ({ data }: EventsHandlerTypes) => {
   return (
     <>
       {/* Introduction */}
-      <BasicBoxWrapper>
+      <>
         <IntroTitle>{data.title}</IntroTitle>
         <BasicDescription>{data.description}</BasicDescription>
-      </BasicBoxWrapper>
+      </>
       {/* Each Event Handler */}
       <BasicBoxWrapper>
         {data.events.map((item, idx) => (

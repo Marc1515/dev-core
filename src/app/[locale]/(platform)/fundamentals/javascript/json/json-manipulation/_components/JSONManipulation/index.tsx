@@ -14,17 +14,21 @@ import {
 /* Paragraphs */
 import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
 /* Lists */
-import { ItemList, List } from "@/app/[locale]/(platform)/_components/Lists";
+import {
+  ItemList,
+  ItemListDescription,
+  List,
+} from "@/app/[locale]/(platform)/_components/Lists";
 import { CodeComponent } from "@/app/[locale]/(platform)/_components/CodeComponent";
 
 export const JSONManipulation = ({ data }: JSONManipulationTypes) => {
   return (
     <>
       {/* Introduction */}
-      <BasicBoxWrapper>
+      <>
         <IntroTitle>{data.title}</IntroTitle>
         <BasicDescription>{data.description}</BasicDescription>
-      </BasicBoxWrapper>
+      </>
       <BasicBoxWrapper>
         {data.items.map((item, idx) => (
           <Fragment key={idx}>
@@ -39,7 +43,9 @@ export const JSONManipulation = ({ data }: JSONManipulationTypes) => {
               <List>
                 {item.items?.map((item, idx) => (
                   <ItemList key={idx}>
-                    <BasicDescription>{item.description}</BasicDescription>
+                    <ItemListDescription>
+                      {item.description}
+                    </ItemListDescription>
                   </ItemList>
                 ))}
               </List>

@@ -8,7 +8,7 @@ import { ConditionalCodes, RepetitionCodes } from "./codes";
 import {
   BasicBoxWrapper,
   FirstIdxBoxWrapper,
-  IdxBoxWrapper
+  SecondIdxBoxWrapper,
 } from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
 import {
@@ -20,7 +20,13 @@ import {
 /* Paragraphs */
 import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
 /* List */
-import { List, ItemList, ItemListDescription, ItemListTitle, ListTitle } from "@/app/[locale]/(platform)/_components/Lists";
+import {
+  List,
+  ItemList,
+  ItemListDescription,
+  ItemListTitle,
+  ListTitle,
+} from "@/app/[locale]/(platform)/_components/Lists";
 import { CodeComponent } from "@/app/[locale]/(platform)/_components/CodeComponent";
 
 export const ControlStructures = ({ data }: ControlStructuresTypes) => {
@@ -57,18 +63,18 @@ export const ControlStructures = ({ data }: ControlStructuresTypes) => {
             <BasicDescription>{item.description}</BasicDescription>
             {item.title === "Repetition Structures (Loops)"
               ? item.items?.map((item, idx) => (
-                  <IdxBoxWrapper key={idx}>
+                  <SecondIdxBoxWrapper key={idx}>
                     <SubTitle>{item.title}</SubTitle>
                     <BasicDescription>{item.description}</BasicDescription>
                     <CodeComponent codeToCopy={RepetitionCodes} idx={idx} />
-                  </IdxBoxWrapper>
+                  </SecondIdxBoxWrapper>
                 ))
               : item.items?.map((item, idx) => (
-                  <IdxBoxWrapper key={idx}>
+                  <SecondIdxBoxWrapper key={idx}>
                     <SubTitle>{item.title}</SubTitle>
                     <BasicDescription>{item.description}</BasicDescription>
                     <CodeComponent codeToCopy={ConditionalCodes} idx={idx} />
-                  </IdxBoxWrapper>
+                  </SecondIdxBoxWrapper>
                 ))}
           </FirstIdxBoxWrapper>
         ))}

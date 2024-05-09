@@ -21,10 +21,10 @@ export const ElementContentModification = ({
   return (
     <>
       {/* Introduction */}
-      <BasicBoxWrapper>
+      <>
         <IntroTitle>{data.title}</IntroTitle>
         <BasicDescription>{data.description}</BasicDescription>
-      </BasicBoxWrapper>
+      </>
       {/* Each Content Modification */}
       <BasicBoxWrapper>
         {data.modifications.map((modification, idx) => (

@@ -19,10 +19,10 @@ export const Navigation = ({ data }: NavigationTypes) => {
   return (
     <>
       {/* Introduction */}
-      <BasicBoxWrapper>
+      <>
         <IntroTitle>{data.title}</IntroTitle>
         <BasicDescription>{data.description}</BasicDescription>
-      </BasicBoxWrapper>
+      </>
       {/* Each Type of Navigation */}
       <BasicBoxWrapper>
         {data.items.map((item, idx) => (

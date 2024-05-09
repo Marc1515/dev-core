@@ -6,13 +6,16 @@
       "title": "Key Differences",
       "items": [
         {
-          "description": "Context: A function can exist independently, whereas a method is always defined in the context of an object."
+          "title": "Context",
+          "description": "A function can exist independently, whereas a method is always defined in the context of an object."
         },
         {
-          "description": "Call: You call a function directly by its name, whereas a method is called on an object ('object.method()')."
+          "title": "Call",
+          "description": "You call a function directly by its name, whereas a method is called on an object ('object.method()')."
         },
         {
-          "description": "Purpose: While functions are designed for possibly general tasks, methods are typically designed to interact with the attributes of the object to which they belong."
+          "title": "Purpose",
+          "description": "While functions are designed for possibly general tasks, methods are typically designed to interact with the attributes of the object to which they belong."
         }
       ]
     },

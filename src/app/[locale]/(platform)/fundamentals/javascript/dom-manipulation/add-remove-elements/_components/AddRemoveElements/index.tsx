@@ -19,10 +19,10 @@ export const AddRemoveElements = ({ data }: AddRemoveElementsTypes) => {
   return (
     <>
       {/* Introduction */}
-      <BasicBoxWrapper>
+      <>
         <IntroTitle>{data.title}</IntroTitle>
         <BasicDescription>{data.description}</BasicDescription>
-      </BasicBoxWrapper>
+      </>
       {/* Each Modification */}
       <BasicBoxWrapper>
         {data.items.map((item, idx) => (
