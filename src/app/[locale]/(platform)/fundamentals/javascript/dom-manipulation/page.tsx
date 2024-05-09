@@ -33,10 +33,10 @@ const DOMManipulationPage = async ({
 
   return (
     <>
-      <BasicBoxWrapper>
+      <>
         <IntroTitle>{data.title}</IntroTitle>
         <BasicDescription>{data.description}</BasicDescription>
-      </BasicBoxWrapper>
+      </>
       <CardsWrapper>
         {data.items.map((item, idx) => (
           <Card key={idx}>

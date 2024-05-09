@@ -33,7 +33,7 @@ export const SecondIdxBoxWrapper = ({ children }: WrappersProps) => {
 /* Cards Wrapper */
 export const CardsWrapper = ({ children }: WrappersProps) => {
   return (
-    <div className="w-full h-full flex flex-col gap-y-5 justify-evenly">
+    <div className="w-full h-full pt-10 flex flex-col gap-y-5 justify-evenly">
       {children}
     </div>
   );

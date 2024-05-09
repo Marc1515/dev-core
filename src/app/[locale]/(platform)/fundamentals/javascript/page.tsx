@@ -33,10 +33,10 @@ const JavaScriptPage = async ({ params: { locale } }: JavaScriptPageProps) => {
   }) as JavascriptTypes["data"];
   return (
     <>
-      <BasicBoxWrapper>
+      <>
         <IntroTitle>{data.title}</IntroTitle>
         <BasicDescription>{data.description}</BasicDescription>
-      </BasicBoxWrapper>
+      </>
 
       <Accordion type="single" collapsible>
         <CardsWrapper>
