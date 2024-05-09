@@ -6,7 +6,7 @@ import { JavascriptTypes } from "./types";
 import Link from "next/link";
 
 /* Wrappers */
-import { BasicBoxWrapper, CardsWrapper } from "../../_components/Wrappers";
+import { CardsWrapper } from "../../_components/Wrappers";
 /* Titles */
 import { IntroTitle } from "../../_components/Titles";
 /* Paragraphs */

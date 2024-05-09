@@ -6,7 +6,7 @@ import { SyntaxAndBasicConceptsTypes } from "./types";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 /* Wrappers */
-import { BasicBoxWrapper, CardsWrapper } from "../../../_components/Wrappers";
+import { CardsWrapper } from "../../../_components/Wrappers";
 /* Titles */
 import { IntroTitle } from "../../../_components/Titles";
 /* Paragraphs */

@@ -11,7 +11,7 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 /* Wrappers */
-import { BasicBoxWrapper, CardsWrapper } from "../../../_components/Wrappers";
+import { CardsWrapper } from "../../../_components/Wrappers";
 /* Titles */
 import { IntroTitle } from "../../../_components/Titles";
 /* Paragraphs */
