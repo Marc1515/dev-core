@@ -4,7 +4,6 @@ import React from "react";
 
 import { MobileSidebarTypes } from "./types";
 import { getMobileSidebarData } from "./moblileSidebarData";
-import LanguageChanger from "@/lib/LanguageChanger";
 
 import {
   Accordion,
@@ -21,6 +20,7 @@ import { FaCubes } from "react-icons/fa";
 import { FiMonitor } from "react-icons/fi";
 import { FaServer } from "react-icons/fa";
 import { BsServer } from "react-icons/bs";
+import { LanguageButton } from "../LanguageButton";
 
 export const MobileSidebar = ({ data }: MobileSidebarTypes) => {
   const moblileSidebarData = getMobileSidebarData(data);
@@ -69,7 +69,7 @@ export const MobileSidebar = ({ data }: MobileSidebarTypes) => {
           </AccordionItem>
         ))}
       </Accordion>
-      <LanguageChanger />
+      <LanguageButton />
     </div>
   );
 };
