@@ -3,29 +3,31 @@
 import React from "react";
 import { VariablesTypes } from "./types";
 /* Wrappers */
-import {
-  BasicBoxWrapper,
-  ListWrapper,
-} from "@/app/[locale]/(platform)/_components/Wrappers";
+import { BasicBoxWrapper } from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
 import {
   IntroTitle,
   SecondaryTitle,
-  SubTitle,
 } from "@/app/[locale]/(platform)/_components/Titles";
 /* Paragraphs */
 import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
 /* Lists */
-import { List, ItemList } from "@/app/[locale]/(platform)/_components/Lists";
+import {
+  List,
+  ItemList,
+  ListTitle,
+  ItemListTitle,
+  ItemListDescription,
+} from "@/app/[locale]/(platform)/_components/Lists";
 
 export const Variables = ({ data }: VariablesTypes) => {
   return (
     <>
       {/* Variables */}
-      <BasicBoxWrapper>
+      <>
         <IntroTitle>{data.title}</IntroTitle>
         <BasicDescription>{data.description}</BasicDescription>
-      </BasicBoxWrapper>
+      </>
 
       {/* Main Function */}
       <BasicBoxWrapper>
@@ -34,17 +36,17 @@ export const Variables = ({ data }: VariablesTypes) => {
       </BasicBoxWrapper>
 
       {/* Importance */}
-      <ListWrapper>
-        <SecondaryTitle>{data.importance.title}</SecondaryTitle>
+      <BasicBoxWrapper>
+        <ListTitle>{data.importance.title}</ListTitle>
         <List>
           {data.importance.items.map((item, idx) => (
             <ItemList key={idx}>
-              <SubTitle>{item.title}</SubTitle>
-              <BasicDescription>{item.description}</BasicDescription>
+              <ItemListTitle>{item.title}</ItemListTitle>
+              <ItemListDescription>{item.description}</ItemListDescription>
             </ItemList>
           ))}
         </List>
-      </ListWrapper>
+      </BasicBoxWrapper>
     </>
   );
 };
