@@ -4,19 +4,19 @@ export const syntaxAndBasicConceptsNamespaces = ["syntax-and-basic-concepts"];
 
 export const variablesNamespaces = ["variables"];
 
-export const dataTypesNamespaces = ["dataTypes"];
+export const dataTypesNamespaces = ["data-types"];
 
 export const operatorsNamespaces = ["operators"];
 
-export const controlStructuresNamespaces = ["controlStructures"];
+export const controlStructuresNamespaces = ["control-structures"];
 
 export const functionsNamespaces = ["functions"];
 
 export const methodsNamespaces = ["methods"];
 
-export const stringsManipulationNamespaces = ["stringsManipulation"];
+export const stringsManipulationNamespaces = ["strings-manipulation"];
 
-export const arraysManipulationNamespaces = ["arraysManipulation"];
+export const arraysManipulationNamespaces = ["arrays-manipulation"];
 
 export const domManipulationNamespaces = ["dom-manipulation"];
 

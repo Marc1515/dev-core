@@ -9,7 +9,7 @@
         "description": "Variables in JavaScript are fundamental for storing and manipulating data within a program. They act as containers where you can store values, such as numbers, text (strings), or more complex structures such as arrays and objects. They allow code to be more dynamic and flexible, making it easier to perform operations, make decisions and control the flow of the program. In addition, the use of variables helps to make the code more readable and easier to maintain, as you can assign descriptive names to these data containers."
       },
       {
-        "path": "/fundamentals/javascript/syntax-and-basic-concepts/datatypes",
+        "path": "/fundamentals/javascript/syntax-and-basic-concepts/data-types",
         "title": "Data Types",
         "description": "Data types in JavaScript are fundamental in determining how data can be stored and manipulated within a program. They provide a structure that helps the programming language understand what operations are possible with that data and how it should be handled. By defining data types such as numbers, strings or Booleans, JavaScript can optimise memory usage and operation execution, ensuring that interactions with data are predictable and efficient."
       },
@@ -19,7 +19,7 @@
         "description": "Operators in JavaScript are symbols that tell the language engine how to perform mathematical, comparison, or logical operations between variables and values. They allow you to manipulate the value of data, compare data, or combine logical conditions to control the flow of code execution. These operators are fundamental to performing calculations, making decisions in code based on conditions, and handling the logic behind user interaction and system response."
       },
       {
-        "path": "/fundamentals/javascript/syntax-and-basic-concepts/controlstructures",
+        "path": "/fundamentals/javascript/syntax-and-basic-concepts/control-structures",
         "title": "Control Structures",
         "description": "Control structures are fundamental in any programming language, including JavaScript, as they direct the flow of code execution based on certain conditions or by repeating actions in a controlled manner."
       },
@@ -34,12 +34,12 @@
         "description": "A method is a type of function that is associated with an object (or class). In other words, a method is a function that belongs to an object. This means that the method usually operates on the data contained within its object."
       },
       {
-        "path": "/fundamentals/javascript/syntax-and-basic-concepts/stringsmanipulation",
+        "path": "/fundamentals/javascript/syntax-and-basic-concepts/strings-manipulation",
         "title": "Strings Manipulation",
         "description": "String manipulation in programming involves altering or parsing text. This includes operations such as concatenating two or more strings, extracting specific parts of a string, replacing characters or substrings within a string, converting the string to upper or lower case, and searching for patterns within a string. These operations are essential in many software applications, from web form processing to report generation and database interaction."
       },
       {
-        "path": "/fundamentals/javascript/syntax-and-basic-concepts/arraysmanipulation",
+        "path": "/fundamentals/javascript/syntax-and-basic-concepts/arrays-manipulation",
         "title": "Arrays Manipulation",
         "description": "Array manipulation in programming refers to the set of techniques used to modify, inspect or process collections of data stored in array structures. Common operations include adding or removing elements, sorting and filtering data according to certain criteria, and accessing specific elements through their index. Modern programming languages provide a wide range of built-in methods to facilitate these tasks, allowing developers to manage arrays efficiently and effectively."
       }
