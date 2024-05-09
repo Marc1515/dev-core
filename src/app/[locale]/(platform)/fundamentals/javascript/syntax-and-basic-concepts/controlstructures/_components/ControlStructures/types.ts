@@ -7,10 +7,16 @@ interface Data {
   description: string;
   main_function: Mainfunction;
   importance: Importance;
-  structures: Structure[];
+  structures: Structures;
 }
 
-interface Structure {
+interface Structures {
+  title: string;
+  description: string;
+  items: Item[];
+}
+
+interface Item {
   title: string;
   description: string;
   items?: Mainfunction[];
