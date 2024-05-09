@@ -9,7 +9,7 @@ interface WrappersProps {
 /* Main Wrapper Content */
 export const MainWrapperContent = ({ children }: WrappersProps) => {
   return (
-    <div className="w-full h-full p-5 pt-20 dark:bg-custom-gradient bg-custom-gradient transition-all duration-500">
+    <div className="w-full h-full p-5 pt-36 dark:bg-custom-gradient bg-custom-gradient transition-all duration-500">
       {children}
     </div>
   );
@@ -17,7 +17,17 @@ export const MainWrapperContent = ({ children }: WrappersProps) => {
 
 /* Basic Box Wrapper */
 export const BasicBoxWrapper = ({ children }: WrappersProps) => {
-  return <div className="py-5">{children}</div>;
+  return <div className="pt-32">{children}</div>;
+};
+
+/*First Idx Box Wrapper */
+export const FirstIdxBoxWrapper = ({ children }: WrappersProps) => {
+  return <div className="pt-20">{children}</div>;
+};
+
+/*Idx Box Wrapper */
+export const IdxBoxWrapper = ({ children }: WrappersProps) => {
+  return <div className="pt-16">{children}</div>;
 };
 
 /* Cards Wrapper */

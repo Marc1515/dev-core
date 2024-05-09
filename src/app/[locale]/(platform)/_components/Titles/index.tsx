@@ -11,10 +11,15 @@ export const IntroTitle = ({ children }: TitlesProps) => {
 
 /* Secondary Title */
 export const SecondaryTitle = ({ children }: TitlesProps) => {
-  return <span className="block text-xl font-bold py-5">{children}</span>;
+  return <span className="block text-xl font-bold pb-10">{children}</span>;
+};
+
+/* Loop Title */
+export const LoopTitle = ({ children }: TitlesProps) => {
+  return <span className="block text-xl font-bold">{children}</span>;
 };
 
 /* Sub Title */
 export const SubTitle = ({ children }: TitlesProps) => {
-  return <span className="block font-bold py-5">{children}</span>;
+  return <span className="block font-bold pb-5">{children}</span>;
 };
