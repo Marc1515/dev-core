@@ -46,7 +46,9 @@ export const JSONApis = ({ data }: JSONApisTypes) => {
             </List>
           </ListWrapper>
           {/* Code */}
-          <CodeComponent codeToCopy={codes} idx={idx} />
+          {codes[idx] !== "" ? (
+            <CodeComponent codeToCopy={codes} idx={idx} />
+          ) : null}
         </BasicBoxWrapper>
       ))}
     </>
