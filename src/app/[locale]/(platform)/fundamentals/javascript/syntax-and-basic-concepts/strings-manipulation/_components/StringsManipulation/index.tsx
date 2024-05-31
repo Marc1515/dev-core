@@ -5,7 +5,10 @@ import React, { Fragment } from "react";
 import { StringsManipulationTypes } from "./types";
 import { codes } from "./codes";
 /* Wrappers */
-import { BasicBoxWrapper } from "@/app/[locale]/(platform)/_components/Wrappers";
+import {
+  BasicBoxWrapper,
+  ListWrapper,
+} from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
 import {
   IntroTitle,
@@ -25,15 +28,16 @@ export const StringsManipulation = ({ data }: StringsManipulationTypes) => {
   return (
     <>
       {/* Introduction */}
-      <>
+      <BasicBoxWrapper>
         <IntroTitle>{data.title}</IntroTitle>
         <BasicDescription>{data.description}</BasicDescription>
-      </>
+      </BasicBoxWrapper>
       {/* Each Manipulation Type */}
-      <BasicBoxWrapper>
-        {data.manipulation.map((item, idx) => (
-          <Fragment key={idx}>
-            <SecondaryTitle>{item.title}</SecondaryTitle>
+
+      {data.manipulation.map((item, idx) => (
+        <BasicBoxWrapper key={idx}>
+          <SecondaryTitle>{item.title}</SecondaryTitle>
+          <ListWrapper>
             <List>
               {!item.description ? (
                 item.items?.map((item, idx) => (
@@ -47,11 +51,11 @@ export const StringsManipulation = ({ data }: StringsManipulationTypes) => {
                 <BasicDescription>{item.description}</BasicDescription>
               )}
             </List>
-            {/* Code */}
-            <CodeComponent codeToCopy={codes} idx={idx} />
-          </Fragment>
-        ))}
-      </BasicBoxWrapper>
+          </ListWrapper>
+          {/* Code */}
+          <CodeComponent codeToCopy={codes} idx={idx} />
+        </BasicBoxWrapper>
+      ))}
     </>
   );
 };

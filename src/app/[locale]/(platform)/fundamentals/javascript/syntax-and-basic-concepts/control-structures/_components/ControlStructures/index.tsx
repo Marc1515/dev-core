@@ -8,6 +8,7 @@ import { ConditionalCodes, RepetitionCodes } from "./codes";
 import {
   BasicBoxWrapper,
   FirstIdxBoxWrapper,
+  ListWrapper,
   SecondIdxBoxWrapper,
 } from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
@@ -45,14 +46,16 @@ export const ControlStructures = ({ data }: ControlStructuresTypes) => {
       {/* Importance */}
       <BasicBoxWrapper>
         <ListTitle>{data.importance.title}</ListTitle>
-        <List>
-          {data.importance.items.map((item, idx) => (
-            <ItemList key={idx}>
-              <ItemListTitle>{item.title}</ItemListTitle>
-              <ItemListDescription>{item.description}</ItemListDescription>
-            </ItemList>
-          ))}
-        </List>
+        <ListWrapper>
+          <List>
+            {data.importance.items.map((item, idx) => (
+              <ItemList key={idx}>
+                <ItemListTitle>{item.title}</ItemListTitle>
+                <ItemListDescription>{item.description}</ItemListDescription>
+              </ItemList>
+            ))}
+          </List>
+        </ListWrapper>
       </BasicBoxWrapper>
       {/* Structures */}
       <BasicBoxWrapper>

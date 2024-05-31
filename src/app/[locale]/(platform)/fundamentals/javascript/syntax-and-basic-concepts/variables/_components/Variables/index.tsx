@@ -3,7 +3,10 @@
 import React from "react";
 import { VariablesTypes } from "./types";
 /* Wrappers */
-import { BasicBoxWrapper } from "@/app/[locale]/(platform)/_components/Wrappers";
+import {
+  BasicBoxWrapper,
+  ListWrapper,
+} from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
 import {
   IntroTitle,
@@ -38,14 +41,16 @@ export const Variables = ({ data }: VariablesTypes) => {
       {/* Importance */}
       <BasicBoxWrapper>
         <ListTitle>{data.importance.title}</ListTitle>
-        <List>
-          {data.importance.items.map((item, idx) => (
-            <ItemList key={idx}>
-              <ItemListTitle>{item.title}</ItemListTitle>
-              <ItemListDescription>{item.description}</ItemListDescription>
-            </ItemList>
-          ))}
-        </List>
+        <ListWrapper>
+          <List>
+            {data.importance.items.map((item, idx) => (
+              <ItemList key={idx}>
+                <ItemListTitle>{item.title}</ItemListTitle>
+                <ItemListDescription>{item.description}</ItemListDescription>
+              </ItemList>
+            ))}
+          </List>
+        </ListWrapper>
       </BasicBoxWrapper>
     </>
   );

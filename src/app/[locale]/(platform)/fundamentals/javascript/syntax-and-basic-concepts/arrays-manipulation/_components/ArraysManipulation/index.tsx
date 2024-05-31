@@ -5,7 +5,10 @@ import React, { Fragment } from "react";
 import { ArraysManipulationTypes } from "./types";
 import { codes } from "./codes";
 /* Wrappers */
-import { BasicBoxWrapper } from "@/app/[locale]/(platform)/_components/Wrappers";
+import {
+  BasicBoxWrapper,
+  ListWrapper,
+} from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
 import {
   IntroTitle,
@@ -30,10 +33,11 @@ export const ArraysManipulation = ({ data }: ArraysManipulationTypes) => {
         <BasicDescription>{data.description}</BasicDescription>
       </>
       {/* Each Manipulation Type */}
-      <BasicBoxWrapper>
-        {data.manipulation.map((item, idx) => (
-          <Fragment key={idx}>
-            <SecondaryTitle>{item.title}</SecondaryTitle>
+
+      {data.manipulation.map((item, idx) => (
+        <BasicBoxWrapper key={idx}>
+          <SecondaryTitle>{item.title}</SecondaryTitle>
+          <ListWrapper>
             <List>
               {!item.description ? (
                 item.items?.map((item, idx) => (
@@ -47,10 +51,10 @@ export const ArraysManipulation = ({ data }: ArraysManipulationTypes) => {
                 <BasicDescription>{item.description}</BasicDescription>
               )}
             </List>
-            <CodeComponent codeToCopy={codes} idx={idx} />
-          </Fragment>
-        ))}
-      </BasicBoxWrapper>
+          </ListWrapper>
+          <CodeComponent codeToCopy={codes} idx={idx} />
+        </BasicBoxWrapper>
+      ))}
     </>
   );
 };

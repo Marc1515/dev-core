@@ -27,15 +27,15 @@ export const Functions = ({ data }: FunctionsTypes) => {
         <BasicDescription>{data.description}</BasicDescription>
       </>
       {/* Each Function */}
-      <BasicBoxWrapper>
-        {data.items.map((item, idx) => (
-          <Fragment key={idx}>
-            <SecondaryTitle>{item.title}</SecondaryTitle>
-            <BasicDescription>{item.description}</BasicDescription>
-            <CodeComponent codeToCopy={codes} idx={idx} />
-          </Fragment>
-        ))}
-      </BasicBoxWrapper>
+
+      {data.items.map((item, idx) => (
+        <BasicBoxWrapper key={idx}>
+          <SecondaryTitle>{item.title}</SecondaryTitle>
+          <BasicDescription>{item.description}</BasicDescription>
+          <CodeComponent codeToCopy={codes} idx={idx} />
+        </BasicBoxWrapper>
+      ))}
+
       {/* Conclusion */}
       <>
         <Conclusion>{data.conclusion}</Conclusion>

@@ -24,16 +24,15 @@ export const SelectElements = ({ data }: SelectElementsTypes) => {
         <BasicDescription>{data.description}</BasicDescription>
       </>
       {/* Each Selector */}
-      <BasicBoxWrapper>
-        {data.items?.map((item, idx) => (
-          <Fragment key={idx}>
-            <SecondaryTitle>{item.title}</SecondaryTitle>
-            <BasicDescription>{item.description}</BasicDescription>
-            {/* Code */}
-            <CodeComponent codeToCopy={codes} idx={idx} />
-          </Fragment>
-        ))}
-      </BasicBoxWrapper>
+
+      {data.items?.map((item, idx) => (
+        <BasicBoxWrapper key={idx}>
+          <SecondaryTitle>{item.title}</SecondaryTitle>
+          <BasicDescription>{item.description}</BasicDescription>
+          {/* Code */}
+          <CodeComponent codeToCopy={codes} idx={idx} />
+        </BasicBoxWrapper>
+      ))}
     </>
   );
 };

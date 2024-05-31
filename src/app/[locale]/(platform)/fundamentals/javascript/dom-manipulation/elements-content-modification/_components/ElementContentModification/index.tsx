@@ -26,16 +26,15 @@ export const ElementContentModification = ({
         <BasicDescription>{data.description}</BasicDescription>
       </>
       {/* Each Content Modification */}
-      <BasicBoxWrapper>
-        {data.modifications.map((modification, idx) => (
-          <Fragment key={idx}>
-            <SecondaryTitle>{modification.title}</SecondaryTitle>
-            <BasicDescription>{modification.description}</BasicDescription>
-            {/* Code */}
-            <CodeComponent codeToCopy={codes} idx={idx} />
-          </Fragment>
-        ))}
-      </BasicBoxWrapper>
+
+      {data.modifications.map((modification, idx) => (
+        <BasicBoxWrapper key={idx}>
+          <SecondaryTitle>{modification.title}</SecondaryTitle>
+          <BasicDescription>{modification.description}</BasicDescription>
+          {/* Code */}
+          <CodeComponent codeToCopy={codes} idx={idx} />
+        </BasicBoxWrapper>
+      ))}
     </>
   );
 };

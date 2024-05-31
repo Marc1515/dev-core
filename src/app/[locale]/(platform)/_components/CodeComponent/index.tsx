@@ -22,7 +22,7 @@ export const CodeComponent = ({ codeToCopy, idx }: CodeComponentProps) => {
   }
 
   return (
-    <div className="flex flex-col items-end pr-4 mt-10 mb-20 codeWrapperShadow">
+    <div className="flex flex-col items-end pr-4 mt-10 codeWrapperShadow">
       <ClipboardButton textToCopy={code} />
       <pre className="w-full pb-5 pl-5 overflow-x-auto">{code}</pre>
     </div>

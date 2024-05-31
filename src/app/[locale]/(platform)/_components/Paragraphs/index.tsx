@@ -6,10 +6,10 @@ interface ParagraphsProps {
 
 /* Basic Description */
 export const BasicDescription = ({ children }: ParagraphsProps) => {
-  return <p>{children}</p>;
+  return <p className="pt-10">{children}</p>;
 };
 
 /* Conclusion */
 export const Conclusion = ({ children }: ParagraphsProps) => {
-  return <p>{children}</p>;
+  return <p className="pt-20">{children}</p>;
 };

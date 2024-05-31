@@ -4,7 +4,10 @@ import React, { Fragment } from "react";
 
 import { DataTypesTypes } from "./types";
 /* Wrappers */
-import { BasicBoxWrapper } from "@/app/[locale]/(platform)/_components/Wrappers";
+import {
+  BasicBoxWrapper,
+  ListWrapper,
+} from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
 import {
   IntroTitle,
@@ -36,18 +39,20 @@ export const DataTypes = ({ data }: DataTypesTypes) => {
             <SecondaryTitle>{item.title}</SecondaryTitle>
             <BasicDescription>{item.description}</BasicDescription>
             {/* Each Item */}
-            <List>
-              {item.items.map((item, idx) => (
-                <Fragment key={idx}>
-                  <ItemList>
-                    <ItemListTitle>{item.title}: </ItemListTitle>
-                    <ItemListDescription>
-                      {item.description}
-                    </ItemListDescription>
-                  </ItemList>
-                </Fragment>
-              ))}
-            </List>
+            <ListWrapper>
+              <List>
+                {item.items.map((item, idx) => (
+                  <Fragment key={idx}>
+                    <ItemList>
+                      <ItemListTitle>{item.title}: </ItemListTitle>
+                      <ItemListDescription>
+                        {item.description}
+                      </ItemListDescription>
+                    </ItemList>
+                  </Fragment>
+                ))}
+              </List>
+            </ListWrapper>
           </BasicBoxWrapper>
         ))}
       </>

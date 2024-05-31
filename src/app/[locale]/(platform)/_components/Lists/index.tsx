@@ -19,7 +19,6 @@ export const ItemList = ({ children }: ListsProps) => {
   return <li className="pt-10">{children}</li>;
 };
 
-
 /* List Title */
 export const ItemListTitle = ({ children }: ListsProps) => {
   return <span className="block font-bold pb-5">{children}</span>;

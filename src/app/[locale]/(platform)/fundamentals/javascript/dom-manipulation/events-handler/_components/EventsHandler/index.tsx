@@ -24,16 +24,15 @@ export const EventsHandler = ({ data }: EventsHandlerTypes) => {
         <BasicDescription>{data.description}</BasicDescription>
       </>
       {/* Each Event Handler */}
-      <BasicBoxWrapper>
-        {data.events.map((item, idx) => (
-          <Fragment key={idx}>
-            <SecondaryTitle>{item.title}</SecondaryTitle>
-            <BasicDescription>{item.description}</BasicDescription>
-            {/* Code */}
-            <CodeComponent codeToCopy={codes} idx={idx} />
-          </Fragment>
-        ))}
-      </BasicBoxWrapper>
+
+      {data.events.map((item, idx) => (
+        <BasicBoxWrapper key={idx}>
+          <SecondaryTitle>{item.title}</SecondaryTitle>
+          <BasicDescription>{item.description}</BasicDescription>
+          {/* Code */}
+          <CodeComponent codeToCopy={codes} idx={idx} />
+        </BasicBoxWrapper>
+      ))}
     </>
   );
 };

@@ -5,7 +5,10 @@ import React, { Fragment } from "react";
 import { JSONSyntaxTypes } from "./types";
 import { codes } from "./codes";
 /* Wrappers */
-import { BasicBoxWrapper } from "@/app/[locale]/(platform)/_components/Wrappers";
+import {
+  BasicBoxWrapper,
+  ListWrapper,
+} from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
 import {
   IntroTitle,
@@ -31,11 +34,12 @@ export const JSONSyntax = ({ data }: JSONSyntaxTypes) => {
       </>
 
       {/* Each Explanation */}
-      <BasicBoxWrapper>
-        {data.items.map((item, idx) => (
-          <Fragment key={idx}>
-            <SecondaryTitle>{item.title}</SecondaryTitle>
-            <BasicDescription>{item.description}</BasicDescription>
+
+      {data.items.map((item, idx) => (
+        <BasicBoxWrapper key={idx}>
+          <SecondaryTitle>{item.title}</SecondaryTitle>
+          <BasicDescription>{item.description}</BasicDescription>
+          <ListWrapper>
             <List>
               {item.items?.map((item, idx) => (
                 <ItemList key={idx}>
@@ -43,13 +47,13 @@ export const JSONSyntax = ({ data }: JSONSyntaxTypes) => {
                 </ItemList>
               ))}
             </List>
-            {codes[idx] === "" ? null : (
-              /* Code */
-              <CodeComponent codeToCopy={codes} idx={idx} />
-            )}
-          </Fragment>
-        ))}
-      </BasicBoxWrapper>
+          </ListWrapper>
+          {codes[idx] === "" ? null : (
+            /* Code */
+            <CodeComponent codeToCopy={codes} idx={idx} />
+          )}
+        </BasicBoxWrapper>
+      ))}
     </>
   );
 };

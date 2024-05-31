@@ -24,16 +24,15 @@ export const StylesModification = ({ data }: StylesModificationTypes) => {
         <BasicDescription>{data.description}</BasicDescription>
       </>
       {/* Each Style Modification */}
-      <BasicBoxWrapper>
-        {data.modifications.map((modification, idx) => (
-          <Fragment key={idx}>
-            <SecondaryTitle>{modification.title}</SecondaryTitle>
-            <BasicDescription>{modification.description}</BasicDescription>
-            {/* Code */}
-            <CodeComponent codeToCopy={codes} idx={idx} />
-          </Fragment>
-        ))}
-      </BasicBoxWrapper>
+
+      {data.modifications.map((modification, idx) => (
+        <BasicBoxWrapper key={idx}>
+          <SecondaryTitle>{modification.title}</SecondaryTitle>
+          <BasicDescription>{modification.description}</BasicDescription>
+          {/* Code */}
+          <CodeComponent codeToCopy={codes} idx={idx} />
+        </BasicBoxWrapper>
+      ))}
     </>
   );
 };
