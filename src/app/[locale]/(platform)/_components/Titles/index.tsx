@@ -21,5 +21,5 @@ export const LoopTitle = ({ children }: TitlesProps) => {
 
 /* Sub Title */
 export const SubTitle = ({ children }: TitlesProps) => {
-  return <span className="block font-bold pt-5">{children}</span>;
+  return <span className="block font-bold">{children}</span>;
 };

@@ -5,12 +5,15 @@
     "items": [
       {
         "title": "Basics of Web APIs",
+        "description": "An introduction to the fundamental concepts of APIs and their role in web development.",
         "items": [
           {
-            "description": "APIs (Application Programming Interfaces) provide a set of protocols and tools for building software applications. In the context of web development, APIs commonly refer to web services or web APIs that allow communication between different software systems, typically over the HTTP protocol."
+            "title": "APIs (Application Programming Interfaces)",
+            "description": "Provide a set of protocols and tools for building software applications. In the context of web development, APIs commonly refer to web services or web APIs that allow communication between different software systems, typically over the HTTP protocol."
           },
           {
-            "description": "RESTful APIs: One of the most common types of web APIs, REST (Representational State Transfer) utilizes HTTP methods like GET, POST, PUT, and DELETE to manipulate resources represented in formats such as JSON."
+            "title": "RESTful APIs",
+            "description": "One of the most common types of web APIs, REST (Representational State Transfer) utilizes HTTP methods like GET, POST, PUT, and DELETE to manipulate resources represented in formats such as JSON."
           }
         ]
       },
@@ -24,6 +27,7 @@
       },
       {
         "title": "Handling API Responses",
+        "description": "Properly handling API responses is crucial for robust application development.",
         "items": [
           {
             "title": "Error Handling",
@@ -37,6 +41,7 @@
       },
       {
         "title": "Best Practices",
+        "description": "Following best practices ensures efficient and secure API communication.",
         "items": [
           {
             "title": "Content-Type",

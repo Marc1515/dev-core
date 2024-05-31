@@ -33,24 +33,20 @@ export const JSONApis = ({ data }: JSONApisTypes) => {
       {data.items.map((item, idx) => (
         <BasicBoxWrapper key={idx}>
           <SecondaryTitle>{item.title}</SecondaryTitle>
-          {item.description ? (
-            <>
-              <BasicDescription>{item.description}</BasicDescription>
-              {/* Code */}
-              <CodeComponent codeToCopy={codes} idx={idx} />
-            </>
-          ) : (
-            <ListWrapper>
-              <List>
-                {item.items?.map((item, idx) => (
-                  <ItemList key={idx}>
-                    <SubTitle>{item.title}</SubTitle>
-                    <BasicDescription>{item.description}</BasicDescription>
-                  </ItemList>
-                ))}
-              </List>
-            </ListWrapper>
-          )}
+          <BasicDescription>{item.description}</BasicDescription>
+
+          <ListWrapper>
+            <List>
+              {item.items?.map((item, idx) => (
+                <ItemList key={idx}>
+                  <SubTitle>{item.title}</SubTitle>
+                  <BasicDescription>{item.description}</BasicDescription>
+                </ItemList>
+              ))}
+            </List>
+          </ListWrapper>
+          {/* Code */}
+          <CodeComponent codeToCopy={codes} idx={idx} />
         </BasicBoxWrapper>
       ))}
     </>
