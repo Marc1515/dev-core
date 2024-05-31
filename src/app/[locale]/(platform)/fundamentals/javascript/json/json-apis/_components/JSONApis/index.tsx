@@ -5,7 +5,10 @@ import React, { Fragment } from "react";
 import { JSONApisTypes } from "./types";
 import { codes } from "./codes";
 /* Wrappers */
-import { BasicBoxWrapper } from "@/app/[locale]/(platform)/_components/Wrappers";
+import {
+  BasicBoxWrapper,
+  ListWrapper,
+} from "@/app/[locale]/(platform)/_components/Wrappers";
 /* Titles */
 import {
   IntroTitle,
@@ -26,17 +29,18 @@ export const JSONApis = ({ data }: JSONApisTypes) => {
         <IntroTitle>{data.title}</IntroTitle>
         <BasicDescription>{data.description}</BasicDescription>
       </>
-      <BasicBoxWrapper>
-        {data.items.map((item, idx) => (
-          <Fragment key={idx}>
-            <SecondaryTitle>{item.title}</SecondaryTitle>
-            {item.description ? (
-              <>
-                <BasicDescription>{item.description}</BasicDescription>
-                {/* Code */}
-                <CodeComponent codeToCopy={codes} idx={idx} />
-              </>
-            ) : (
+
+      {data.items.map((item, idx) => (
+        <BasicBoxWrapper key={idx}>
+          <SecondaryTitle>{item.title}</SecondaryTitle>
+          {item.description ? (
+            <>
+              <BasicDescription>{item.description}</BasicDescription>
+              {/* Code */}
+              <CodeComponent codeToCopy={codes} idx={idx} />
+            </>
+          ) : (
+            <ListWrapper>
               <List>
                 {item.items?.map((item, idx) => (
                   <ItemList key={idx}>
@@ -45,10 +49,10 @@ export const JSONApis = ({ data }: JSONApisTypes) => {
                   </ItemList>
                 ))}
               </List>
-            )}
-          </Fragment>
-        ))}
-      </BasicBoxWrapper>
+            </ListWrapper>
+          )}
+        </BasicBoxWrapper>
+      ))}
     </>
   );
 };

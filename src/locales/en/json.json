@@ -6,7 +6,7 @@
       {
         "path": "/fundamentals/javascript/json/json-syntax",
         "title": "JSON Syntax",
-        "description": ""
+        "description": "JSON syntax is derived from JavaScript object notation syntax, but the format is text only. It can be used to represent structured data based on JavaScript object syntax."
       },
       {
         "path": "/fundamentals/javascript/json/json-manipulation",
@@ -16,7 +16,7 @@
       {
         "path": "/fundamentals/javascript/json/json-apis",
         "title": "JSON APIs",
-        "description": ""
+        "description": "JSON APIs are web services that use JSON as their format for sending and receiving data. They allow for efficient data exchange between clients and servers."
       }
     ]
   }

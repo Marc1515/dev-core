@@ -16,5 +16,6 @@ interface Item2 {
 }
 
 interface Item {
+  title: string;
   description: string;
 }

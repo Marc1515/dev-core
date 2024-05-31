@@ -1,7 +1,7 @@
 {
   "data": {
     "title": "JSON Manipulation",
-    "description": "",
+    "description": "JSON manipulation involves converting data between JSON strings and JavaScript objects, allowing for efficient data exchange and handling in web applications.",
     "items": [
       {
         "title": "Parsing JSON",
@@ -15,23 +15,25 @@
         "title": "Working with Nested Objects and Arrays",
         "description": "JSON can contain complex structures such as nested objects and arrays. Handling these requires careful parsing and stringification."
       },
-
       {
         "title": "Error Handling",
         "description": "When parsing JSON, you might encounter format errors. It's important to handle these exceptions."
       },
-
       {
         "title": "Best Practices for JSON Manipulation",
+        "description": "Following best practices can ensure efficient and secure JSON data handling.",
         "items": [
           {
-            "description": "Validate JSON before parsing: Ensure that the JSON data is correctly formatted to avoid syntax errors."
+            "title": "Validate JSON before parsing",
+            "description": "Ensure that the JSON data is correctly formatted to avoid syntax errors."
           },
           {
-            "description": "Security considerations: Be cautious when parsing JSON from untrusted sources. Malformed JSON can lead to security vulnerabilities."
+            "title": "Security Considerations",
+            "description": "Be cautious when parsing JSON from untrusted sources. Malformed JSON can lead to security vulnerabilities."
           },
           {
-            "description": "Use schema validation: For complex JSON data, consider using JSON schema validation tools to enforce data structure and types."
+            "title": "Use Schema Validation",
+            "description": "For complex JSON data, consider using JSON schema validation tools to enforce data structure and types."
           }
         ]
       }
