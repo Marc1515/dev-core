@@ -1,8 +1,8 @@
 "use client";
 
-import React, { Fragment } from "react";
+import React from "react";
 
-import { JSONSyntaxTypes } from "./types";
+import { JSONSyntaxPageTypes } from "./types";
 import { codes } from "./codes";
 /* Wrappers */
 import {
@@ -15,7 +15,10 @@ import {
   SecondaryTitle,
 } from "@/app/[locale]/(platform)/_components/Titles";
 /* Paragraphs */
-import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
+import {
+  BasicDescription,
+  Conclusion,
+} from "@/app/[locale]/(platform)/_components/Paragraphs";
 /* Lists */
 import {
   ItemList,
@@ -25,7 +28,7 @@ import {
 } from "@/app/[locale]/(platform)/_components/Lists";
 import { CodeComponent } from "@/app/[locale]/(platform)/_components/CodeComponent";
 
-export const JSONSyntax = ({ data }: JSONSyntaxTypes) => {
+export const JSONSyntax = ({ data }: JSONSyntaxPageTypes) => {
   return (
     <>
       {/* Introduction */}
@@ -56,6 +59,9 @@ export const JSONSyntax = ({ data }: JSONSyntaxTypes) => {
           )}
         </BasicBoxWrapper>
       ))}
+      <BasicBoxWrapper>
+        <Conclusion>{data.conclusion}</Conclusion>
+      </BasicBoxWrapper>
     </>
   );
 };
