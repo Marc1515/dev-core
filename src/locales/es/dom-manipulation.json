@@ -1,0 +1,38 @@
+{
+  "data": {
+    "title": "Manipulación del DOM",
+    "description": "El DOM (Modelo de Objeto de Documento) es una representación del documento HTML como un árbol de nodos. JavaScript puede interactuar con el DOM para modificar el contenido, la estructura o el estilo de la página.",
+    "items": [
+      {
+        "path": "/fundamentals/javascript/dom-manipulation/select-elements",
+        "title": "Seleccionar Elementos",
+        "description": "Seleccionar elementos es el proceso de recuperar uno o más elementos del DOM para manipularlos. Esto se puede hacer usando métodos como `document.getElementById`, `document.querySelector` y `document.querySelectorAll`."
+      },
+      {
+        "path": "/fundamentals/javascript/dom-manipulation/elements-content-modification",
+        "title": "Manipulación del Contenido de los Elementos",
+        "description": "Esto implica cambiar el contenido textual o HTML de los elementos del DOM. Los métodos comunes para esto incluyen `textContent` e `innerHTML`, permitiendo que los scripts actualicen, agreguen o eliminen contenido dinámicamente."
+      },
+      {
+        "path": "/fundamentals/javascript/dom-manipulation/styles-modification",
+        "title": "Modificación de Estilos",
+        "description": "Las modificaciones de estilo implican cambiar las propiedades CSS de los elementos para alterar su apariencia. Esto se puede lograr a través de la propiedad `style` de los elementos del DOM, permitiendo cambios de estilo en línea como `element.style.backgroundColor = 'red';`."
+      },
+      {
+        "path": "/fundamentals/javascript/dom-manipulation/add-remove-elements",
+        "title": "Agregar o Eliminar Elementos",
+        "description": "JavaScript puede agregar o eliminar elementos del DOM dinámicamente usando métodos como `appendChild`, `insertBefore`, `removeChild` y `replaceChild`, permitiendo actualizaciones dinámicas del diseño de la página."
+      },
+      {
+        "path": "/fundamentals/javascript/dom-manipulation/events-handler",
+        "title": "Manejo de Eventos",
+        "description": "El manejo de eventos implica configurar oyentes para varias interacciones del usuario o eventos del navegador, como clics o pulsaciones de teclas, usando métodos como `addEventListener` o `removeEventListener`. Esto permite aplicaciones web interactivas y responsivas."
+      },
+      {
+        "path": "/fundamentals/javascript/dom-manipulation/navigation",
+        "title": "Navegación",
+        "description": "La navegación a través del árbol del DOM implica usar propiedades como `parentNode`, `childNodes` y `nextSibling` para moverse entre diferentes nodos en el DOM, permitiendo que los scripts localicen y manipulen elementos específicos de manera eficiente."
+      }
+    ]
+  }
+}

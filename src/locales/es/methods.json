@@ -1,10 +1,24 @@
 {
-  "methods_description": "Un método es un tipo de función que está asociado con un objeto (o clase). En otras palabras, un método es una función que pertenece a un objeto. Esto significa que el método usualmente opera con los datos que están contenidos dentro de su objeto.",
-  "methods_example_introduction": "Por ejemplo, en JavaScript, los objetos de tipo 'String' tienen métodos como 'toUpperCase()', 'slice()', etc., que operan sobre la información del string específico con el que son llamados.",
-  "methods_example_explanation": "En este ejemplo, 'toUpperCase()' es un método del objeto 'texto' (que es una instancia de 'String'). Está actuando sobre los datos de 'texto' y devuelve una nueva cadena de caracteres en mayúsculas.",
-  "methods_example_key_differences_title": "Diferencias Clave",
-  "methods_example_key_differences_context": "Contexto: Una función puede existir por sí sola, mientras que un método siempre es definido en el contexto de un objeto.",
-  "methods_example_key_differences_call": "Llamada: Llamas  a una función directamente por su nombre, mientras que un método se llama en el contexto de un objeto ('objeto.metodo()').",
-  "methods_example_key_differences_purpose": "Propósito: Mientras que las funciones son diseñadas para tareas posiblemente generales, los métodos suelen estar diseñados para interactuar con los atributos del objeto al que pertenecen.",
-  "methods_example_conclusion": "Conociendo la diferencia entre métodos y funciones, puedes empezar a comprender mejor cómo y cuándo usar cada uno en tus programas, especialmente en un lenguaje orientado a objetos como JavaScript."
+  "data": {
+    "title": "Métodos",
+    "description": "Un método es un tipo de función que está asociado con un objeto (o clase). En otras palabras, un método es una función que pertenece a un objeto. Esto significa que el método usualmente opera sobre los datos contenidos dentro de su objeto.",
+    "key_differences": {
+      "title": "Diferencias Clave",
+      "items": [
+        {
+          "title": "Contexto",
+          "description": "Una función puede existir independientemente, mientras que un método siempre se define en el contexto de un objeto."
+        },
+        {
+          "title": "Llamada",
+          "description": "Llamas a una función directamente por su nombre, mientras que un método se llama en un objeto ('object.method()')."
+        },
+        {
+          "title": "Propósito",
+          "description": "Mientras que las funciones están diseñadas para tareas posiblemente generales, los métodos están típicamente diseñados para interactuar con los atributos del objeto al que pertenecen."
+        }
+      ]
+    },
+    "conclusion": "Entender la diferencia entre métodos y funciones te ayuda a comprender mejor cómo y cuándo usar cada uno en tus programas, especialmente en un lenguaje orientado a objetos como JavaScript."
+  }
 }

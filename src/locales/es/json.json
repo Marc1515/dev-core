@@ -1,24 +1,23 @@
 {
-  "json_description": "JSON (Notación de Objetos de JavaScript) es un formato ligero de intercambio de datos, fácil de entender para los humanos y simple de analizar para las máquinas. Está basado en un subconjunto del lenguaje de programación JavaScript, aunque es independiente del lenguaje y puede ser utilizado en muchas plataformas de programación.",
-  "syntax_json_title": "Sintaxis de JSON",
-  "syntax_json_explanation": "La sintaxis de JSON es un subconjunto de la sintaxis de objetos de JavaScript, con algunas reglas específicas:",
-  "sj_data_in_key_value_pairs_title": "Datos en Pares Clave-Valor",
-  "sj_data_in_key_value_pairs_explanation_one": "JSON está compuesto por pares clave-valor. Cada clave va seguida de dos puntos (:) y el valor correspondiente.",
-  "sj_data_in_key_value_pairs_explanation_two": "Las claves deben ser cadenas, encerradas entre comillas dobles.",
-  "sj_data_in_key_value_pairs_explanation_three": "Los valores pueden ser cadenas, números, objetos, arreglos, booleanos (verdadero/falso) o nulos.",
-  "sj_objects_title": "Objetos",
-  "sj_objects_explanation": "Los objetos en JSON son colecciones de pares clave-valor encerrados entre llaves ({}).",
-  "sj_arrays_explanation_one": "Los arreglos en JSON son listas ordenadas de valores, encerrados entre corchetes ([]).",
-  "sj_arrays_explanation_two": "Los valores dentro de un arreglo pueden ser de cualquier tipo, incluyendo otros objetos o arreglos.",
-  "sj_valid_data_formats_title": "Formatos de Datos Válidos",
-  "sj_valid_data_formats_explanation_one": "Números: Los números en JSON pueden ser enteros o flotantes, pero no deben tener formatos especiales como fechas o funciones.",
-  "sj_valid_data_formats_explanation_two": "Debe estar encerrado entre comillas dobles.",
-  "sj_valid_data_formats_explanation_three": "Booleanos y Nulo: Representados por las palabras clave 'true', 'false' y 'null'.",
-  "sj_advantages_of_json_title": "Ventajas de JSON",
-  "sj_advantages_of_json_explanation_one": "Legibilidad: Su formato claro facilita la comprensión, lo que es ventajoso para el desarrollo y la depuración.",
-  "sj_advantages_of_json_explanation_two": "Eficiencia de Transmisión: Siendo un formato ligero, es ideal para el intercambio de datos a través de redes donde el ancho de banda puede ser una preocupación.",
-  "sj_advantages_of_json_explanation_three": "Estandarización: Su amplia aceptación como formato de intercambio de datos asegura que diferentes sistemas y tecnologías puedan interactuar entre sí de manera efectiva.",
-  "sj_common_uses_title": "Usos Comunes de JSON",
-  "sj_common_uses_one": "APIs y Servicios Web: JSON es comúnmente utilizado en APIs web para enviar respuestas del servidor al cliente. Esto permite que las aplicaciones web y móviles procesen y utilicen los datos de manera eficiente.",
-  "sj_common_uses_two": "Configuración de Proyectos: Muchos proyectos de software utilizan JSON para archivos de configuración, como 'package.json' en proyectos de Node.js, lo que facilita la gestión de dependencias y scripts."
+  "data": {
+    "title": "JSON",
+    "description": "JSON (JavaScript Object Notation) es un formato de intercambio de datos ligero, fácil de entender para los humanos y simple de analizar para las máquinas. Está basado en un subconjunto del lenguaje de programación JavaScript, aunque es independiente del lenguaje y puede ser utilizado en muchas plataformas de programación.",
+    "items": [
+      {
+        "path": "/fundamentals/javascript/json/json-syntax",
+        "title": "Sintaxis de JSON",
+        "description": "La sintaxis de JSON se deriva de la notación de objetos de JavaScript, pero el formato es solo texto. Puede ser utilizado para representar datos estructurados basados en la sintaxis de objetos de JavaScript."
+      },
+      {
+        "path": "/fundamentals/javascript/json/json-manipulation",
+        "title": "Manipulación de JSON",
+        "description": "La manipulación de JSON se centra principalmente en convertir datos entre un formato de cadena, adecuado para la transmisión, y un formato de objeto utilizable en JavaScript."
+      },
+      {
+        "path": "/fundamentals/javascript/json/json-apis",
+        "title": "APIs JSON",
+        "description": "Las APIs JSON son servicios web que utilizan JSON como su formato para enviar y recibir datos. Permiten un intercambio de datos eficiente entre clientes y servidores."
+      }
+    ]
+  }
 }

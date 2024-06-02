@@ -1,0 +1,34 @@
+{
+  "data": {
+    "title": "Manipulación de Arrays",
+    "description": "Los arrays son estructuras que te permiten almacenar múltiples valores en una sola variable. JavaScript ofrece varios métodos para trabajar con arrays:",
+    "manipulation": [
+      {
+        "title": "Agregar/Eliminar Elementos:",
+        "items": [
+          { "description": "Agrega elementos al final de un array." },
+          { "description": "Elimina el último elemento de un array." },
+          { "description": "Elimina el primer elemento de un array." },
+          { "description": "Agrega elementos al principio de un array." }
+        ]
+      },
+      {
+        "title": "Iterar sobre Arrays",
+        "description": "Ejecuta una función para cada elemento del array."
+      },
+      {
+        "title": "Transformar Arrays",
+        "description": "Crea un nuevo array con los resultados de llamar a una función proporcionada en cada elemento del array."
+      },
+      {
+        "title": "Buscar en Arrays",
+        "description": "Busca elementos en un array que cumplan una condición."
+      },
+      {
+        "title": "Ordenar Arrays",
+        "description": "Ordena los elementos de un array en su lugar y devuelve el array."
+      }
+    ],
+    "conclusion": "Esta visión general debería ayudarte a entender los conceptos básicos de la manipulación de strings y arrays en JavaScript, mejorando tu capacidad para manejar datos y mejorar la interactividad de tus aplicaciones web."
+  }
+}

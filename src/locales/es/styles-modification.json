@@ -1,0 +1,17 @@
+{
+  "data": {
+    "title": "Modificación de Estilos",
+    "description": "Esta sección profundiza en la manipulación dinámica de estilos CSS a través de JavaScript, permitiendo cambios de estilo directos y manipulaciones de clases. Cubre el acceso a propiedades de estilo individuales y el uso de métodos de classList para gestionar eficazmente los atributos de clase CSS, mejorando la presentación visual de los elementos web de manera dinámica.",
+    "modifications": [
+      {
+        "title": "Acceso a Estilos",
+        "description": "JavaScript te permite modificar los estilos CSS de los elementos en el DOM a través de la propiedad 'style' de un elemento. Por ejemplo, 'element.style.backgroundColor = \"blue\";' cambia el color de fondo del elemento a azul."
+      },
+      {
+        "title": "Manipulación de Clases",
+        "description": "A veces, en lugar de cambiar directamente el estilo de un elemento, es más práctico agregar, eliminar o alternar clases CSS. Los métodos 'classList.add()', 'classList.remove()' y 'classList.toggle()' son herramientas útiles para este propósito."
+      }
+    ],
+    "conclusion": "Usar JavaScript para manipular estilos permite a los desarrolladores crear experiencias web interactivas y dinámicas. Entender cómo acceder y modificar propiedades de estilo y gestionar clases CSS puede mejorar significativamente la interfaz y la experiencia del usuario."
+  }
+}

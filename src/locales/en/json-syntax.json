@@ -10,7 +10,9 @@
           {
             "description": "JSON is made up of key-value pairs. Each key is followed by a colon (:) and the corresponding value."
           },
-          { "description": "Keys must be strings, enclosed in double quotes." },
+          {
+            "description": "Keys must be strings, enclosed in double quotes."
+          },
           {
             "description": "Values can be strings, numbers, objects, arrays, booleans (true/false), or null."
           }
@@ -40,9 +42,9 @@
             "title": "Numbers",
             "description": "Numbers in JSON can be integers or floats but should not have special formats like dates or functions."
           },
-          { 
-            "title": "Strings",  
-            "description": "Must be enclosed in double quotes."
+          {
+            "title": "Strings",
+            "description": "Strings must be enclosed in double quotes."
           },
           {
             "title": "Booleans and Null",
@@ -82,6 +84,7 @@
           }
         ]
       }
-    ]
+    ],
+    "conclusion": "Understanding JSON syntax and its applications is essential for modern web development. Its simplicity, readability, and efficiency make it a go-to choice for data interchange in various scenarios."
   }
 }

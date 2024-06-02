@@ -1,0 +1,21 @@
+{
+  "data": {
+    "title": "Manejo de Eventos",
+    "description": "Esta sección explora cómo gestionar las interacciones de los usuarios y otros eventos en el DOM usando JavaScript. Incluye agregar oyentes de eventos, definir funciones manejadoras y comprender la propagación de eventos para gestionar eficazmente las acciones desencadenadas por las entradas del usuario u otras interacciones dinámicas dentro de la página web.",
+    "events": [
+      {
+        "title": "Agregar Eventos",
+        "description": "Los eventos son fundamentales para interactuar con la página web. El método 'addEventListener()' se utiliza para asignar un evento a un elemento. Por ejemplo, puedes escuchar eventos de clic, eventos de carga de página, cambios de entrada, etc."
+      },
+      {
+        "title": "Funciones Manejadoras",
+        "description": "Cuando se desencadena un evento, se ejecuta la función asociada (o 'manejador de eventos'). Esta función puede realizar cualquier número de acciones, como validar un formulario, abrir un modal, etc."
+      },
+      {
+        "title": "Propagación de Eventos",
+        "description": "Los eventos en el DOM se propagan en dos fases: captura y burbujeo. Puedes controlar este comportamiento con el tercer argumento de 'addEventListener()', estableciendo true para captura o false para burbujeo."
+      }
+    ],
+    "conclusion": "Dominar el manejo de eventos en JavaScript es crucial para crear aplicaciones web responsivas e interactivas. Al usar eficazmente los oyentes de eventos, las funciones manejadoras y comprender la propagación de eventos, los desarrolladores pueden construir interfaces dinámicas y fáciles de usar."
+  }
+}

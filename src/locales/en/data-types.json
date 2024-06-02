@@ -1,15 +1,15 @@
 {
   "data": {
     "title": "Data Types",
-    "description": "Data types in JavaScript are fundamental in determining how data can be stored and manipulated within a program. They provide a structure that helps the programming language understand what operations are possible with that data and how it should be handled. By defining data types such as numbers, strings or Booleans, JavaScript can optimise memory usage and operation execution, ensuring that interactions with data are predictable and efficient.",
+    "description": "Data types in JavaScript are fundamental in determining how data can be stored and manipulated within a program. They provide a structure that helps the programming language understand what operations are possible with that data and how it should be handled. By defining data types such as numbers, strings or Booleans, JavaScript can optimize memory usage and operation execution, ensuring that interactions with data are predictable and efficient.",
     "types": [
       {
         "title": "Primitive Types",
-        "description": "These are the basics types of data:",
+        "description": "These are the basic types of data:",
         "items": [
           {
             "title": "String",
-            "description": "It's a sequence of characters used to represent text. For example, 'Hello, World!'."
+            "description": "A sequence of characters used to represent text. For example, 'Hello, World!'."
           },
           {
             "title": "Number",
@@ -17,7 +17,7 @@
           },
           {
             "title": "BigInt",
-            "description": "An integer with arbitrary precision. It's useful for very large numbers. For example, 9007199254740991n."
+            "description": "An integer with arbitrary precision. Useful for very large numbers. For example, 9007199254740991n."
           },
           {
             "title": "Boolean",
@@ -29,7 +29,7 @@
           },
           {
             "title": "Null",
-            "description": "Denotes a null value. It's used to represent a non-existent or invalid object or address."
+            "description": "Denotes a null value. Used to represent a non-existent or invalid object or address."
           },
           {
             "title": "Symbol",
@@ -55,6 +55,7 @@
           }
         ]
       }
-    ]
+    ],
+    "conclusion": "Understanding data types is crucial for writing efficient and error-free JavaScript code. They form the backbone of any program, determining how data is stored, manipulated, and interacted with throughout the execution of the application."
   }
 }

@@ -1,0 +1,17 @@
+{
+  "data": {
+    "title": "Modificación del Contenido del Elemento",
+    "description": "Esta sección detalla cómo manipular el contenido dentro de los elementos HTML usando JavaScript. Se centra en dos propiedades principales, 'textContent' e 'innerHTML', cada una ofreciendo diferentes maneras de modificar o leer el contenido de un elemento, atendiendo a necesidades de manipulación de texto o integración de contenido HTML.",
+    "modifications": [
+      {
+        "title": "textContent",
+        "description": "Esta propiedad te permite leer o modificar el texto interno de un elemento HTML. Al usar 'textContent', cualquier etiqueta HTML dentro del contenido se trata como texto plano y no se interpreta como HTML."
+      },
+      {
+        "title": "innerHTML",
+        "description": "A diferencia de 'textContent', la propiedad 'innerHTML' te permite leer o modificar tanto el texto como el HTML dentro de un elemento. Es muy útil para insertar nuevas estructuras HTML dentro de un elemento, pero debe usarse con precaución debido a riesgos de seguridad como ataques de Cross-Site Scripting (XSS) si el contenido es proporcionado por el usuario."
+      }
+    ],
+    "conclusion": "Entender cómo usar 'textContent' e 'innerHTML' de manera efectiva permite a los desarrolladores cambiar dinámicamente el contenido de la página web, mejorando la interactividad y la experiencia del usuario. Un uso adecuado asegura que se mantengan tanto la funcionalidad como la seguridad."
+  }
+}

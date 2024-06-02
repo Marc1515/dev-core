@@ -1,0 +1,29 @@
+{
+  "data": {
+    "title": "Seleccionar Elementos del DOM",
+    "description": "Esta sección se centra en varios métodos proporcionados por JavaScript para seleccionar elementos del DOM, lo que permite a los desarrolladores identificar y manipular partes específicas de la página web. Cada método ofrece un enfoque diferente para la selección basado en atributos como ID, clase, nombre de etiqueta o cualquier selector CSS, facilitando una manipulación del DOM dirigida y eficiente.",
+    "items": [
+      {
+        "title": "getElementByID()",
+        "description": "Selecciona un elemento por su atributo 'id'. Este método devuelve el elemento que tiene el atributo ID con el valor especificado."
+      },
+      {
+        "title": "getElementsByTagName()",
+        "description": "Selecciona todos los elementos de un tipo específico de 'etiqueta' HTML. Este método devuelve una colección HTML viva de elementos con el nombre de etiqueta dado."
+      },
+      {
+        "title": "getElementsByClassName()",
+        "description": "Selecciona todos los elementos que tienen una 'clase' específica. Este método devuelve una colección HTML viva de elementos con el nombre de clase dado."
+      },
+      {
+        "title": "querySelector()",
+        "description": "Selecciona el primer elemento que coincide con un selector CSS especificado. Este método devuelve el primer elemento dentro del documento que coincide con el selector especificado, o grupo de selectores."
+      },
+      {
+        "title": "querySelectorAll()",
+        "description": "Selecciona todos los elementos que coinciden con un selector CSS especificado. Este método devuelve una NodeList estática de todos los elementos que coinciden con el grupo de selectores especificado."
+      }
+    ],
+    "conclusion": "Entender y utilizar diferentes métodos para seleccionar elementos del DOM es esencial para un desarrollo web eficiente. Estos métodos permiten a los desarrolladores acceder y manipular fácilmente partes específicas de una página web, mejorando la interactividad y la experiencia del usuario."
+  }
+}

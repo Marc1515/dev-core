@@ -6,7 +6,7 @@
       {
         "path": "/fundamentals/javascript/syntax-and-basic-concepts",
         "title": "Sintaxis y Conceptos Básicos",
-        "description": "La sintaxis y los conceptos básicos de JavaScript son fundamentales para crear y controlar la funcionalidad de las páginas web. Permiten a los desarrolladores escribir instrucciones que el navegador puede interpretar y ejecutar, como manipular elementos HTML, reaccionar a eventos de usuarios y comunicarse con servidores. Comprender estos conceptos es crucial para implementar la lógica de control, estructurar el código de manera eficiente y realizar operaciones de datos, todo lo cual es esencial para desarrollar aplicaciones web interactivas y dinámicas."
+        "description": "La sintaxis y los conceptos básicos de JavaScript son fundamentales para crear y controlar la funcionalidad de las páginas web. Permiten a los desarrolladores escribir instrucciones que el navegador puede interpretar y ejecutar, como manipular elementos HTML, reaccionar a eventos de usuario y comunicarse con servidores. Entender estos conceptos es crucial para implementar lógica de control, estructurar el código de manera eficiente y realizar operaciones de datos, todo lo cual es esencial para desarrollar aplicaciones web interactivas y dinámicas."
       },
       {
         "path": "/fundamentals/javascript/dom-manipulation",
@@ -16,7 +16,7 @@
       {
         "path": "/fundamentals/javascript/json",
         "title": "JSON",
-        "description": "JSON (Notación de Objetos de JavaScript) es un formato ligero de intercambio de datos, fácil de entender para los humanos y simple de analizar para las máquinas. Está basado en un subconjunto del lenguaje de programación JavaScript, aunque es independiente del lenguaje y puede ser utilizado en muchas plataformas de programación."
+        "description": "JSON (Notación de Objetos de JavaScript) es un formato de intercambio de datos ligero, fácil de entender para los humanos y simple de analizar para las máquinas. Está basado en un subconjunto del lenguaje de programación JavaScript, aunque es independiente del lenguaje y puede ser utilizado en muchas plataformas de programación."
       }
     ]
   }

@@ -8,6 +8,7 @@
     },
     "importance": {
       "title": "Importance of Operators in Programming",
+      "description": "Operators are crucial in programming because they provide the means to perform a variety of essential tasks that affect the control flow, data manipulation, and overall logic of applications.",
       "items": [
         {
           "title": "Control of Program Flow",
@@ -25,6 +26,7 @@
     },
     "additional_concepts": {
       "title": "Additional Concepts Related to Operators",
+      "description": "In addition to the basic types of operators, understanding their associativity, precedence, and evaluation techniques is crucial for writing effective and efficient code.",
       "items": [
         {
           "title": "Operator Associativity",
@@ -36,7 +38,7 @@
         },
         {
           "title": "Short-circuit Evaluation",
-          "description": "Some logical operators like && (logical  AND) and || (logical OR) do not evaluate the second operand if the result can already be determined with the first. This is useful for preventing runtime errors and improving program efficiency."
+          "description": "Some logical operators like && (logical AND) and || (logical OR) do not evaluate the second operand if the result can already be determined with the first. This is useful for preventing runtime errors and improving program efficiency."
         }
       ]
     },
@@ -119,7 +121,7 @@
         ]
       },
       {
-        "title": "Comparision Operators",
+        "title": "Comparison Operators",
         "description": "Comparison operators are used to compare two values.",
         "items": [
           {
@@ -205,18 +207,17 @@
           }
         ]
       },
-
       {
         "title": "Type Operators",
         "description": "Type Operators are used in JavaScript to evaluate the characteristics of variables and objects at runtime. They provide a means to gain insights about variable types and their relationships to constructors within the language's type system.",
         "items": [
           {
-            "symbol": "Typeof",
+            "symbol": "typeof",
             "title": "Type Of",
             "description": "Returns a string indicating the type of the unevaluated operand."
           },
           {
-            "symbol": "Instanceof",
+            "symbol": "instanceof",
             "title": "Instance Of",
             "description": "Tests whether the prototype property of a constructor appears anywhere in the prototype chain of an object."
           }

@@ -1,0 +1,17 @@
+{
+  "data": {
+    "title": "Navegación del DOM",
+    "description": "Esta sección describe técnicas para navegar a través del Modelo de Objeto de Documento (DOM), centrándose en cómo acceder y localizar varios elementos dentro de la estructura de árbol jerárquico de los documentos HTML. Se destacan métodos para identificar las relaciones de padres, hijos y hermanos entre nodos, así como técnicas para buscar y recuperar elementos basados en diferentes atributos como etiquetas, clases o selectores CSS.",
+    "items": [
+      {
+        "title": "Nodos Padre, Hijo y Hermano",
+        "description": "El DOM está estructurado como un árbol de nodos. Puedes navegar por este árbol utilizando propiedades como 'parentNode', 'childNodes' y 'nextSibling' para acceder a los nodos padre, hijo y hermano respectivamente."
+      },
+      {
+        "title": "Búsqueda en el Árbol DOM",
+        "description": "Métodos como 'getElementsByTagName()', 'getElementsByClassName()' y 'querySelector()' te permiten buscar elementos en el DOM basándote en diferentes criterios, facilitando la manipulación de elementos específicos."
+      }
+    ],
+    "conclusion": "Dominar las técnicas de navegación del DOM es crucial para un desarrollo web efectivo. Al entender cómo acceder y manipular varios elementos dentro del árbol DOM, los desarrolladores pueden crear páginas web dinámicas e interactivas."
+  }
+}

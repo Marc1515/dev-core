@@ -1,0 +1,21 @@
+{
+  "data": {
+    "title": "Agregar o Eliminar Elementos",
+    "description": "Esta sección cubre la manipulación dinámica del DOM al agregar o eliminar elementos. JavaScript proporciona métodos no solo para crear nuevos elementos, sino también para insertarlos en el DOM o eliminar elementos existentes, permitiendo cambios en tiempo real en la estructura de la página web.",
+    "items": [
+      {
+        "title": "Creación de Elementos",
+        "description": "Puedes crear nuevos nodos en el DOM usando el método 'document.createElement()', que crea un nuevo elemento HTML que puedes configurar (como agregar texto o estilos) antes de insertarlo en el documento."
+      },
+      {
+        "title": "Inserción de Elementos",
+        "description": "Una vez que se ha creado un elemento, puedes insertarlo en el DOM utilizando métodos como 'appendChild()' o 'insertBefore()'. Estos métodos te permiten especificar dónde se debe colocar el nuevo elemento en relación con otros nodos existentes."
+      },
+      {
+        "title": "Eliminar Elementos",
+        "description": "Para eliminar un elemento, puedes usar el método 'removeChild()' desde el nodo padre del elemento que deseas eliminar, o usar el método 'remove()' directamente en el elemento que deseas eliminar."
+      }
+    ],
+    "conclusion": "Entender cómo agregar o eliminar elementos dinámicamente en el DOM es esencial para crear aplicaciones web interactivas y responsivas. Estas técnicas permiten a los desarrolladores actualizar el contenido y la estructura de la página web en tiempo real, mejorando la experiencia del usuario."
+  }
+}
