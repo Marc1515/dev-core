@@ -37,9 +37,9 @@ export const Functions = ({ data }: FunctionsTypes) => {
       ))}
 
       {/* Conclusion */}
-      <>
+      <BasicBoxWrapper>
         <Conclusion>{data.conclusion}</Conclusion>
-      </>
+      </BasicBoxWrapper>
     </>
   );
 };

@@ -8,6 +8,7 @@ interface Data {
   main_function: Mainfunction;
   importance: Importance;
   structures: Structures;
+  conclusion: string;
 }
 
 interface Structures {
@@ -17,6 +18,7 @@ interface Structures {
 }
 
 interface Item {
+  id: number;
   title: string;
   description: string;
   items?: Mainfunction[];
@@ -24,6 +26,7 @@ interface Item {
 
 interface Importance {
   title: string;
+  description: string;
   items: Mainfunction[];
 }
 

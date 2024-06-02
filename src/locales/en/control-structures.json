@@ -29,10 +29,12 @@
       "description": "Control structures in JavaScript can be broadly categorized into sequential, conditional, and repetition structures, each serving distinct purposes in program flow control.",
       "items": [
         {
+          "id": 1,
           "title": "Sequential Structures",
           "description": "Sequential structures are the foundation of any program, where instructions are executed one after the other, in the order they appear in the script. There is no decision-making or repetition implicit in sequential structures."
         },
         {
+          "id": 2,
           "title": "Conditional Structures",
           "description": "Conditional structures allow you to execute different sections of code depending on whether one or more conditions are true or false. Here are the main ones:",
           "items": [
@@ -55,6 +57,7 @@
           ]
         },
         {
+          "id": 3,
           "title": "Repetition Structures (Loops)",
           "description": "Loops allow repeating a block of code multiple times. The main repetition structures in JavaScript are:",
           "items": [

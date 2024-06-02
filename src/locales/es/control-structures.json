@@ -29,10 +29,12 @@
       "description": "Las estructuras de control en JavaScript se pueden categorizar ampliamente en estructuras secuenciales, condicionales y de repetición, cada una con propósitos distintos en el control del flujo del programa.",
       "items": [
         {
+          "id": 1,
           "title": "Estructuras Secuenciales",
           "description": "Las estructuras secuenciales son la base de cualquier programa, donde las instrucciones se ejecutan una tras otra, en el orden en que aparecen en el script. No hay toma de decisiones ni repetición implícita en las estructuras secuenciales."
         },
         {
+          "id": 2,
           "title": "Estructuras Condicionales",
           "description": "Las estructuras condicionales permiten ejecutar diferentes secciones de código dependiendo de si una o más condiciones son verdaderas o falsas. Aquí están las principales:",
           "items": [
@@ -55,6 +57,7 @@
           ]
         },
         {
+          "id": 3,
           "title": "Estructuras de Repetición (Bucles)",
           "description": "Los bucles permiten repetir un bloque de código múltiples veces. Las principales estructuras de repetición en JavaScript son:",
           "items": [

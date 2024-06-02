@@ -11,7 +11,8 @@ interface Data {
 
 interface Item2 {
   title: string;
-  description?: string;
+  description: string;
+  id?: number;
   items?: Item[];
 }
 

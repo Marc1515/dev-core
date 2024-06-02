@@ -16,7 +16,10 @@ import {
   SubTitle,
 } from "@/app/[locale]/(platform)/_components/Titles";
 /* Paragraphs */
-import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
+import {
+  BasicDescription,
+  Conclusion,
+} from "@/app/[locale]/(platform)/_components/Paragraphs";
 /* Lists */
 import { ItemList, List } from "@/app/[locale]/(platform)/_components/Lists";
 import { CodeComponent } from "@/app/[locale]/(platform)/_components/CodeComponent";
@@ -51,6 +54,9 @@ export const JSONApis = ({ data }: JSONApisTypes) => {
           ) : null}
         </BasicBoxWrapper>
       ))}
+      <BasicBoxWrapper>
+        <Conclusion>{data.conclusion}</Conclusion>
+      </BasicBoxWrapper>
     </>
   );
 };

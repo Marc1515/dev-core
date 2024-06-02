@@ -6,6 +6,7 @@ interface Data {
   title: string;
   description: string;
   modifications: Modification[];
+  conclusion: string;
 }
 
 interface Modification {

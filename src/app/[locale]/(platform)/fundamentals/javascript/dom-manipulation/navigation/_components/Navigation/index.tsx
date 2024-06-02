@@ -12,7 +12,10 @@ import {
   SecondaryTitle,
 } from "@/app/[locale]/(platform)/_components/Titles";
 /* Paragraphs */
-import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
+import {
+  BasicDescription,
+  Conclusion,
+} from "@/app/[locale]/(platform)/_components/Paragraphs";
 import { CodeComponent } from "@/app/[locale]/(platform)/_components/CodeComponent";
 
 export const Navigation = ({ data }: NavigationTypes) => {
@@ -33,6 +36,9 @@ export const Navigation = ({ data }: NavigationTypes) => {
           <CodeComponent codeToCopy={codes} idx={idx} />
         </BasicBoxWrapper>
       ))}
+      <BasicBoxWrapper>
+        <Conclusion>{data.conclusion}</Conclusion>
+      </BasicBoxWrapper>
     </>
   );
 };

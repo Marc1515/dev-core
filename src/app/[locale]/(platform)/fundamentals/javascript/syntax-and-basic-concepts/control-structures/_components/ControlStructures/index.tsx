@@ -19,7 +19,10 @@ import {
   SubTitle,
 } from "@/app/[locale]/(platform)/_components/Titles";
 /* Paragraphs */
-import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
+import {
+  BasicDescription,
+  Conclusion,
+} from "@/app/[locale]/(platform)/_components/Paragraphs";
 /* List */
 import {
   List,
@@ -64,7 +67,7 @@ export const ControlStructures = ({ data }: ControlStructuresTypes) => {
           <FirstIdxBoxWrapper key={idx}>
             <SubTitle>{item.title}</SubTitle>
             <BasicDescription>{item.description}</BasicDescription>
-            {item.title === "Repetition Structures (Loops)"
+            {item.id === 3
               ? item.items?.map((item, idx) => (
                   <SecondIdxBoxWrapper key={idx}>
                     <SubTitle>{item.title}</SubTitle>
@@ -81,6 +84,9 @@ export const ControlStructures = ({ data }: ControlStructuresTypes) => {
                 ))}
           </FirstIdxBoxWrapper>
         ))}
+      </BasicBoxWrapper>
+      <BasicBoxWrapper>
+        <Conclusion>{data.conclusion}</Conclusion>
       </BasicBoxWrapper>
     </>
   );

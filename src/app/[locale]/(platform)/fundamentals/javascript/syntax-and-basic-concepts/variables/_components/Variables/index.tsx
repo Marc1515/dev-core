@@ -13,7 +13,10 @@ import {
   SecondaryTitle,
 } from "@/app/[locale]/(platform)/_components/Titles";
 /* Paragraphs */
-import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
+import {
+  BasicDescription,
+  Conclusion,
+} from "@/app/[locale]/(platform)/_components/Paragraphs";
 /* Lists */
 import {
   List,
@@ -51,6 +54,10 @@ export const Variables = ({ data }: VariablesTypes) => {
             ))}
           </List>
         </ListWrapper>
+      </BasicBoxWrapper>
+
+      <BasicBoxWrapper>
+        <Conclusion>{data.conclusion}</Conclusion>
       </BasicBoxWrapper>
     </>
   );

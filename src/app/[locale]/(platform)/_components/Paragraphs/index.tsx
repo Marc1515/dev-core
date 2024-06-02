@@ -11,5 +11,5 @@ export const BasicDescription = ({ children }: ParagraphsProps) => {
 
 /* Conclusion */
 export const Conclusion = ({ children }: ParagraphsProps) => {
-  return <p className="pt-20">{children}</p>;
+  return <p>{children}</p>;
 };

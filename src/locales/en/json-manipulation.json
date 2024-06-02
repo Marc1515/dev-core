@@ -20,6 +20,7 @@
         "description": "When parsing JSON, you might encounter format errors. It's important to handle these exceptions."
       },
       {
+        "id": 1,
         "title": "Best Practices for JSON Manipulation",
         "description": "Following best practices can ensure efficient and secure JSON data handling.",
         "items": [

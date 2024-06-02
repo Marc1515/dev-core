@@ -15,7 +15,10 @@ import {
   SecondaryTitle,
 } from "@/app/[locale]/(platform)/_components/Titles";
 /* Paragraphs */
-import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
+import {
+  BasicDescription,
+  Conclusion,
+} from "@/app/[locale]/(platform)/_components/Paragraphs";
 /* Lists */
 import {
   ItemList,
@@ -53,12 +56,15 @@ export const JSONManipulation = ({ data }: JSONManipulationTypes) => {
               </List>
             </ListWrapper>
             {/* Code */}
-            {item.title !== "Best Practices for JSON Manipulation" ? (
+            {item.id !== 1 ? (
               <CodeComponent codeToCopy={codes} idx={idx} />
             ) : null}
           </>
         </BasicBoxWrapper>
       ))}
+      <BasicBoxWrapper>
+        <Conclusion>{data.conclusion}</Conclusion>
+      </BasicBoxWrapper>
     </>
   );
 };

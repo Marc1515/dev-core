@@ -20,6 +20,7 @@
         "description": "Al parsear JSON, puedes encontrarte con errores de formato. Es importante manejar estas excepciones."
       },
       {
+        "id": 1,
         "title": "Mejores Prácticas para la Manipulación de JSON",
         "description": "Seguir las mejores prácticas puede asegurar un manejo de datos JSON eficiente y seguro.",
         "items": [

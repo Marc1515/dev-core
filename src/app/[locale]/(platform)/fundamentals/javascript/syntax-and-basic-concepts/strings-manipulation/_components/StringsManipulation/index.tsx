@@ -15,7 +15,10 @@ import {
   SecondaryTitle,
 } from "@/app/[locale]/(platform)/_components/Titles";
 /* Paragraphs */
-import { BasicDescription } from "@/app/[locale]/(platform)/_components/Paragraphs";
+import {
+  BasicDescription,
+  Conclusion,
+} from "@/app/[locale]/(platform)/_components/Paragraphs";
 /* Lists */
 import {
   ItemList,
@@ -28,10 +31,10 @@ export const StringsManipulation = ({ data }: StringsManipulationTypes) => {
   return (
     <>
       {/* Introduction */}
-      <BasicBoxWrapper>
+      <>
         <IntroTitle>{data.title}</IntroTitle>
         <BasicDescription>{data.description}</BasicDescription>
-      </BasicBoxWrapper>
+      </>
       {/* Each Manipulation Type */}
 
       {data.manipulation.map((item, idx) => (
@@ -56,6 +59,9 @@ export const StringsManipulation = ({ data }: StringsManipulationTypes) => {
           <CodeComponent codeToCopy={codes} idx={idx} />
         </BasicBoxWrapper>
       ))}
+      <BasicBoxWrapper>
+        <Conclusion>{data.conclusion}</Conclusion>
+      </BasicBoxWrapper>
     </>
   );
 };

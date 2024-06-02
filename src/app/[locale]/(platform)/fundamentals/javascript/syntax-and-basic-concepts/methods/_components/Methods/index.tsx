@@ -54,9 +54,9 @@ export const Methods = ({ data }: MethodsTypes) => {
         </ListWrapper>
       </BasicBoxWrapper>
       {/* Conclusion */}
-      <>
+      <BasicBoxWrapper>
         <Conclusion>{data.conclusion}</Conclusion>
-      </>
+      </BasicBoxWrapper>
     </>
   );
 };

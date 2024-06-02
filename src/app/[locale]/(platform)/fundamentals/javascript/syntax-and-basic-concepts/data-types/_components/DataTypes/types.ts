@@ -6,6 +6,7 @@ interface Data {
   title: string;
   description: string;
   types: Type[];
+  conclusion: string;
 }
 
 interface Type {
