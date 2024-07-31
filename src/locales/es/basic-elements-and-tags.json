@@ -1,0 +1,34 @@
+{
+  "data": {
+    "title": "Elementos y Etiquetas Básicas",
+    "description": "Una visión general de los elementos y etiquetas fundamentales de HTML5 utilizados para estructurar y formatear el contenido web.",
+    "items": [
+      {
+        "title": "Encabezados",
+        "description": "<h1> a <h6>: Diferentes niveles de encabezados."
+      },
+      {
+        "title": "Párrafos",
+        "description": "<p>: Para párrafos de texto."
+      },
+      {
+        "title": "Enlaces",
+        "description": "<a href='URL'>: Para crear enlaces a otras páginas."
+      },
+      {
+        "title": "Imágenes",
+        "description": "<img src='URL' alt='Descripción'>: Para insertar imágenes."
+      },
+      {
+        "title": "Listas",
+        "description": "HTML proporciona diferentes tipos de listas para organizar el contenido.",
+        "items": [
+          { "title": "<ul>", "description": "Listas no ordenadas." },
+          { "title": "<ol>", "description": "Listas ordenadas." },
+          { "title": "<li>", "description": "Elementos de lista." }
+        ]
+      }
+    ],
+    "conclusion": "Dominar estos elementos y etiquetas básicas es esencial para crear páginas web bien estructuradas y de fácil navegación. Estos componentes forman la base de HTML y son fundamentales para técnicas de desarrollo web más avanzadas."
+  }
+}
