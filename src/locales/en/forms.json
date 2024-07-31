@@ -1,0 +1,29 @@
+{
+  "data": {
+    "title": "Forms",
+    "description": "An overview of HTML5 form elements used to create interactive and user-friendly web forms.",
+    "items": [
+      {
+        "title": "<form>",
+        "description": "Form container."
+      },
+      {
+        "title": "<input>",
+        "description": "Input field."
+      },
+      {
+        "title": "<label>",
+        "description": "Label for form fields."
+      },
+      {
+        "title": "<button>",
+        "description": "Button to submit the form."
+      },
+      {
+        "title": "Input types",
+        "description": "'text', 'password', 'email', 'number', etc."
+      }
+    ],
+    "conclusion": "Understanding and using HTML5 form elements is essential for creating interactive, accessible, and user-friendly forms on the web. These elements allow developers to gather user input efficiently and effectively."
+  }
+}

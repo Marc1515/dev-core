@@ -1,0 +1,29 @@
+{
+  "data": {
+    "title": "Formularios",
+    "description": "Una visión general de los elementos de formulario de HTML5 utilizados para crear formularios web interactivos y fáciles de usar.",
+    "items": [
+      {
+        "title": "<form>",
+        "description": "Contenedor del formulario."
+      },
+      {
+        "title": "<input>",
+        "description": "Campo de entrada."
+      },
+      {
+        "title": "<label>",
+        "description": "Etiqueta para campos del formulario."
+      },
+      {
+        "title": "<button>",
+        "description": "Botón para enviar el formulario."
+      },
+      {
+        "title": "Tipos de entrada",
+        "description": "'text', 'password', 'email', 'number', etc."
+      }
+    ],
+    "conclusion": "Entender y utilizar los elementos de formulario de HTML5 es esencial para crear formularios interactivos, accesibles y fáciles de usar en la web. Estos elementos permiten a los desarrolladores recopilar la información del usuario de manera eficiente y efectiva."
+  }
+}
