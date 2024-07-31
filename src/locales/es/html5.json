@@ -1,0 +1,38 @@
+{
+  "data": {
+    "title": "HTML5",
+    "description": "Una guía completa para aprender HTML5, la última versión del estándar HTML, que cubre temas esenciales y mejores prácticas.",
+    "items": [
+      {
+        "path": "/fundamentals/html5/introduction",
+        "title": "Introducción a HTML5",
+        "description": "Aprende qué es HTML5, su importancia y la estructura básica de un documento HTML5, incluyendo elementos esenciales como doctype, html, head y body."
+      },
+      {
+        "path": "/fundamentals/html5/basic-elements-and-tags",
+        "title": "Elementos y Etiquetas Básicas",
+        "description": "Entiende los elementos y etiquetas fundamentales de HTML5, incluyendo encabezados, párrafos, enlaces, imágenes y listas, que forman la base del contenido web."
+      },
+      {
+        "path": "/fundamentals/html5/forms",
+        "title": "Formularios",
+        "description": "Explora los elementos de formulario de HTML5, como campos de entrada, etiquetas, botones y diferentes tipos de entrada, para crear formularios web interactivos y fáciles de usar."
+      },
+      {
+        "path": "/fundamentals/html5/multimedia",
+        "title": "Multimedia",
+        "description": "Descubre cómo integrar elementos multimedia como audio y video en tus páginas web utilizando las etiquetas audio y video de HTML5, mejorando la experiencia del usuario."
+      },
+      {
+        "path": "/fundamentals/html5/semantics",
+        "title": "Semántica",
+        "description": "Aprende sobre los elementos semánticos de HTML5 como header, nav, section, article, footer y aside, que mejoran la estructura y accesibilidad del contenido web."
+      },
+      {
+        "path": "/fundamentals/html5/global-attributes",
+        "title": "Atributos Globales",
+        "description": "Entiende los atributos globales que se pueden aplicar a la mayoría de los elementos HTML5, como id, class, style y title, para mejorar la funcionalidad y el estilo de las páginas web."
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+    "data": {
+      "title": "HTML5",
+      "description": "A comprehensive guide to learning HTML5, the latest version of the HTML standard, covering essential topics and best practices.",
+      "items": [
+        {
+          "path": "/fundamentals/html5/introduction",
+          "title": "Introduction to HTML5",
+          "description": "Learn what HTML5 is, its significance, and the basic structure of an HTML5 document, including essential elements like doctype, html, head, and body."
+        },
+        {
+          "path": "/fundamentals/html5/basic-elements-and-tags",
+          "title": "Basic Elements and Tags",
+          "description": "Understand the fundamental HTML5 elements and tags, including headings, paragraphs, links, images, and lists, which form the backbone of web content."
+        },
+        {
+          "path": "/fundamentals/html5/forms",
+          "title": "Forms",
+          "description": "Explore HTML5 form elements, such as input fields, labels, buttons, and different input types, to create interactive and user-friendly web forms."
+        },
+        {
+          "path": "/fundamentals/html5/multimedia",
+          "title": "Multimedia",
+          "description": "Discover how to integrate multimedia elements like audio and video into your web pages using HTML5's audio and video tags, enhancing the user experience."
+        },
+        {
+          "path": "/fundamentals/html5/semantics",
+          "title": "Semantics",
+          "description": "Learn about HTML5 semantic elements like header, nav, section, article, footer, and aside, which improve the structure and accessibility of web content."
+        },
+        {
+          "path": "/fundamentals/html5/global-attributes",
+          "title": "Global Attributes",
+          "description": "Understand global attributes that can be applied to most HTML5 elements, such as id, class, style, and title, to enhance the functionality and styling of web pages."
+        }
+      ]
+    }
+  }
+  
