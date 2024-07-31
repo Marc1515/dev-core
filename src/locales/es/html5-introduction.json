@@ -1,0 +1,37 @@
+{
+  "data": {
+    "title": "¿Qué es HTML?",
+    "description": "HTML, o Lenguaje de Marcado de Hipertexto, es el lenguaje estándar utilizado para crear y diseñar páginas web y aplicaciones web.",
+    "items": [
+      {
+        "description": "Lenguaje de marcado para estructurar contenido web."
+      },
+      {
+        "description": "HTML5 es la última versión de HTML, con nuevas características y mejoras."
+      }
+    ],
+    "basic_structure": {
+      "title": "Estructura básica de un documento HTML5",
+      "description": "El diseño fundamental de un documento HTML5, incluyendo elementos esenciales que proporcionan estructura y significado al contenido.",
+      "items": [
+        {
+          "title": "<!DOCTYPE html>",
+          "description": "Declaración del tipo de documento."
+        },
+        {
+          "title": "<html>",
+          "description": "Elemento raíz que contiene todo el contenido de la página."
+        },
+        {
+          "title": "<head>",
+          "description": "Contiene metadatos como el título, enlaces a estilos, etc."
+        },
+        {
+          "title": "<body>",
+          "description": "Contiene el contenido visible de la página web."
+        }
+      ]
+    },
+    "conclusion": "Entender HTML5 es crucial para el desarrollo web, ya que proporciona la estructura básica para las páginas web e incluye nuevas características que mejoran tanto la funcionalidad como la experiencia del usuario."
+  }
+}
