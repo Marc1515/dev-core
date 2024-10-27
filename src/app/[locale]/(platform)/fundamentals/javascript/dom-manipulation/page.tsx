@@ -1,8 +1,11 @@
-import React from "react";
 import initTranslations from "@/app/i18n";
+
 import { domManipulationNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
-import { DomManipulationTypes } from "./types";
+
+import { DomManipulationTypes } from "@/types/dom-manipulation";
+
 import Link from "next/link";
+
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import {
   Accordion,
@@ -11,11 +14,11 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 /* Wrappers */
-import { CardsWrapper } from "../../../_components/Wrappers";
+import { CardsWrapper } from "@/components/Wrappers";
 /* Titles */
-import { IntroTitle } from "../../../_components/Titles";
+import { IntroTitle } from "@/components/Titles";
 /* Paragraphs */
-import { BasicDescription } from "../../../_components/Paragraphs";
+import { BasicDescription } from "@/components/Paragraphs";
 
 interface DOMManipulationPageProps {
   params: {

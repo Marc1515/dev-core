@@ -1,8 +1,11 @@
-import React from "react";
 import initTranslations from "@/app/i18n";
-import { JSONPageTypes } from "./types";
+
+import { JSONPageTypes } from "@/types/json";
+
 import { jsonNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
+
 import Link from "next/link";
+
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import {
   Accordion,
@@ -10,12 +13,13 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+
 /* Wrappers */
-import { CardsWrapper } from "../../../_components/Wrappers";
+import { CardsWrapper } from "@/components/Wrappers";
 /* Titles */
-import { IntroTitle } from "../../../_components/Titles";
+import { IntroTitle } from "@/components/Titles";
 /* Paragraphs */
-import { BasicDescription } from "../../../_components/Paragraphs";
+import { BasicDescription } from "@/components/Paragraphs";
 
 interface JSONPageProps {
   params: {

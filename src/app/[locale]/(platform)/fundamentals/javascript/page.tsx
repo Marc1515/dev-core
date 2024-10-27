@@ -1,16 +1,17 @@
-import React from "react";
-
 import initTranslations from "@/app/i18n";
+
 import { javascriptNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
-import { JavascriptTypes } from "./types";
+
+import { JavascriptTypes } from "@/types/javascript";
+
 import Link from "next/link";
 
 /* Wrappers */
-import { CardsWrapper } from "../../_components/Wrappers";
+import { CardsWrapper } from "@/components/Wrappers";
 /* Titles */
-import { IntroTitle } from "../../_components/Titles";
+import { IntroTitle } from "@/components/Titles";
 /* Paragraphs */
-import { BasicDescription } from "../../_components/Paragraphs";
+import { BasicDescription } from "@/components/Paragraphs";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
