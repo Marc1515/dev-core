@@ -1,8 +1,18 @@
-import React from "react";
-
 import initTranslations from "@/app/i18n";
+
 import { stylesModificationNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
-import { StylesModification } from "./_components/StylesModification";
+
+import { StylesModificationTypes } from "@/types/styles-modification";
+
+import { codes } from "@/codes/styles-modification";
+
+/* Wrappers */
+import { BasicBoxWrapper } from "@/components/Wrappers";
+/* Titles */
+import { IntroTitle, SecondaryTitle } from "@/components/Titles";
+/* Paragraphs */
+import { BasicDescription, Conclusion } from "@/components/Paragraphs";
+import { CodeComponent } from "@/components/CodeComponent";
 
 interface StylesModificationPageProps {
   params: {
@@ -14,11 +24,30 @@ const StylesModificationPage = async ({
   params: { locale },
 }: StylesModificationPageProps) => {
   const { t } = await initTranslations(locale, stylesModificationNamespaces);
-  const data = t("data", { returnObjects: true });
+  const data: StylesModificationTypes["data"] = t("data", {
+    returnObjects: true,
+  });
   return (
-    <div>
-      <StylesModification data={data} />
-    </div>
+    <>
+      {/* Introduction */}
+      <>
+        <IntroTitle>{data.title}</IntroTitle>
+        <BasicDescription>{data.description}</BasicDescription>
+      </>
+      {/* Each Style Modification */}
+
+      {data.modifications.map((modification, idx) => (
+        <BasicBoxWrapper key={idx}>
+          <SecondaryTitle>{modification.title}</SecondaryTitle>
+          <BasicDescription>{modification.description}</BasicDescription>
+          {/* Code */}
+          <CodeComponent codeToCopy={codes} idx={idx} />
+        </BasicBoxWrapper>
+      ))}
+      <BasicBoxWrapper>
+        <Conclusion>{data.conclusion}</Conclusion>
+      </BasicBoxWrapper>
+    </>
   );
 };
 

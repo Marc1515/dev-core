@@ -1,8 +1,18 @@
-import React from "react";
-
 import initTranslations from "@/app/i18n";
+
 import { functionsNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
-import { Functions } from "./_components/Functions";
+
+import { FunctionsTypes } from "@/types/functions";
+
+import { codes } from "@/codes/functions";
+
+/* Wrappers */
+import { BasicBoxWrapper } from "@/components/Wrappers";
+/* Titles */
+import { IntroTitle, SecondaryTitle } from "@/components/Titles";
+/* Paragraphs */
+import { BasicDescription, Conclusion } from "@/components/Paragraphs";
+import { CodeComponent } from "@/components/CodeComponent";
 
 interface FunctionPageProps {
   params: {
@@ -12,12 +22,30 @@ interface FunctionPageProps {
 
 const FunctionsPage = async ({ params: { locale } }: FunctionPageProps) => {
   const { t } = await initTranslations(locale, functionsNamespaces);
-  const data = t("data", { returnObjects: true });
+  const data: FunctionsTypes["data"] = t("data", { returnObjects: true });
 
   return (
-    <div>
-      <Functions data={data} />
-    </div>
+    <>
+      {/* Introduction */}
+      <>
+        <IntroTitle>{data.title}</IntroTitle>
+        <BasicDescription>{data.description}</BasicDescription>
+      </>
+      {/* Each Function */}
+
+      {data.items.map((item, idx) => (
+        <BasicBoxWrapper key={idx}>
+          <SecondaryTitle>{item.title}</SecondaryTitle>
+          <BasicDescription>{item.description}</BasicDescription>
+          <CodeComponent codeToCopy={codes} idx={idx} />
+        </BasicBoxWrapper>
+      ))}
+
+      {/* Conclusion */}
+      <BasicBoxWrapper>
+        <Conclusion>{data.conclusion}</Conclusion>
+      </BasicBoxWrapper>
+    </>
   );
 };
 

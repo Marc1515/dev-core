@@ -1,8 +1,18 @@
-import React from "react";
-
 import initTranslations from "@/app/i18n";
+
 import { elementContentModificationNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
-import { ElementContentModification } from "./_components/ElementContentModification";
+
+import { ElementContentModificationTypes } from "@/types/elements-content-manipulation";
+
+import { codes } from "@/codes/elements-content-manipulation";
+
+/* Wrappers */
+import { BasicBoxWrapper } from "@/components/Wrappers";
+/* Titles */
+import { IntroTitle, SecondaryTitle } from "@/components/Titles";
+/* Paragraphs */
+import { BasicDescription, Conclusion } from "@/components/Paragraphs";
+import { CodeComponent } from "@/components/CodeComponent";
 
 interface ElementsContentModificationPageProps {
   params: {
@@ -17,11 +27,30 @@ const ElementsContentModificationPage = async ({
     locale,
     elementContentModificationNamespaces
   );
-  const data = t("data", { returnObjects: true });
+  const data: ElementContentModificationTypes["data"] = t("data", {
+    returnObjects: true,
+  });
   return (
-    <div>
-      <ElementContentModification data={data} />
-    </div>
+    <>
+      {/* Introduction */}
+      <>
+        <IntroTitle>{data.title}</IntroTitle>
+        <BasicDescription>{data.description}</BasicDescription>
+      </>
+      {/* Each Content Modification */}
+
+      {data.modifications.map((modification, idx) => (
+        <BasicBoxWrapper key={idx}>
+          <SecondaryTitle>{modification.title}</SecondaryTitle>
+          <BasicDescription>{modification.description}</BasicDescription>
+          {/* Code */}
+          <CodeComponent codeToCopy={codes} idx={idx} />
+        </BasicBoxWrapper>
+      ))}
+      <BasicBoxWrapper>
+        <Conclusion>{data.conclusion}</Conclusion>
+      </BasicBoxWrapper>
+    </>
   );
 };
 

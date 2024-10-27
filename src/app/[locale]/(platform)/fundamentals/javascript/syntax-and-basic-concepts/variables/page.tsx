@@ -1,6 +1,9 @@
 import initTranslations from "@/app/i18n";
+
 import { variablesNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
+
 import { VariablesTypes } from "@/types/variables";
+
 /* Wrappers */
 import { BasicBoxWrapper, ListWrapper } from "@/components/Wrappers";
 /* Titles */
