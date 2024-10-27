@@ -2,20 +2,11 @@ import initTranslations from "@/app/i18n";
 import { variablesNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
 import { VariablesTypes } from "@/types/variables";
 /* Wrappers */
-import {
-  BasicBoxWrapper,
-  ListWrapper,
-} from "@/app/[locale]/(platform)/_components/Wrappers";
+import { BasicBoxWrapper, ListWrapper } from "@/components/Wrappers";
 /* Titles */
-import {
-  IntroTitle,
-  SecondaryTitle,
-} from "@/app/[locale]/(platform)/_components/Titles";
+import { IntroTitle, SecondaryTitle } from "@/components/Titles";
 /* Paragraphs */
-import {
-  BasicDescription,
-  Conclusion,
-} from "@/app/[locale]/(platform)/_components/Paragraphs";
+import { BasicDescription, Conclusion } from "@/components/Paragraphs";
 /* Lists */
 import {
   List,
@@ -23,7 +14,7 @@ import {
   ListTitle,
   ItemListTitle,
   ItemListDescription,
-} from "@/app/[locale]/(platform)/_components/Lists";
+} from "@/components/Lists";
 
 interface VariablesProps {
   params: {
