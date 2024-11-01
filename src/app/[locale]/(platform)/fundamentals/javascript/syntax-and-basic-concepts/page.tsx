@@ -1,11 +1,7 @@
 import initTranslations from "@/app/i18n";
-
 import { syntaxAndBasicConceptsNamespaces } from "@/constants/namespaces/javaScriptNamespaces";
-
 import Link from "next/link";
-
 import { SyntaxAndBasicConceptsTypes } from "@/types/syntax-and-basic-concepts";
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 /* Wrappers */
 import { CardsWrapper } from "@/components/Wrappers";
@@ -13,7 +9,6 @@ import { CardsWrapper } from "@/components/Wrappers";
 import { IntroTitle } from "@/components/Titles";
 /* Paragraphs */
 import { BasicDescription } from "@/components/Paragraphs";
-
 import {
   Accordion,
   AccordionContent,
@@ -38,16 +33,17 @@ const SyntaxAndBasicConceptsPage = async ({
     returnObjects: true,
   }) as SyntaxAndBasicConceptsTypes["data"];
 
+  // Calcula el número de tarjetas
+  const cardsNumber = data.items.length > 5 ? 8 : 3; // Usa 8 si hay más de 5 elementos, de lo contrario usa 3
+
   return (
     <>
-      <>
-        <IntroTitle>{data.title}</IntroTitle>
-        <BasicDescription>{data.description}</BasicDescription>
-      </>
+      <IntroTitle>{data.title}</IntroTitle>
+      <BasicDescription>{data.description}</BasicDescription>
 
       <CardsWrapper>
         {data.items.map((item, idx) => (
-          <Card key={idx}>
+          <Card key={idx} cardsNumber={cardsNumber}>
             <CardHeader>
               <Link href={item.path}>
                 <CardTitle>{item.title}</CardTitle>

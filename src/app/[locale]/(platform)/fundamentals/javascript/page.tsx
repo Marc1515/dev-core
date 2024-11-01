@@ -33,11 +33,9 @@ const JavaScriptPage = async ({ params: { locale } }: JavaScriptPageProps) => {
     returnObjects: true,
   }) as JavascriptTypes["data"];
   return (
-    <>
-      <>
-        <IntroTitle>{data.title}</IntroTitle>
-        <BasicDescription>{data.description}</BasicDescription>
-      </>
+    <div className="p-1 md:px-10 w-full h-full">
+      <IntroTitle>{data.title}</IntroTitle>
+      <BasicDescription>{data.description}</BasicDescription>
 
       <Accordion type="single" collapsible>
         <CardsWrapper>
@@ -58,7 +56,7 @@ const JavaScriptPage = async ({ params: { locale } }: JavaScriptPageProps) => {
           ))}
         </CardsWrapper>
       </Accordion>
-    </>
+    </div>
   );
 };
 
